@@ -66,7 +66,7 @@ alias v="vim"
 alias n="nvim"
 # alias vim="nvim"
 alias b="btop"
-alias y="yay"
+alias y="yazi"
 alias t="tmux"
 alias h="htop"
 alias p="sudo pacman"
@@ -86,17 +86,7 @@ alias gad="git add"
 alias lshw="sudo lshw"
 alias zb="zbarimg"
 alias zshupdate="source ~/dots/.zshrc"
-alias fupdate="sudo dnf update && sudo dnf upgrade && flatpak update"
-alias dnf="sudo dnf"
-alias dnfi="sudo dnf install"
-alias dnfs="sudo dnf search"
-alias dnfr="sudo dnf remove"
-# Load syntax highlighting; should be last. Dependent on the distro
-if [[ -f /etc/arch-release ]]; then
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-else
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+alias ff="fastfetch"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # eval "$(starship init zsh)"
