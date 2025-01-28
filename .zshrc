@@ -11,8 +11,7 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-# TERMINAL="kitty"
-EDITOR="nvim"
+export EDITOR="nvim"
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -87,6 +86,11 @@ alias lshw="sudo lshw"
 alias zb="zbarimg"
 alias zshupdate="source ~/dots/.zshrc"
 alias ff="fastfetch"
+
+# Custom keybinds
+bindkey -s '^F' 'fzf -e\n'
+bindkey -s '^Y' 'yazi \n'
+bindkey -s '^R' 'source ~/dots/.zshrc \n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# eval "$(starship init zsh)"
+# eval "$(starship init zhh)"
