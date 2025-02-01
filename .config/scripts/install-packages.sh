@@ -10,7 +10,7 @@ flameshot
 ghostty
 keepassxc
 kitty
-missioncenter
+mission-center
 neovim
 obsidian
 solaar
@@ -34,7 +34,7 @@ ifuse
 iftop
 iotop
 libimobiledevice
-libvirtd
+libvirt
 lua
 lm_sensors
 luarocks
