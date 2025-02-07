@@ -102,6 +102,8 @@ flatpaks=(
 "com.spotify.Client"
 "com.todoist.Todoist"
 "com.visualstudio.code"
+"com.usebottles.bottles"
+"org.gnome.World.PikaBackup"
 )
 
 install_packages() {
