@@ -3,6 +3,7 @@
 apps=(
 alacritty
 blueman
+calibre
 dconf-editor
 discord
 firefox
@@ -12,6 +13,7 @@ keepassxc
 kitty
 mission-center
 neovim
+nitrogen
 obsidian
 solaar
 thunderbird
@@ -48,7 +50,7 @@ playerctl
 php
 pnpm
 powertop
-power-profiles-daemon
+# power-profiles-daemon
 protobuf
 python
 qemu-full
@@ -57,6 +59,7 @@ ruby
 rust
 syncthing
 starship
+tlp
 usbmuxd
 usbutils
 unzip
@@ -85,12 +88,14 @@ zathura
 other=(
 adw-gtk-theme
 ttf-jetbrains-mono-nerd
+noto-fonts-emoji
 )
 yay_stuff=(
 cava
 btave-bin
 bluetuith-bin
 todoist-bin
+zen-browser-bin
 vscodium-bin
 vscodium-bin-marketplace
 )
