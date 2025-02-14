@@ -11,9 +11,12 @@ flameshot
 ghostty
 keepassxc
 kitty
+lxappereance
 mission-center
 neovim
 nitrogen
+nwg-look
+qt5ct
 obsidian
 solaar
 thunderbird
@@ -100,6 +103,7 @@ todoist-bin
 zen-browser-bin
 vscodium-bin
 vscodium-bin-marketplace
+adwaita-qt5
 )
 flatpaks=(
 "com.github.tchx84.Flatseal"
