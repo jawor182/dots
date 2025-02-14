@@ -5,7 +5,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 export QT_QPA_PLATFORMTHEME=qt5ct
 nm-applet &
 blueman-applet &
-megasync -b &
+# megasync -b &
 picom -b &
 slstatus &
 dunst &

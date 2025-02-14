@@ -46,12 +46,14 @@ nodejs
 npm
 openbsd-netcat
 pamixer
+picom
 playerctl
 php
 pnpm
 powertop
 # power-profiles-daemon
 protobuf
+pulsemixer
 python
 qemu-full
 ripgrep
@@ -92,7 +94,7 @@ noto-fonts-emoji
 )
 yay_stuff=(
 cava
-btave-bin
+brave-bin
 bluetuith-bin
 todoist-bin
 zen-browser-bin
