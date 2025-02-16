@@ -100,7 +100,7 @@ cava
 brave-bin
 bluetuith-bin
 todoist-bin
-zen-browser-bin
+librewolf-bin
 vscodium-bin
 vscodium-bin-marketplace
 adwaita-qt5
