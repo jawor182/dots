@@ -1,4 +1,4 @@
 #!/bin/sh
 
-date=$(date '+ %A, %B %d %H:%M')
+date=$(date '+ %A, %d %B %H:%M')
 echo "$date"
