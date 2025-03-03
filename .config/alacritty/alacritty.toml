@@ -6,6 +6,6 @@ size = 16
 
 [general]
 import = [
-"~/.config/alacritty/catppuccin-mocha.toml"
+"~/.config/alacritty/gruvbox-dark.toml"
 ]
 
