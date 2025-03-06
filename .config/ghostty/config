@@ -2,4 +2,4 @@ theme = GruvboxDark
 font-family = JetBrainsMonoNerdFont
 font-size = 16
 confirm-close-surface = false
-
+background-opacity = 0.8
