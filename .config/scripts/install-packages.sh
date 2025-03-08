@@ -11,7 +11,7 @@ flameshot
 ghostty
 keepassxc
 kitty
-lxappereance
+lxappearance
 mission-center
 neovim
 nitrogen
