@@ -11,6 +11,7 @@ flameshot
 ghostty
 keepassxc
 kitty
+ly
 lxappearance
 mission-center
 neovim
@@ -31,6 +32,7 @@ cargo
 clang
 cups
 deno
+dunst
 dnsmasq
 ffmpeg
 fish
@@ -70,6 +72,7 @@ usbutils
 unzip
 wl-clipboard
 xclip
+xorg
 yarn
 zbar
 zsh-autosuggestions
@@ -92,14 +95,16 @@ zathura
 )
 other=(
 adw-gtk-theme
+adwaita-icon-theme
 ttf-jetbrains-mono-nerd
 noto-fonts-emoji
+papirus-icon-theme
 )
 yay_stuff=(
 cava
 brave-bin
+adwaita-slim-gtk-theme
 bluetuith-bin
-todoist-bin
 librewolf-bin
 vscodium-bin
 vscodium-bin-marketplace
@@ -111,7 +116,6 @@ flatpaks=(
 "com.mattjakeman.ExtensionManager"
 "com.rafaelmardojai.Blanket"
 "com.spotify.Client"
-"com.todoist.Todoist"
 "com.visualstudio.code"
 "com.usebottles.bottles"
 "org.gnome.World.PikaBackup"

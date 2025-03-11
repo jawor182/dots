@@ -15,7 +15,8 @@ nm-applet &
 blueman-applet &
 # megasync -b &
 picom -b &
-slstatus &
+# slstatus &
+dwmblocks &
 dunst &
 nitrogen --restore &
 
