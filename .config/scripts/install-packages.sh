@@ -74,6 +74,7 @@ wl-clipboard
 xclip
 xorg
 yarn
+zathura-pdf-poppler
 zbar
 zsh-autosuggestions
 zsh-completions

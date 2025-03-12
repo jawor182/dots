@@ -6,16 +6,16 @@
 case $BUTTON in
     1) notify-send "Hello" ;;
     2) notify-send "world" ;;
-	3) notify-send "🔋 Battery module" "🔋: discharging
+    3) notify-send "🔋 Battery module" "🔋: discharging
 🛑: not charging
 ♻: stagnant charge
 🔌: charging
 ⚡: charged
 ❗: battery very low!
 - Scroll to change adjust xbacklight." ;;
-	4) xbacklight -inc 10 ;;
-	5) xbacklight -dec 10 ;;
-	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+    # 4) xbacklight -inc 10 ;;
+    # 5) xbacklight -dec 10 ;;
+    # 6) setsid -f "$TERMINAL" -e "$EDITOR" "~/dots/.local/bin/statusbar/sb-battery" ;;
 esac
 
 # Loop through all attached batteries and format the info
