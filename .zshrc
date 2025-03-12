@@ -11,8 +11,8 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-export EDITOR="nvim"
-export TERMINAL="kitty"
+# export EDITOR="nvim"
+# export TERMINAL="kitty"
 
 # Basic auto/tab complete:
 autoload -U compinit

@@ -15,7 +15,7 @@ case $BUTTON in
 - Scroll to change adjust xbacklight." ;;
     # 4) xbacklight -inc 10 ;;
     # 5) xbacklight -dec 10 ;;
-    # 6) setsid -f "$TERMINAL" -e "$EDITOR" "~/dots/.local/bin/statusbar/sb-battery" ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 # Loop through all attached batteries and format the info
