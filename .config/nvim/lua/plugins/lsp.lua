@@ -36,7 +36,7 @@ return {
                 "cssls",
                 "cssmodules_ls",
                 "css_variables",
-                "denols",
+                -- "denols",
                 -- "eslint_d",
                 -- "gofumpt",
                 "jsonls",

@@ -74,11 +74,12 @@ wl-clipboard
 xclip
 xorg
 yarn
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zbar
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
+xsecurelock
 )
 cli=(
 bat
@@ -98,6 +99,7 @@ other=(
 adw-gtk-theme
 adwaita-icon-theme
 ttf-jetbrains-mono-nerd
+ttf-font-awesome
 noto-fonts-emoji
 papirus-icon-theme
 )

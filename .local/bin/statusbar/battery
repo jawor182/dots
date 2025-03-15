@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# TODO: :
+# - [ ] battery indicator for both batteries displaying status and correlating icon
+# - [ ] on click - how long will the battery last or until charged
+# - [ ] on click - open file to edit
+# Battery status info options :
+# 󰁹 - > 95
+# 󰂀 - > 70
+# 󰁽 - > 50
+# 󰁼 - > 25
+# 󰂃 - < 20 
+# 󰢜 - chargin < 25
+# 󰂆 - chargin > 25
+# 󰢝 - chargin > 50
+# 󰢞 - chargin > 75
+# 󰂅 - chargin > 95
+# 󱧥 - not charging
+# 󰂑 - unknown
+
+case $BUTTON in  
+    1) notify-send "Battery stuff" ;;
+esac
+for battery in /sys/class/power_supply/BAT?*; do
+    echo "$(cat $battery/status 2>&1)";
+done

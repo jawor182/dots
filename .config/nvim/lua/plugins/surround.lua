@@ -6,7 +6,7 @@ return {
         require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
             -- ysxy - surround a x with 
-            -- $ X - in visual mode surround selected with X
+            -- S X - in visual mode surround selected with X
             -- csxy - change surroundings from x to y
             -- dsx - remove x surroundings
             -- with t the same stuff work in html

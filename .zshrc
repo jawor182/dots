@@ -99,8 +99,8 @@ alias restow="stow -R ."
 # --multi"
 
 # Custom keybinds
-bindkey -s '^F' 'fzf -e\n'
-bindkey -s '^Y' 'yazi \n'
+bindkey -s '^S' 'fzf -e\n'
+bindkey -s '^F' 'yazi \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
