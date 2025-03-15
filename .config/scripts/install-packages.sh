@@ -86,6 +86,8 @@ bat
 btop
 fastfetch
 fzf
+github-cli
+lshw
 htop
 jq
 neofetch
@@ -107,12 +109,12 @@ cava
 brave-bin
 adwaita-slim-gtk-theme
 bluetuith-bin
-librewolf-bin
-vscodium-bin
-vscodium-bin-marketplace
+# librewolf-bin
+# vscodium-bin
+# vscodium-bin-marketplace
 adwaita-qt5
 )
-flatpaks=(
+# flatpaks=(
 # "com.github.tchx84.Flatseal"
 # "com.jeffser.Alpaca"
 # "com.mattjakeman.ExtensionManager"
