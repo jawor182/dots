@@ -2,21 +2,21 @@
 
 apps=(
 alacritty
-blueman
+# blueman
 calibre
 dconf-editor
 discord
 firefox
 flameshot
-ghostty
+# ghostty
 keepassxc
 kitty
 ly
 lxappearance
-mission-center
+# mission-center
 neovim
 nitrogen
-nwg-look
+# nwg-look
 qt5ct
 obsidian
 solaar
@@ -31,7 +31,7 @@ ntfs-3g
 cargo
 clang
 cups
-deno
+# deno
 dunst
 dnsmasq
 ffmpeg
@@ -84,7 +84,6 @@ xsecurelock
 cli=(
 bat
 btop
-bluetui
 fastfetch
 fzf
 htop
@@ -114,15 +113,15 @@ vscodium-bin-marketplace
 adwaita-qt5
 )
 flatpaks=(
-"com.github.tchx84.Flatseal"
-"com.jeffser.Alpaca"
-"com.mattjakeman.ExtensionManager"
-"com.rafaelmardojai.Blanket"
-"com.spotify.Client"
-"com.visualstudio.code"
-"com.usebottles.bottles"
-"org.gnome.World.PikaBackup"
-)
+# "com.github.tchx84.Flatseal"
+# "com.jeffser.Alpaca"
+# "com.mattjakeman.ExtensionManager"
+# "com.rafaelmardojai.Blanket"
+# "com.spotify.Client"
+# "com.visualstudio.code"
+# "com.usebottles.bottles"
+# "org.gnome.World.PikaBackup"
+# )
 
 install_packages() {
     local category=$1
@@ -138,16 +137,16 @@ install_packages_aur() {
     echo "Installing $category ..."
     yay -Syu "${packages[@]}"
 }
-install_packages_flatpak() {
-    local category=$1
-    shift
-    local packages=("$@")
-    echo "Installing $category ..."
-    flatpak install -y  "${packages[@]}"
-}
+# install_packages_flatpak() {
+#     local category=$1
+#     shift
+#     local packages=("$@")
+#     echo "Installing $category ..."
+#     flatpak install -y  "${packages[@]}"
+# }
 install_packages "apps" "${apps[@]}"
 install_packages "libs" "${libs[@]}"
 install_packages "cli" "${cli[@]}"
 install_packages "other" "${other[@]}"
 install_packages_aur "yay" "${yay_stuff[@]}"
-install_packages_flatpak "flatpaks" "${flatpaks[@]}"
+# install_packages_flatpak "flatpaks" "${flatpaks[@]}"
