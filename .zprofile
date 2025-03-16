@@ -10,6 +10,7 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORM=wayland
 export ELECTRON_OZONE_PLATFORM_HINT=auto
+export XDG_CURRENT_DESKTOP=river
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
     river
