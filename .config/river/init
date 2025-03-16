@@ -18,9 +18,10 @@ riverctl spawn "dbus-update-activation-environment --all"
 riverctl keyboard-layout pl
 riverctl focus-follows-cursor normal
 riverctl default-attach-mode bottom
+riverctl spawn "foot -s"
 
 # Vars
-terminal="kitty"
+terminal="footclient"
 browser="brave"
 music="spotify-launcher"
 launcher="fuzzel"
@@ -43,7 +44,7 @@ riverctl map normal Super M spawn $mail
 riverctl map normal Super P spawn $passmanager
 riverctl map normal Super+Shift F spawn "$terminal -e $fileManager"
 riverctl map normal Super+Alt   F spawn $gfileManager
-riverctl map normal Super B spawn "killall -SIGUSR1 waybar"
+# riverctl map normal Super B spawn "killall -SIGUSR1 waybar"
 riverctl map normal Super+Shift S spawn 'grim -g "$(slurp)" $HOME/Pictures/$(date +'%s.png')'
 riverctl map normal Super+Shift C spawn "wl-color-picker clipboard"
 riverctl map normal Super+Control B spawn "$terminal -e bluetuith"
