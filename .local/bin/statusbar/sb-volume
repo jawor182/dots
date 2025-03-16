@@ -1,6 +1,10 @@
 #!/bin/sh
 
 # volume=$(wpctl get-volume @DEFAULT_SINK@ | sed "s/Volume: //" | awk '{printf "%d%%\n", $1 * 100}')
+# # TODO:
+# - [ ] optimize way of adding icons 
+# - [ ] iCoNz 
+
 volume=$(pamixer --get-volume-human)
 if [[ $volume != "muted" ]]; then
     icon="󰕾 "
