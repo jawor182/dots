@@ -4,6 +4,7 @@
     "position": "top",
     "spacing": 6,
     "modules-left": [
+        "river/tags",
         "hyprland/workspaces"
     ],
     "modules-center": [
@@ -13,6 +14,10 @@
         "custom/audio",
         "tray"
     ],
+    "river/tags":{
+        "format":"{}"
+
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -27,15 +32,15 @@
         "format": "{}",
         "tooltip-format": "",
         "restart-interval": 1,
-        "exec": "~/.config/scripts/date.sh",
-        "on-click-right": "kitty -e nvim ~/.config/scripts/date.sh",
+        "exec": "sb-date",
+        "on-click-right": "kitty -e nvim ~/.local/bin/statusbar/sb-date",
         "tooltip": "false",
     },
     "custom/audio": {
         "format": "{}",
         "tooltip-format": "",
-        "exec":"~/.config/scripts/volume.sh",
-        "on-click-right": "kitty -e nvim ~/.config/scripts/volume.sh",
+        "exec":"sb-volume",
+        "on-click-right": "kitty -e nvim ~/.local/bin/statusbar/sb-volume",
         "restart-interval": 1,
         "tooltip": "false",
     },

@@ -90,6 +90,9 @@ alias zshupdate="source ~/dots/.zshrc"
 alias ff="fastfetch"
 alias f="flatpak"
 alias restow="stow -R ."
+alias ta="tmux attach"
+alias tn="tmux new"
+alias tns="tmux new -s"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
