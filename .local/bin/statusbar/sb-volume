@@ -6,7 +6,7 @@
 # - [ ] iCoNz 
 
 volume=$(pamixer --get-volume-human)
-if [[ $volume != "muted" ]]; then
+if [ $volume != "muted" ]; then
     icon="󰕾 "
 else
     icon="󰝟 "

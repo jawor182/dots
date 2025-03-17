@@ -2,21 +2,18 @@
 
 apps=(
 alacritty
-# blueman
 calibre
 dconf-editor
 discord
 firefox
 flameshot
-# ghostty
 keepassxc
 kitty
 ly
 lxappearance
-# mission-center
 neovim
+nautilus
 nitrogen
-# nwg-look
 qt5ct
 obsidian
 solaar
@@ -27,11 +24,12 @@ virt-viewer
 zsh
 )
 libs=(
+dash
+checkbashisms
 ntfs-3g    
 cargo
 clang
 cups
-# deno
 dunst
 dnsmasq
 ffmpeg
@@ -45,6 +43,7 @@ libvirt
 lua
 lm_sensors
 luarocks
+mokutil
 man-db
 man-pages
 nodejs
@@ -53,10 +52,11 @@ openbsd-netcat
 pamixer
 picom
 playerctl
+pciutils
+usbutils
 php
 pnpm
 powertop
-# power-profiles-daemon
 protobuf
 pulsemixer
 python
@@ -84,35 +84,49 @@ xsecurelock
 cli=(
 bat
 btop
+inxi
 fastfetch
 fzf
+figlet
+cowsay
+lshw
 github-cli
+speedtest-cli
 lshw
 htop
 jq
 neofetch
 pulsemixer
 stow
+tldr
 yazi
 zathura
 )
 other=(
 adw-gtk-theme
 adwaita-icon-theme
-ttf-jetbrains-mono-nerd
-ttf-font-awesome
 noto-fonts-emoji
+noto-fonts
+tf-dejavu 
+ttf-font-awesome 
+ttf-hanazono 
+ttf-jetbrains-mono-nerd 
+ttf-liberation 
+ttf-nerd-fonts-symbols 
+ttf-nerd-fonts-symbols-common 
+ttf-sazanami 
 papirus-icon-theme
+kvantum
+kvantum-qt5
 )
 yay_stuff=(
 cava
 brave-bin
 adwaita-slim-gtk-theme
 bluetuith-bin
-# librewolf-bin
-# vscodium-bin
-# vscodium-bin-marketplace
 adwaita-qt5
+kvantum-theme-arc
+kvantum-theme-libadwaita
 )
 # flatpaks=(
 # "com.github.tchx84.Flatseal"
