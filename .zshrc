@@ -11,8 +11,6 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
-# export EDITOR="nvim"
-# export TERMINAL="kitty"
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -58,13 +56,10 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
-ELECTRON_FORCE_DARK_MODE=true
-export ELECTRON_FORCE_DARK_MODE
 
 # Variables
 alias v="vim"
 alias n="nvim"
-# alias vim="nvim"
 alias b="btop"
 alias y="yay"
 alias t="tmux"
@@ -107,4 +102,3 @@ bindkey -s '^F' 'yazi \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# eval "$(starship init zhh)"
