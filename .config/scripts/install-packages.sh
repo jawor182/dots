@@ -28,6 +28,12 @@ dash
 checkbashisms
 ntfs-3g    
 cargo
+cups 
+cups-pdf
+cups-filters
+system-config-printer
+gutenprint
+foomatin-db-gutenprint-ppds
 clang
 cups
 dunst
