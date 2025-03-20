@@ -2,7 +2,7 @@
 ~/.config/screenlayout/screen.sh
 systemctl --user start xdg-desktop-portal-gtk
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="gtk2"
 export XDG_CURRENT_DESKTOP=DWM
 export XDG_SESSION_TYPE=x11
 export ELECTRON_FORCE_DARK_MODE=true
