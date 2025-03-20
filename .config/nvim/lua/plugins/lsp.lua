@@ -32,26 +32,17 @@ return {
                 "gopls",
                 "bashls",
                 "clangd",
-                -- "clang-format",
                 "cssls",
                 "cssmodules_ls",
                 "css_variables",
-                -- "denols",
-                -- "eslint_d",
-                -- "gofumpt",
+                "emmet_ls",
                 "jsonls",
-                -- "jsonlint",
                 "html",
-                -- "htmlhint",
-                -- "prettier",
-                -- "prettierd",
-                -- "pyink",
                 "pyright",
-                -- "pylint",
+                "intelephense",
                 "ts_ls",
                 "tailwindcss",
                 "yamlls",
-                -- "yamllint",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -84,6 +75,32 @@ return {
                     local lspconfig = require("lspconfig")
                     lspconfig.gopls.setup({
                         capabilities = capabilities,
+                    })
+                end,
+                ["intelephense"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.intelephense.setup({
+                        capabilities = capabilities,
+                    })
+                end,
+                ["emmet_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.emmet_ls.setup({
+                        capabilities = capabilities,
+                        filetypes = {
+                            "html",
+                            "css",
+                            "php",
+                            "javascriptreact",
+                            "typescriptreact",
+                            "vue",
+                            "svelte",
+                            "pug",
+                            "eruby",
+                            "less",
+                            "sass",
+                            "scss",
+                        },
                     })
                 end,
             },

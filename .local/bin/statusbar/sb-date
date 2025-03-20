@@ -5,7 +5,7 @@
 
 case $BUTTON in 
     1) notify-send "Full time:"  "$(date '+%A, %d %B %Y %n%H:%M:%S')" ;;
-    3) notify-send "This Month" "$(cal | sed "s/\<$(date +'%e'|tr -d ' ')\>/<b><span color='red'>&<\/span><\/b>/")" ;;
+    2) notify-send "This Month" "$(cal | sed "s/\<$(date +'%e'|tr -d ' ')\>/<b><span color='red'>&<\/span><\/b>/")" ;;
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 

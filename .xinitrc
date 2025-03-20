@@ -3,8 +3,6 @@
 systemctl --user start xdg-desktop-portal-gtk
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export GTK_THEME="Adwaita-Slim-Dark"
-export GTK_ICON_THEME="Papirus-Dark"
 export XDG_CURRENT_DESKTOP=DWM
 export XDG_SESSION_TYPE=x11
 export ELECTRON_FORCE_DARK_MODE=true

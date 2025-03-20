@@ -41,6 +41,7 @@ dnsmasq
 ffmpeg
 fish
 go
+gvfs-afc
 ifuse
 iftop
 iotop
