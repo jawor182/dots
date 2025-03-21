@@ -1,16 +1,5 @@
 #!/bin/sh
 
-# volume=$(wpctl get-volume @DEFAULT_SINK@ | sed "s/Volume: //" | awk '{printf "%d%%\n", $1 * 100}')
-# # TODO:
-# - [ ] optimize way of adding icons 
-# - [ ] iCoNz 
-
-volume=$(pamixer --get-volume-human)
-if [ $volume != "muted" ]; then
-    icon="󰕾 "
-else
-    icon="󰝟 "
-fi
 case $BUTTON in 
 
     1) setsid -f "$TERMINAL" -e pulsemixer ;;
@@ -20,4 +9,15 @@ case $BUTTON in
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 
 esac
-echo "$icon$volume"
+volume=$(wpctl get-volume @DEFAULT_SINK@ )
+[ "$volume" != "${volume%\[MUTED\]}" ] && echo "󰖁 " && exit
+volume=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100 }')
+if [ "$volume" -ge 70 ]; then
+    icon="󰕾"
+elif [ "$volume" -ge 50 ]; then
+    icon="󰖀"
+else
+    icon="󰕿"
+fi
+
+echo "$icon $volume%"
