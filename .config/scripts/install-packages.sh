@@ -21,10 +21,14 @@ thunderbird
 vim
 virt-manager
 virt-viewer
+spotify-launcher
+thunar
 zsh
 )
 libs=(
 dash
+xdg-desktop-portal-gtk
+xdg-desktop-portal
 checkbashisms
 ntfs-3g    
 cargo
@@ -96,8 +100,8 @@ fastfetch
 fzf
 figlet
 cowsay
-lshw
 github-cli
+feh
 speedtest-cli
 lshw
 htop
@@ -114,7 +118,7 @@ adw-gtk-theme
 adwaita-icon-theme
 noto-fonts-emoji
 noto-fonts
-tf-dejavu 
+ttf-dejavu 
 ttf-font-awesome 
 ttf-hanazono 
 ttf-jetbrains-mono-nerd 
@@ -129,23 +133,9 @@ kvantum-qt5
 yay_stuff=(
 cava
 brave-bin
-adwaita-slim-gtk-theme
 bluetuith-bin
-adwaita-qt5
-kvantum-theme-arc
-kvantum-theme-libadwaita
+gruvbox-grk-theme-git
 )
-# flatpaks=(
-# "com.github.tchx84.Flatseal"
-# "com.jeffser.Alpaca"
-# "com.mattjakeman.ExtensionManager"
-# "com.rafaelmardojai.Blanket"
-# "com.spotify.Client"
-# "com.visualstudio.code"
-# "com.usebottles.bottles"
-# "org.gnome.World.PikaBackup"
-# )
-
 install_packages() {
     local category=$1
     shift
@@ -160,16 +150,8 @@ install_packages_aur() {
     echo "Installing $category ..."
     yay -Syu "${packages[@]}"
 }
-# install_packages_flatpak() {
-#     local category=$1
-#     shift
-#     local packages=("$@")
-#     echo "Installing $category ..."
-#     flatpak install -y  "${packages[@]}"
-# }
 install_packages "apps" "${apps[@]}"
 install_packages "libs" "${libs[@]}"
 install_packages "cli" "${cli[@]}"
 install_packages "other" "${other[@]}"
 install_packages_aur "yay" "${yay_stuff[@]}"
-# install_packages_flatpak "flatpaks" "${flatpaks[@]}"
