@@ -18,6 +18,7 @@ qt5ct
 obsidian
 solaar
 thunderbird
+nmtui
 vim
 virt-manager
 virt-viewer
