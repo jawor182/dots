@@ -92,6 +92,7 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 xsecurelock
+bluez-utils
 )
 cli=(
 bat
@@ -99,6 +100,7 @@ btop
 inxi
 fastfetch
 fzf
+bluetui
 figlet
 cowsay
 github-cli
