@@ -2,6 +2,8 @@
 # Icons
 # 󰈀 there is internet via ethernet
 # 󰪎 no internet via ethernet
+# 󰖩 there is internet via wifi
+# 󰖪 there is no internet via wifi
 case $BUTTON in
     1) "$TERMINAL" -e "$SHELL" -c 'speedtest; sleep 5; exit'
 esac
