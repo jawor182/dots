@@ -88,6 +88,13 @@ alias restow="stow -R ."
 alias ta="tmux attach"
 alias tn="tmux new"
 alias tns="tmux new -s"
+alias d="cd ~/dots"
+alias dcn="cd ~/dots/.config"
+alias ns="cd ~/new-suckless"
+alias nsd="cd ~/new-suckless/dwm"
+alias nsdm="cd ~/new-suckless/dmenu"
+alias nst="cd ~/new-suckless/st"
+alias nsb="cd ~/new-suckless/blocks"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \

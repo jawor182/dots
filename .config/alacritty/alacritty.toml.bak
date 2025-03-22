@@ -1,9 +1,0 @@
-import = [
-"~/.config/alacritty/gruvbox_dark.toml"
-]
-[window]
-opacity = 0.90
-[font]
-normal = {family = "JetBrainsMonoNerdFont", style = "Default"}
-size = 14
-

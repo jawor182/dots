@@ -9,6 +9,7 @@ export ELECTRON_FORCE_DARK_MODE=true
 export DISPLAY=:0
 picom -b &
 dunst &
+imwheel -k -b "45" &
 nitrogen --restore &
 systemctl --user start syncthing
 setxkbmap -layout pl

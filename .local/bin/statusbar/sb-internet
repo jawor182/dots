@@ -1,0 +1,9 @@
+#!/bin/sh
+# Icons
+# 󰈀 there is internet via ethernet
+# 󰪎 no internet via ethernet
+case $BUTTON in
+    1) "$TERMINAL" -e "$SHELL" -c 'speedtest; sleep 5; exit'
+esac
+[ "$(cat /sys/class/net/e*/operstate 2>/dev/null)" = "up" ] && ethericon="󰈀 " || ethericon="󰪎 " 
+echo "$ethericon"
