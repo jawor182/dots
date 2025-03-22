@@ -134,7 +134,8 @@ yay_stuff=(
 cava
 brave-bin
 bluetuith-bin
-gruvbox-grk-theme-git
+gruvbox-gtk-theme-git
+gruvbox-plus-icon-theme
 )
 install_packages() {
     local category=$1
