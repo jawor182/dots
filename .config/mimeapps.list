@@ -17,5 +17,5 @@ x-scheme-handler/mid=userapp-Thunderbird-B7AG32.desktop
 application/x-zerosize=nvim.desktop
 application/xml=brave-browser.desktop
 application/pdf=org.pwmt.zathura.desktop
-inode/directory=thunar.desktop
 application/epub+zip=calibre-ebook-viewer.desktop
+inode/directory=thunar.desktop
