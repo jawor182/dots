@@ -20,12 +20,10 @@ return {
     opts = {
         workspaces = {
             {
-                name = "personal",
-                path = "~/MEGA/Obsidian",
+                name = "main",
+                path = "~/Obsidian",
             },
         },
-
         -- see below for full list of options 👇
     },
 }
-

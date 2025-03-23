@@ -16,4 +16,4 @@ xrdb -merge ~/.Xresources
 xset r rate 300 50
 dbus-update-activation-environment --all
 dwmblocks &
-exec dwm
+dbus-launch ssh-agent dwm
