@@ -28,6 +28,7 @@ zsh
 )
 libs=(
 dash
+ueberzugpp
 xdg-desktop-portal-gtk
 xdg-desktop-portal
 checkbashisms
