@@ -13,7 +13,6 @@ return {
                 null_ls.builtins.formatting.prettier,
                 null_ls.builtins.formatting.gofumpt,
                 null_ls.builtins.diagnostics.golangci_lint,
-                null_ls.builtins.diagnostics.markdownlint,
                 null_ls.builtins.diagnostics.pylint,
                 null_ls.builtins.diagnostics.sqlfluff,
                 null_ls.builtins.formatting.clang_format,
@@ -31,7 +30,7 @@ return {
                 -- null_ls.builtins.formatting.beautysh,
                 null_ls.builtins.formatting.pint,
                 null_ls.builtins.diagnostics.sqlfluff.with({
-                    extra_args = { "--dialect", "sqlite" },
+                    extra_args = { "--dialect", "postgres" },
                 }),
             },
         })
