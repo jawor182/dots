@@ -36,6 +36,7 @@ return {
                 "cssmodules_ls",
                 "css_variables",
                 "emmet_ls",
+                "emmet_language_server",
                 "jsonls",
                 "html",
                 "pyright",
@@ -78,14 +79,20 @@ return {
                     })
                 end,
                 ["intelephense"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.intelephense.setup({
+                    require("lspconfig").intelephense.setup({
                         capabilities = capabilities,
+                        filetypes = { "php" },
+                        root_dir = function()
+                            return vim.loop.cwd()
+                        end,                                 -- Force current directory as root
+                        init_options = {
+                            storagePath = vim.fn.expand("~/.cache/intelephense"), -- Optional
+                        },
                     })
                 end,
-                ["emmet_ls"] = function()
+               ["emmet_language_server"] = function()
                     local lspconfig = require("lspconfig")
-                    lspconfig.emmet_ls.setup({
+                    lspconfig.emmet_language_server.setup({
                         capabilities = capabilities,
                         filetypes = {
                             "html",
