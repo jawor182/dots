@@ -1,0 +1,8 @@
+#!/bin/sh
+
+git clone https://aur.archlinux.org/yay ~/yay || exit 
+
+cd "$HOME/yay" || exit 
+
+makepkg -si 
+
