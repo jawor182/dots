@@ -9,7 +9,7 @@ export ELECTRON_FORCE_DARK_MODE=true
 export ELECTRON_FORCE_DEVICE_SCALE_FACTOR=1.25
 export GDK_SCALE=1.25
 export GDK_DPI_SCALE=1
-export QT_SCALE_FACTOR=1
+export QT_SCALE_FACTOR=1.25
 export DISPLAY=:0
 picom -b &
 dunst &

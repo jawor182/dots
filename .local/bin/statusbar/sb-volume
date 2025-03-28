@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case $BUTTON in 
+case $BLOCK_BUTTON in 
 
     1) setsid -f "$TERMINAL" -e pulsemixer ;;
     2) wpctl set-mute @DEFAULT_SINK@ toggle ;;
@@ -12,9 +12,9 @@ esac
 volume=$(wpctl get-volume @DEFAULT_SINK@ )
 [ "$volume" != "${volume%\[MUTED\]}" ] && echo "󰖁 " && exit
 volume=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100 }')
-if [ "$volume" -ge 70 ]; then
+if [ "$volume" -ge 50 ]; then
     icon="󰕾"
-elif [ "$volume" -ge 50 ]; then
+elif [ "$volume" -ge 30 ]; then
     icon="󰖀"
 else
     icon="󰕿"

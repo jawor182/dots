@@ -3,7 +3,7 @@
 # date=$(date '+ %A, %d %B %H:%M')
 # date=$(date '+ %d-%m %H:%M')
 
-case $BUTTON in 
+case $BLOCK_BUTTON in 
     1) notify-send "Full time:"  "$(date '+%d %B %Y %n%H:%M:%S')" ;;
     2) notify-send "This Month" "$(cal | sed "s/\<$(date +'%e'|tr -d ' ')\>/<b><span color='red'>&<\/span><\/b>/")" ;;
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;

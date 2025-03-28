@@ -4,7 +4,7 @@
 # 󰪎 no internet via ethernet
 # 󰖩 there is internet via wifi
 # 󰖪 there is no internet via wifi
-case $BUTTON in
+case $BLOCK_BUTTON in
     1) "$TERMINAL" -e "$SHELL" -c 'speedtest; sleep 5; exit' ;;
     3) "$TERMINAL" -e nmtui; pkill -RTMIN+4 dwmblocks ;;
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
