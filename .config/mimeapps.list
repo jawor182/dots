@@ -3,6 +3,7 @@ text/plain=nvim.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-B7AG32.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-B7AG32.desktop;
 application/x-zerosize=Alacritty.desktop;nvim.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=calibre-ebook-viewer.desktop;
 
 [Default Applications]
 text/html=brave-browser.desktop
@@ -18,4 +19,4 @@ application/x-zerosize=nvim.desktop
 application/xml=brave-browser.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/epub+zip=calibre-ebook-viewer.desktop
-inode/directory=thunar.desktop
+inode/directory=org.gnome.Nautilus.desktop

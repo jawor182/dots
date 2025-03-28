@@ -1,0 +1,45 @@
+@import "gruvbox.css";
+
+* {
+    font-family: "JetBrainsMonoNerdFont";
+    font-size: 16px;
+    min-height: 0;
+    color: @fg;
+}
+
+#waybar {
+    background: @bg;
+    border: 2px solid @orange;
+    border-radius: 5px;
+    color: @fg;
+}
+
+#tray {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#workspaces {
+    margin: 4px;
+}
+
+#workspaces button.active {
+    background-color: @yellow;
+}
+
+#workspaces button:hover {
+    background-color: @gray;
+}
+
+#tags {
+    margin:4px;
+}
+#tags button:hover{
+    background-color: @red;
+}
+#tags button.focused{
+    background-color: @yellow;
+}
+/*#tags button.occupied{*/
+/*    background-color: @gray;*/
+/*}*/
