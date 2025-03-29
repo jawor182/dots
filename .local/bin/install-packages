@@ -1,24 +1,19 @@
 #!/bin/bash
 
 apps=(
-alacritty
 calibre
-dconf-editor
 discord
 firefox
 flameshot
 keepassxc
-kitty
 ly
 lxappearance
 neovim
-nautilus
 nitrogen
 qt5ct
 obsidian
 solaar
 thunderbird
-nmtui
 vim
 virt-manager
 virt-viewer
@@ -39,15 +34,14 @@ cups-pdf
 cups-filters
 system-config-printer
 gutenprint
-foomatin-db-gutenprint-ppds
+foomatic-db-gutenprint-ppds
 clang
-cups
 dunst
 dnsmasq
 ffmpeg
-fish
 go
 gvfs-afc
+gvfs
 ifuse
 iftop
 iotop
@@ -78,7 +72,6 @@ ripgrep
 ruby
 rust
 syncthing
-starship
 tlp
 usbmuxd
 usbutils
@@ -87,7 +80,7 @@ wl-clipboard
 xclip
 xorg
 yarn
-zathura-pdf-mupdf
+zathura-pdf-poppler
 zbar
 zsh-autosuggestions
 zsh-completions
@@ -119,7 +112,6 @@ zathura
 )
 other=(
 adw-gtk-theme
-adwaita-icon-theme
 noto-fonts-emoji
 noto-fonts
 ttf-dejavu 
@@ -130,9 +122,6 @@ ttf-liberation
 ttf-nerd-fonts-symbols 
 ttf-nerd-fonts-symbols-common 
 ttf-sazanami 
-papirus-icon-theme
-kvantum
-kvantum-qt5
 )
 yay_stuff=(
 cava

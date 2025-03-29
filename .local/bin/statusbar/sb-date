@@ -9,5 +9,5 @@ case $BLOCK_BUTTON in
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-date=$(date '+ %a %H:%M')
-echo "$date"
+date=$(date '+ %A, %H:%M')
+printf "%s\n" "$date"
