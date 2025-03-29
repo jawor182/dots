@@ -114,5 +114,6 @@ alias CS="cd ~/Coding/szkola"
 bindkey -s '^S' 'fzf -e\n'
 bindkey -s '^F' 'yazi \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
+bindkey -s '^X' 'source ~/dots/.xprofile \n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
