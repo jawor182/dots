@@ -20,9 +20,8 @@ xset r rate 300 50
 setxkbmap -layout pl
 xrdb -merge ~/.Xresources
 
-# Screen and nitrogen
-screen &
-nitrogen --restore
+# Screen 
+screen 
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
