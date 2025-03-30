@@ -16,7 +16,7 @@ systemctl --user start xdg-desktop-portal-gtk
 systemctl --user start syncthing
 
 # Xorg
-xset r rate 500 75
+xset r rate 300 60
 setxkbmap -layout pl
 xrdb -merge ~/.Xresources
 
