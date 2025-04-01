@@ -36,6 +36,8 @@ system-config-printer
 gutenprint
 foomatic-db-gutenprint-ppds
 clang
+qt5
+qt6
 dunst
 dnsmasq
 ffmpeg
@@ -129,6 +131,10 @@ brave-bin
 bluetuith-bin
 gruvbox-gtk-theme-git
 gruvbox-plus-icon-theme
+selectdefaultapplication-git
+qt5gtk2
+qt6gtk2
+qt5-styleplugins
 )
 install_packages() {
     local category=$1

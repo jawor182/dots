@@ -1,5 +1,5 @@
 Xft.dpi: 120
-*.alpha: 0.9
+*.alpha: 0.8
 *.font: JetBrainsMonoNerdFont:size=16
 
 /* !! gruvbox: */
