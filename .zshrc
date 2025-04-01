@@ -107,6 +107,7 @@ alias nst="cd ~/new-suckless/st"
 alias nsb="cd ~/new-suckless/blocks"
 alias C="cd ~/Coding"
 alias CS="cd ~/Coding/szkola"
+alias ipa="ip a"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
