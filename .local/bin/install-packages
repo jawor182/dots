@@ -20,8 +20,24 @@ virt-viewer
 spotify-launcher
 thunar
 zsh
+waybar
+hyprland
+sddm
+foot
 )
 libs=(
+hyprpicker
+hyprcursor
+hyprgraphics
+hypridle
+hyprland-protocols
+hyprland-qt-support
+hyprland-qtutils
+hyprlang
+hyprpolkitagent
+xdg-desktop-portal-hyprland 
+brightnessctl
+uwsm
 dash
 ueberzugpp
 xdg-desktop-portal-gtk
@@ -117,6 +133,7 @@ adw-gtk-theme
 noto-fonts-emoji
 noto-fonts
 ttf-dejavu 
+inter-font
 ttf-font-awesome 
 ttf-hanazono 
 ttf-jetbrains-mono-nerd 
@@ -135,6 +152,7 @@ selectdefaultapplication-git
 qt5gtk2
 qt6gtk2
 qt5-styleplugins
+waypaper
 )
 install_packages() {
     local category=$1

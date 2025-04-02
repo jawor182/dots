@@ -7,3 +7,5 @@
 [user]
 	name = jawor182
 	email = kubajaworski59@outlook.com
+[init]
+	defaultBranch = main
