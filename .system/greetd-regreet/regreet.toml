@@ -1,0 +1,25 @@
+[background]
+path = "/etc/greetd/069.png" 
+fit = "Fill" 
+
+[GTK]
+application_prefer_dark_theme = true
+theme_name = "Gruvbox-Dark" # Example GTK theme
+icon_theme_name = "Adwaita" # Example icon theme
+font_name = "Inter 16" # Example font
+
+[widget.clock]
+# strftime format argument
+# See https://docs.rs/jiff/0.1.14/jiff/fmt/strtime/index.html#conversion-specifications
+format = "%A %H:%M:%S"
+
+# How often to update the text
+resolution = "500ms"
+
+# Override system timezone (IANA Time Zone Database name, aka /etc/zoneinfo path)
+# Remove to use the system time zone.
+timezone = "Europe/Warsaw"
+
+# Ask GTK to make the label at least this wide. This helps keeps the parent element layout and width consistent.
+# Experiment with different widths, the interpretation of this value is entirely up to GTK.
+label_width = 250

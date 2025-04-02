@@ -4,5 +4,6 @@ export EDITOR="nvim"
 # export TERMINAL="st"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec startx
+    exec uwsm start Hyrpland
+    # exec dwm
 fi
