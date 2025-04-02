@@ -28,6 +28,8 @@ sddm
 foot
 nwg-look
 rofi-wayland
+greetd
+greetd-regreet
 )
 libs=(
 swaybg

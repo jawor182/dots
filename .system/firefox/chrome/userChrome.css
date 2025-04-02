@@ -1,0 +1,3 @@
+.titlebar-spacer[type="pre-tabs"] { display: none !important; }  
+#tabbrowser-tabs { --tab-label-mask-size: 0 !important; }  
+

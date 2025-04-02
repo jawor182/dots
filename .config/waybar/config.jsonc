@@ -26,7 +26,7 @@
         // "sway/language",
         "battery",
         // "battery#bat2",
-        "tray",
+        "tray"
     ],
     // Modules configuration
     // "sway/workspaces": {
