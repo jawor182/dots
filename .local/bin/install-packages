@@ -2,6 +2,8 @@
 
 apps=(
 calibre
+gtklock
+tmux
 discord
 firefox
 flameshot
@@ -24,8 +26,11 @@ waybar
 hyprland
 sddm
 foot
+nwg-look
+rofi-wayland
 )
 libs=(
+swaybg
 hyprpicker
 hyprcursor
 hyprgraphics
@@ -127,6 +132,7 @@ stow
 tldr
 yazi
 zathura
+wlr-randr
 )
 other=(
 adw-gtk-theme
