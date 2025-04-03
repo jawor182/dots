@@ -98,12 +98,13 @@
         "tooltip":false
     },
      "bluetooth":{
-        "format":"󰂯",
+        "format":"",
         "on-click":"$TERMINAL -e bluetuith"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
+        "tooltip": false,
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "󰖁 {icon} {format_source}",
         "format-muted": "󰖁 {format_source}",
