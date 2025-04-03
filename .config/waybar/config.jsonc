@@ -15,6 +15,7 @@
         "backlight",
         "battery",
         "pulseaudio",
+        "bluetooth",
         "network",
         "tray"
     ],
@@ -95,6 +96,10 @@
         "format-ethernet": " ",
         "format-disconnected": "Disconnected ⚠",
         "tooltip":false
+    },
+     "bluetooth":{
+        "format":"󰂯",
+        "on-click":"$TERMINAL -e bluetuith"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

@@ -19,7 +19,7 @@ window#waybar {
     transition-property: background-color;
     border-radius:5px;
 }
-#cpu, #pulseaudio,#memory,#backlight,#battery,#network,#tray,#clock {
+#cpu, #pulseaudio,#memory,#backlight,#battery,#network,#tray,#clock,#bluetooth {
     padding:5px;
 }
 #cpu{
@@ -34,7 +34,7 @@ window#waybar {
 #backlight{
     color: @aqua;
 }
-#network{
+#network,#bluetooth{
     color: @blue;
 }
 #workspaces button {
