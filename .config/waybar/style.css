@@ -12,17 +12,13 @@
     font-family: JetBrainsMonoNerdFont,otf-font-awesome,monospace;
     font-size: 16px;
 }
-
 window#waybar {
     background-color: @bg;
     border-bottom: 0px solid @orange;
     color: @fg;
     transition-property: background-color;
-    transition-duration: .3s;
+    border-radius:5px;
 }
-
-
-
 #cpu, #pulseaudio,#memory,#backlight,#battery,#network,#tray,#clock {
     padding:5px;
 }
