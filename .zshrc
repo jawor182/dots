@@ -110,6 +110,8 @@ alias nsb="cd ~/new-suckless/blocks"
 alias C="cd ~/Coding"
 alias CS="cd ~/Coding/szkola"
 alias ipa="ip a"
+alias O="cd ~/Obsidian"
+alias no="cd ~/Obsidian && $EDITOR ."
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -123,5 +125,6 @@ bindkey -s '^S' 'fzf -e\n'
 bindkey -s '^F' 'yazi \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
+bindkey -s '^N' 'cd ~/Obsidian && $EDITOR .\n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
