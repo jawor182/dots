@@ -14,10 +14,9 @@
 }
 window#waybar {
     background-color: @bg;
-    border-bottom: 0px solid @orange;
     color: @fg;
     transition-property: background-color;
-    border-radius:5px;
+    border-radius:0px;
 }
 #cpu, #pulseaudio,#memory,#backlight,#battery,#network,#tray,#clock,#bluetooth {
     padding:5px;
@@ -44,11 +43,11 @@ window#waybar {
 }
 #workspaces button.active{
     background-color: @orange;
-    border-radius:5px;
+    border-radius:0px;
 }
 #workspaces button:hover {
     background: @purple;
-    border-radius:5px;
+    border-radius:0px;
 }
 
 #workspaces button.focused {
@@ -57,6 +56,6 @@ window#waybar {
 
 #workspaces button.urgent {
     background-color: @red;
-    border-radius:5px;
+    border-radius:0px;
 }
 
