@@ -39,6 +39,9 @@ window#waybar {
 #network{
     padding-right: 10px;
 }
+#battery{
+    color:@green;
+}
 #workspaces button {
     padding: 5px;
     color: @fg;
