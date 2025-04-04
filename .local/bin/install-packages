@@ -165,6 +165,7 @@ qt6gtk2
 qt5-styleplugins
 waypaper
 pipes.sh
+ventoy-bin
 )
 install_packages() {
     local category=$1

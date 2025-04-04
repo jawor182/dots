@@ -23,7 +23,7 @@
         "format":"{}"
     },
     "tray": {
-        "icon-size": 24,
+        "icon-size": 18,
         "spacing": 10
     },
     "clock": {
