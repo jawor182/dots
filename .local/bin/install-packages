@@ -137,6 +137,7 @@ tldr
 yazi
 zathura
 wlr-randr
+cmatrix
 )
 other=(
 adw-gtk-theme
@@ -163,6 +164,7 @@ qt5gtk2
 qt6gtk2
 qt5-styleplugins
 waypaper
+pipes.sh
 )
 install_packages() {
     local category=$1
