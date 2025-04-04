@@ -28,7 +28,7 @@
     },
     "clock": {
         "format" : "{:%a, %H:%M}",
-        "format-alt": "{:%A, %d-%m-%Y}",
+        "format-alt": "{:%A, %d.%m.%Y}",
         "tooltip":false
     },
     "cpu": {
@@ -95,7 +95,8 @@
         "format-wifi": "",
         "format-ethernet": " ",
         "format-disconnected": "Disconnected ⚠",
-        "tooltip":false
+        "tooltip":false,
+        "on-click":"$TERMINAL -e nmtui"
     },
      "bluetooth":{
         "format":"",
