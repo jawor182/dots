@@ -112,6 +112,8 @@ alias CS="cd ~/Coding/szkola"
 alias ipa="ip a"
 alias O="cd ~/Obsidian"
 alias no="cd ~/Obsidian && $EDITOR ."
+alias cm="cmatrix"
+alias pp="pipes.sh"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
