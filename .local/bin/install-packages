@@ -116,6 +116,8 @@ xsecurelock
 bluez-utils
 )
 cli=(
+wikiman
+perl-image-exiftool
 bat
 btop
 inxi
