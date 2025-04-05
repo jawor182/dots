@@ -1,10 +1,3 @@
-[Added Associations]
-text/plain=nvim.desktop;
-x-scheme-handler/mailto=userapp-Thunderbird-B7AG32.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-B7AG32.desktop;
-application/x-zerosize=Alacritty.desktop;nvim.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=calibre-ebook-viewer.desktop;
-
 [Default Applications]
 text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
@@ -12,9 +5,9 @@ x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
 text/plain=nvim.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-B7AG32.desktop
-message/rfc822=userapp-Thunderbird-B7AG32.desktop
-x-scheme-handler/mid=userapp-Thunderbird-B7AG32.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-NOLY42.desktop
+message/rfc822=userapp-Thunderbird-NOLY42.desktop
+x-scheme-handler/mid=userapp-Thunderbird-NOLY42.desktop
 application/x-zerosize=nvim.desktop
 application/xml=firefox.desktop
 application/pdf=org.pwmt.zathura.desktop

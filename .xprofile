@@ -22,7 +22,7 @@ setxkbmap -layout pl
 xrdb -merge ~/.Xresources
 
 # Screen 
-# screen 
+screen 
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
