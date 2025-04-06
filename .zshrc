@@ -18,7 +18,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)# Include hidden files.
+_comp_options+=(globdots)
 autoload -U zsh-autosuggestions
 # zmodload zsh/autosuggestions
 # vi mode
@@ -93,7 +93,7 @@ alias lshw="sudo lshw"
 alias zb="zbarimg"
 alias zshupdate="source ~/dots/.zshrc"
 alias ff="fastfetch"
-alias f="yazi"
+alias f="$FILES"
 alias restow="stow -R ."
 alias ta="tmux attach"
 alias tn="tmux new"
@@ -125,9 +125,10 @@ alias pp="pipes.sh"
 
 # Custom keybinds
 bindkey -s '^S' 'fzf -e\n'
-bindkey -s '^F' 'yazi \n'
+bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
-bindkey -s '^N' 'cd ~/Obsidian && $EDITOR .\n'
+bindkey -s '^N' '$EDITOR .\n'
+bindkey -s '^O' 'cd ~/Obsidian && $EDITOR .\n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
