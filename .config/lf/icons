@@ -5,10 +5,10 @@ ow	󰈔
 ln	󰌹
 or	󰈔
 ex	󰗝
-*.txt	󰊄
-*.mom	󰊄
-*.me	󰊄
-*.ms	󰊄
+*.txt	
+*.mom	
+*.me	
+*.ms	
 *.avif	󰋩
 *.png	󰋩
 *.webp	󰋩
@@ -31,6 +31,7 @@ ex	󰗝
 *.epub	󰂺
 *.csv	󰈛
 *.xlsx	󰈛
+*.docx  
 *.tex	󰈙
 *.md	󰍔
 *.r	    󰟔
@@ -104,3 +105,4 @@ ex	󰗝
 *.env   
 *.cfg   
 *.lock  󰌾
+*.ics   󰃵
