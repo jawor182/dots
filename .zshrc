@@ -56,7 +56,7 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
-export MANPAGER="$EDITOR +Man!"
+export MANPAGER="bat"
 
 # Variables
 alias v="vim"
@@ -115,6 +115,9 @@ alias O="cd ~/Obsidian"
 alias no="cd ~/Obsidian && $EDITOR ."
 alias cm="cmatrix"
 alias pp="pipes.sh"
+alias awi="wikiman -s arch"
+alias wi="wikiman"
+alias lf="lfub"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -129,6 +132,7 @@ bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
 bindkey -s '^N' '$EDITOR .\n'
+bindkey -s '^E' '$EDITOR $(fzf -e)\n'
 bindkey -s '^O' 'cd ~/Obsidian && $EDITOR .\n'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

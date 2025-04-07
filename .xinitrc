@@ -5,7 +5,7 @@
 # Apps autostart
 dwmblocks &
 picom -b &
-nitrogen --restore &
+# nitrogen --restore &
 dunst &
 
 dbus-update-activation-environment --all
