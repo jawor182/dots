@@ -21,6 +21,7 @@ virt-viewer
 spotify-launcher
 thunar
 zsh
+nm-connection-editor
 greetd
 greetd-regreet
 )
@@ -95,6 +96,7 @@ perl-file-mimeinfo
 cli=(
 wikiman
 perl-image-exiftool
+perl-rename
 bat
 btop
 inxi
