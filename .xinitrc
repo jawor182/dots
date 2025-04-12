@@ -7,7 +7,7 @@ dwmblocks &
 picom -b &
 setbg &
 dunst &
-nitrogen --restore &
+# nitrogen --restore &
 lxsession &
 
 dbus-update-activation-environment --all
