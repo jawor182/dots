@@ -5,9 +5,8 @@
 # Apps autostart
 dwmblocks &
 picom -b &
-setbg &
+setbg ~/walls &
 dunst &
-# nitrogen --restore &
 lxsession &
 
 dbus-update-activation-environment --all
