@@ -7,7 +7,7 @@ discord
 firefox
 flameshot
 keepassxc
-lxappearance
+lxappearance-gtk3
 neovim
 nitrogen
 qt5ct
@@ -127,16 +127,14 @@ ttf-liberation
 ttf-nerd-fonts-symbols 
 ttf-nerd-fonts-symbols-common 
 ttf-sazanami 
+adw-gtk-theme
 )
 yay_stuff=(
 cava
 brave-bin
 bluetuith-bin
 selectdefaultapplication-git
-gtk-theme-arc-gruvbox-git
-qt5gtk2
-qt6gtk2
-qt5-styleplugins
+adwaita-qt5
 waypaper
 pipes.sh
 ventoy-bin
