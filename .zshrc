@@ -91,7 +91,7 @@ alias lshw="sudo lshw"
 alias zb="zbarimg"
 alias zshupdate="source ~/dots/.zshrc"
 alias ff="fastfetch"
-alias f="$FILES"
+# alias f="$FILES"
 alias restow="stow -R ."
 alias ta="tmux attach"
 alias tn="tmux new"
@@ -115,7 +115,7 @@ alias cm="cmatrix"
 alias pp="pipes.sh"
 alias awi="wikiman -s arch"
 alias wi="wikiman"
-alias lf="lfub"
+# alias lf="lfub"
 
 # export FZF_DEFAULT_OPTS=" \
 # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -126,11 +126,12 @@ alias lf="lfub"
 
 # Custom keybinds
 bindkey -s '^S' 'fzf -e\n'
-bindkey -s '^F' '$FILES \n'
+# bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
 bindkey -s '^N' '$EDITOR .\n'
 bindkey -s '^E' '$EDITOR $(fzf -e)\n'
 bindkey -s '^O' 'cd ~/Obsidian && $EDITOR .\n'
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

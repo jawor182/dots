@@ -25,5 +25,5 @@ Xft.dpi: 120
 /* !! nsxiv */
 Nsxiv.window.background:#000000
 Nsxiv.window.foreground:#ffffff
-Nsxiv.bar.font: JetBrainsMonoNerdFont:size=16
+! Nsxiv.bar.font: JetBrainsMonoNerdFont:size=16
 
