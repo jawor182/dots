@@ -5,6 +5,7 @@ x-scheme-handler/https=librewolf.desktop
 x-scheme-handler/about=librewolf.desktop
 x-scheme-handler/unknown=librewolf.desktop
 text/plain=nvim.desktop
+text/javascript=nvim.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-NOLY42.desktop
 message/rfc822=userapp-Thunderbird-NOLY42.desktop
 x-scheme-handler/mid=userapp-Thunderbird-NOLY42.desktop
