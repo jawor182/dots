@@ -95,6 +95,7 @@ perl-file-mimeinfo
 )
 cli=(
 wikiman
+tree
 perl-image-exiftool
 perl-rename
 bat
