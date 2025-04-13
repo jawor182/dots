@@ -142,6 +142,7 @@ adwaita-qt5
 waypaper
 pipes.sh
 ventoy-bin
+tabbed
 )
 install_packages() {
     local category=$1
