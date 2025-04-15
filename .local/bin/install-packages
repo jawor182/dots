@@ -11,6 +11,8 @@ lxappearance-gtk3
 lxsession
 neovim
 # nitrogen
+xwallpaper
+xdotool
 qt5ct
 obsidian
 solaar
@@ -142,7 +144,7 @@ adwaita-qt5
 waypaper
 pipes.sh
 ventoy-bin
-tabbed
+# tabbed
 )
 install_packages() {
     local category=$1
