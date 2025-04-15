@@ -1,16 +1,16 @@
 [Default Applications]
-text/html=librewolf.desktop
-x-scheme-handler/http=librewolf.desktop
-x-scheme-handler/https=librewolf.desktop
-x-scheme-handler/about=librewolf.desktop
-x-scheme-handler/unknown=librewolf.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 text/plain=nvim.desktop
 text/javascript=nvim.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-NOLY42.desktop
 message/rfc822=userapp-Thunderbird-NOLY42.desktop
 x-scheme-handler/mid=userapp-Thunderbird-NOLY42.desktop
 application/x-zerosize=nvim.desktop
-application/xml=librewolf.desktop
+application/xml=brave-browser.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/epub+zip=calibre-ebook-viewer.desktop
 video/x-flv=mpv.desktop
