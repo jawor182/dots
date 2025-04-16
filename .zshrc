@@ -117,8 +117,6 @@ alias nsb="cd ~/new-suckless/blocks"
 alias C="cd ~/Coding"
 alias CS="cd ~/Coding/szkola"
 alias ipa="ip a"
-alias O="cd ~/Obsidian"
-alias no="cd ~/Obsidian && $EDITOR ."
 alias cm="cmatrix"
 alias pp="pipes.sh"
 alias awi="wikiman -s arch"
@@ -131,7 +129,6 @@ bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
 bindkey -s '^N' '$EDITOR .\n'
 bindkey -s '^E' '$EDITOR $(fzf -e)\n'
-bindkey -s '^O' 'cd ~/Obsidian && $EDITOR .\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
