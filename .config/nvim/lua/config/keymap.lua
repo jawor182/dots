@@ -1,7 +1,7 @@
 
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>tr", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>tr", vim.cmd.Yazi)
 vim.keymap.set("n",'K', vim.lsp.buf.hover, {})
 
 local harpoon = require("harpoon")
