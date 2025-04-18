@@ -86,7 +86,7 @@ unzip
 xclip
 xorg
 yarn
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zbar
 zsh-autosuggestions
 zsh-completions
