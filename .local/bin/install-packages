@@ -1,6 +1,7 @@
 #!/bin/bash
 
 apps=(
+alacritty
 calibre
 tmux
 discord

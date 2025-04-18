@@ -1,0 +1,16 @@
+[general]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+[font]
+size = 16
+normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
+[window]
+# opacity = 0.8
+[keyboard]
+bindings = [
+    {key = "c", mods = "Alt", action = "copy"},
+    {key = "v", mods = "Alt", action = "paste"},
+    {key = "j", mods = "Alt", action = "ScrollLineDown"},
+    {key = "k", mods = "Alt", action = "ScrollLineUp"}
+]
+[env]
+TERM = "xterm-256color"
