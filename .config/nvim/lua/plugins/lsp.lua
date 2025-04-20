@@ -25,7 +25,15 @@ return {
         )
 
         require("fidget").setup({})
-        require("mason").setup()
+        require("mason").setup({
+            ui = {
+                icons = {
+                    package_installed = " ",
+                    package_pending = " ",
+                    package_uninstalled = " "
+                }
+            }
+        })
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
@@ -84,13 +92,13 @@ return {
                         filetypes = { "php" },
                         root_dir = function()
                             return vim.loop.cwd()
-                        end,                                 -- Force current directory as root
+                        end,                                                      -- Force current directory as root
                         init_options = {
                             storagePath = vim.fn.expand("~/.cache/intelephense"), -- Optional
                         },
                     })
                 end,
-               ["emmet_language_server"] = function()
+                ["emmet_language_server"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.emmet_language_server.setup({
                         capabilities = capabilities,

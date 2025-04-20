@@ -137,6 +137,7 @@ bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'source ~/dots/.xprofile \n'
 bindkey -s '^N' '$EDITOR .\n'
 bindkey -s '^E' '$EDITOR $(fzf -e)\n'
+bindkey -s '^B' 'xrdb -m ~/.Xresources \n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
