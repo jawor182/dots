@@ -1,0 +1,124 @@
+// -*- mode: jsonc -*-
+{
+    "height": 36, 
+    "spacing": 4, 
+    "margin": 4,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "cpu",
+        "memory",
+        "backlight",
+        "battery",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+    ],
+    "hyprland/workspaces":{
+        "format":"{}"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format" : "{:%a, %H:%M}",
+        "format-alt": "{:%A, %d.%m.%Y}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip-format":"{avg_frequency}"
+    },
+    "memory": {
+        "format": "{}% ",
+        "on-click": "$TERMINAL -e htop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            "good": 65,
+            "warning": 30,
+            "critical": 10
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% 󱧥",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            // "",
+            // "",
+            // "",
+            // "",
+            // ""
+            "󰂎",
+            "󰁼",
+            "󰁽",
+            "󰂀",
+            "󰁹",
+
+        ]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": " ",
+        "format-disconnected": "⚠",
+        "tooltip":false,
+        "on-click":"$TERMINAL -e speedtest",
+        "on-click-right":"$TERMINAL -e nm-connection-editor"
+    },
+     "bluetooth":{
+        "format":"",
+        "on-click":"$TERMINAL -e bluetuith"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "tooltip": false,
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "󰖁 {icon}",
+        "format-muted": "󰖁",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "$TERMINAL -e pulsemixer"
+    }
+}

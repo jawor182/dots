@@ -2,6 +2,7 @@
 
 apps=(
 calibre
+gtklock
 tmux
 discord
 firefox
@@ -10,7 +11,6 @@ keepassxc
 lxappearance-gtk3
 lxsession
 neovim
-# nitrogen
 xwallpaper
 xdotool
 qt5ct
@@ -26,8 +26,27 @@ zsh
 nm-connection-editor
 greetd
 greetd-regreet
+waybar
+hyprland
+foot
+nwg-look
+rofi-wayland
 )
 libs=(
+swaybg
+hyprpicker
+hyprcursor
+hyprgraphics
+hypridle
+hyprland-protocols
+hyprland-qt-support
+hyprland-qtutils
+hyprlang
+hyprpolkitagent
+xdg-desktop-portal-hyprland 
+brightnessctl
+grim
+slurp
 rclone
 dash
 ueberzugpp
@@ -115,6 +134,7 @@ speedtest-cli
 lshw
 htop
 jq
+uwsm
 neofetch
 pulsemixer
 stow
@@ -134,7 +154,6 @@ ttf-liberation
 ttf-nerd-fonts-symbols 
 ttf-nerd-fonts-symbols-common 
 ttf-sazanami 
-adw-gtk-theme
 gnome-themes-extra
 )
 yay_stuff=(
@@ -146,7 +165,6 @@ adwaita-qt5
 waypaper
 pipes.sh
 ventoy-bin
-# tabbed
 )
 install_packages() {
     local category=$1
