@@ -30,7 +30,7 @@ window#waybar {
     transition-property: background-color;
     border-radius:6px;
 }
-#cpu,#network,#tray,#memory,#backlight,#battery,#clock,#bluetooth {
+#cpu,#network,#memory,#backlight,#battery,#clock,#bluetooth {
     padding:5px;
 }
 #cpu{
