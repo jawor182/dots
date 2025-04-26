@@ -165,7 +165,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
     
     # Custom 
-    # { on = "W", run = "shell --confirm 'swww $1'", desc = "Set wallpaper" },
+    { on = "W", run = "shell --confirm 'setbg $1'", desc = "Set wallpaper" },
 ]
 
 [tasks]

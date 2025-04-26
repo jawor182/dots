@@ -24,6 +24,7 @@ spotify-launcher
 thunar
 zsh
 nm-connection-editor
+nsxiv
 greetd
 greetd-regreet
 waybar
@@ -166,6 +167,8 @@ adwaita-qt5
 waypaper
 pipes.sh
 ventoy-bin
+qt5gtk2
+qt5-styleplugins
 )
 install_packages() {
     local category=$1
