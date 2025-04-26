@@ -12,9 +12,6 @@ return {
         "rafamadriz/friendly-snippets",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
-        -- Add these new dependencies
-        "jose-elias-alvarez/null-ls.nvim",
-        "jay-babu/mason-null-ls.nvim",
     },
 
     config = function()
@@ -33,11 +30,10 @@ return {
                 icons = {
                     package_installed = " ",
                     package_pending = " ",
-                    package_uninstalled = " ",
-                },
-            },
+                    package_uninstalled = " "
+                }
+            }
         })
-
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
@@ -58,85 +54,73 @@ return {
                 "yamlls",
             },
             handlers = {
-                -- ... (keep your existing handlers)
+                function(server_name) -- default handler (optional)
+                    require("lspconfig")[server_name].setup({
+                        capabilities = capabilities,
+                    })
+                end,
+
+                ["lua_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.lua_ls.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            Lua = {
+                                runtime = { version = "Lua 5.1" },
+                                diagnostics = {
+                                    globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
+                                },
+                            },
+                        },
+                    })
+                end,
+                ["ts_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ts_ls.setup({
+                        capabilities = capabilities,
+                    })
+                end,
+                ["gopls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.gopls.setup({
+                        capabilities = capabilities,
+                    })
+                end,
+                ["intelephense"] = function()
+                    require("lspconfig").intelephense.setup({
+                        capabilities = capabilities,
+                        filetypes = { "php" },
+                        root_dir = function()
+                            return vim.loop.cwd()
+                        end,                                                      -- Force current directory as root
+                        init_options = {
+                            storagePath = vim.fn.expand("~/.cache/intelephense"), -- Optional
+                        },
+                    })
+                end,
+                ["emmet_language_server"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.emmet_language_server.setup({
+                        capabilities = capabilities,
+                        filetypes = {
+                            "html",
+                            "css",
+                            "php",
+                            "javascriptreact",
+                            "typescriptreact",
+                            "vue",
+                            "svelte",
+                            "pug",
+                            "eruby",
+                            "less",
+                            "sass",
+                            "scss",
+                        },
+                    })
+                end,
             },
         })
 
-        -- Add mason-null-ls setup for formatters and linters
-        require("mason-null-ls").setup({
-            ensure_installed = {
-                -- Formatters
-                "stylua",
-                "prettier",
-                "black",
-                "isort",
-                "shfmt",
-                "gofumpt",
-                "goimports",
-                "clang-format",
-                "yamlfmt",
-                "sql-formatter",
-                "pyink",
-                "phpcbf",
-                "jq",
-
-                -- Linters
-                "eslint_d",
-                "cpplint",
-                "shellcheck",
-                "hadolint",
-                "markdownlint",
-                "yamllint",
-                "pylint",
-                "golangci-lint",
-                "stylelint",
-                "dotenv-linter",
-                "phpcs",
-            },
-            automatic_installation = true,
-        })
-
-        -- Configure null-ls
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                -- Formatters
-                null_ls.builtins.formatting.stylua,
-                null_ls.builtins.formatting.prettier.with({
-                    filetypes = {
-                        "html",
-                        "markdown",
-                        "css",
-                        "javascript",
-                        "javascriptreact",
-                        "typescript",
-                        "typescriptreact",
-                        "json",
-                        "yaml",
-                        "scss",
-                    },
-                }),
-                null_ls.builtins.formatting.black,
-                null_ls.builtins.formatting.isort,
-                null_ls.builtins.formatting.shfmt,
-                null_ls.builtins.formatting.gofumpt,
-                null_ls.builtins.formatting.goimports,
-                null_ls.builtins.formatting.clang_format,
-                null_ls.builtins.formatting.rustfmt,
-
-                -- Linters
-                null_ls.builtins.diagnostics.eslint_d,
-                null_ls.builtins.diagnostics.shellcheck,
-                null_ls.builtins.diagnostics.hadolint,
-                null_ls.builtins.diagnostics.markdownlint,
-                null_ls.builtins.diagnostics.yamllint,
-                null_ls.builtins.diagnostics.pylint,
-                null_ls.builtins.diagnostics.golangci_lint,
-                null_ls.builtins.diagnostics.stylelint,
-            },
-        })
-
-        -- ... (keep your existing cmp and luasnip config)
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
         cmp.setup.filetype({ "sql" }, {
             sources = {
@@ -147,7 +131,7 @@ return {
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    require("luasnip").lsp_expand(args.body)
+                    require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
                 end,
             },
             mapping = cmp.mapping.preset.insert({
@@ -161,13 +145,14 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
-                { name = "luasnip" },
+                { name = "luasnip" }, -- For luasnip users.
             }, {
                 { name = "buffer" },
             }),
         })
         require("luasnip.loaders.from_vscode").lazy_load()
         vim.diagnostic.config({
+            -- update_in_insert = true,
             float = {
                 focusable = false,
                 style = "minimal",
@@ -178,6 +163,6 @@ return {
             },
         })
         require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-        require("luasnip").filetype_extend("javascript", { "html" })
+        require('luasnip').filetype_extend("javascript", { "html" })
     end,
 }
