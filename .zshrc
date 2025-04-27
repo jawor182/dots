@@ -20,7 +20,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 autoload -U zsh-autosuggestions
-# zmodload zsh/autosuggestions
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
