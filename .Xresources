@@ -1,5 +1,4 @@
 Xft.dpi: 120
-! *.alpha: 0.8
 *.alpha: 1
 *.font: JetBrainsMonoNerdFont:size=16
 
@@ -24,7 +23,7 @@ Xft.dpi: 120
  *.color257: #ebdbb2 
 */
 /* Catppuccin Mocha*/
-*color0: #45475a
+*color0: #1e1e2e
 *color1: #f38ba8
 *color2: #a6e3a1
 *color3: #f9e2af
@@ -42,8 +41,16 @@ Xft.dpi: 120
 *color15: #a6adc8
 *.color256: #313244 
 *.color257: #cdd6f4
-! /* !! nsxiv */
+
+/* DWM Catppuccin */
+dwm.normbgcolor : #1e1e2e
+dwm.normbordercolor : #585b70
+dwm.normfgcolor : #cdd6f4
+dwm.selbgcolor : #89b4fa
+dwm.selbordercolor : #cba6f7
+dwm.selfgcolor : #181926
+
+/* !! nsxiv */
 Nsxiv.window.background:#000000
 Nsxiv.window.foreground:#ffffff
-! Nsxiv.bar.font: JetBrainsMonoNerdFont:size=16
 
