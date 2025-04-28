@@ -1,9 +1,3 @@
-function ColorMyPencils(color)
-    color = color or "gruvbox"
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
 return {
     {
         "catppuccin/nvim",
@@ -11,19 +5,19 @@ return {
         priority = 1000,
         config = function()
             require("catppuccin").setup({
-                flavor = "mocha", -- latte, frappe, macchiato, mocha
+                flavor = "mocha",
                 background = {
                     dark = "mocha",
                 },
                 transparent_background = false,
-                show_end_of_buffer = false,
+                show_end_of_buffer = true,
                 term_colors = true,
                 dim_inactive = {
                     enabled = false,
                     shade = "dark",
                     percentage = 0.15,
                 },
-                no_italic = true,
+                no_italic = false,
                 no_bold = false,
                 no_underline = false,
                 styles = {
@@ -46,11 +40,11 @@ return {
                 integrations = {
                     cmp = true,
                     gitsigns = true,
-                    nvimtree = true,
+                    nvimtree = false,
                     treesitter = true,
-                    notify = false,
+                    notify = true,
                     mini = {
-                        enabled = false,
+                        enabled = true,
                         indentscope_color = "",
                     },
                 },

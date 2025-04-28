@@ -44,3 +44,8 @@ vim.keymap.set({'n'}, '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n',"<leader>db",":DBUIToggle<CR>")
 
 vim.keymap.set('n','<leader>gf', vim.lsp.buf.format, {})
+
+local wrapping = require("wrapping")
+vim.keymap.set("n", "[ow", wrapping.hard_wrap_mode, { desc = "Hard Wrap Mode" })
+vim.keymap.set("n", "]ow", wrapping.soft_wrap_mode, { desc = "Soft Wrap Mode" })
+vim.keymap.set("n", "yow", wrapping.toggle_wrap_mode, { desc = "Toggle Wrap Mode" })
