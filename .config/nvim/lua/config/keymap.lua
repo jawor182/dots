@@ -3,6 +3,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>tr", vim.cmd.Yazi)
 vim.keymap.set("n",'K', vim.lsp.buf.hover, {})
+vim.keymap.set("n",'<leader>mm',vim.cmd.Mason)
+vim.keymap.set("n",'<leader>ml',vim.cmd.Lazy)
 
 local harpoon = require("harpoon")
 harpoon:setup()
@@ -21,8 +23,8 @@ vim.keymap.set("n", "<leader>8", function() harpoon:list():select(8) end)
 vim.keymap.set("n", "<leader>9", function() harpoon:list():select(9) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+vim.keymap.set("n", "<leader>P", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<leader>N", function() harpoon:list():next() end)
 
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
