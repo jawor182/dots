@@ -92,7 +92,7 @@
         ]
     },
     "network": {
-        "format-wifi": "",
+        "format-wifi": " ",
         "format-ethernet": " ",
         "format-disconnected": "⚠",
         "tooltip":false,
@@ -104,7 +104,6 @@
         "on-click":"$TERMINAL -e bluetuith"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "tooltip": false,
         "format-bluetooth": "{volume}% {icon}",

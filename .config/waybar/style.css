@@ -30,21 +30,20 @@ window#waybar {
     transition-property: background-color;
     border-radius:6px;
 }
-#cpu,#network,#memory,#backlight,#battery,#clock,#bluetooth {
+#cpu,#network,#memory,#backlight,#battery,#clock{
     padding:5px;
+}
+#bluetooth{
+    padding: 1px;
 }
 #cpu{
     color:@red;
 }
-#pulseaudio,#bluetooth{
+#pulseaudio,#network{
     padding-right: 8px;
 }
 #memory{
     color:@purple;
-}
-#network{
-    padding: 0px;
-    padding-right: 15px;
 }
 #pulseaudio{
     color:@yellow;
