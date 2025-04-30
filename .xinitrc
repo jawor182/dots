@@ -5,11 +5,13 @@
 # Apps autostart
 dwmblocks &
 picom -b &
-setbg ~/walls &
+# setbg ~/walls &
+waypaper --random
 dunst &
 lxsession &
 
 dbus-update-activation-environment --all
-while :; do
+# while :; do
 	dbus-launch ssh-agent dwm
-done
+# done
+# dbus-launch awesome

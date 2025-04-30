@@ -4,7 +4,8 @@
     "spacing": 4, 
     "margin": 4,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "river/tags"
     ],
     "modules-center": [
         "clock"
@@ -21,6 +22,9 @@
     ],
     "hyprland/workspaces":{
         "format":"{}"
+    },
+    "river/tags":{
+        "format": {}
     },
     "tray": {
         "icon-size": 18,
