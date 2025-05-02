@@ -51,5 +51,7 @@ Xft.dpi: 120
 *.selfgcolor : #181926
 
 /* !! nsxiv */
-Nsxiv.window.background:#00000
-Nsxiv.window.foreground:#ffffff
+! Nsxiv.window.background:#000000
+! Nsxiv.window.foreground:#ffffff
+! Nsxiv.window.background: #1e1e2e
+! Nsxiv.window.foreground: #cdd6f4
