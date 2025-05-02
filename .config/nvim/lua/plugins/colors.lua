@@ -9,7 +9,7 @@ return {
                 background = {
                     dark = "mocha",
                 },
-                transparent_background = false,
+                transparent_background = true,
                 show_end_of_buffer = true,
                 term_colors = true,
                 dim_inactive = {
@@ -36,15 +36,16 @@ return {
                 },
                 color_overrides = {},
                 custom_highlights = {},
-                default_integrations = true,
+                default_integrations = false,
                 integrations = {
-                    cmp = true,
-                    gitsigns = true,
+                    cmp = false,
+                    gitsigns = false,
                     nvimtree = false,
-                    treesitter = true,
-                    notify = true,
+                    treesitter = false,
+                    notify = false,
+                    lualine = false,
                     mini = {
-                        enabled = true,
+                        enabled = false,
                         indentscope_color = "",
                     },
                 },

@@ -120,7 +120,7 @@ alias cs="cd ~/Coding/szkola"
 alias ipa="ip a"
 alias cm="cmatrix"
 alias pp="pipes.sh"
-alias awi="wikiman -s arch"
+alias wia="wikiman -s arch"
 alias wi="wikiman"
 
 export FZF_DEFAULT_OPTS=" \

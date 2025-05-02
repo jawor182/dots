@@ -13,3 +13,7 @@ vim.opt.conceallevel = 1
 
 vim.opt.termguicolors = true
 
+vim.cmd("highlight Normal guibg=none ctermbg=none")
+vim.cmd("highlight NormalNC guibg=none ctermbg=none")
+vim.cmd("highlight LineNr guibg=none ctermbg=none")
+vim.cmd("highlight SignColumn guibg=none ctermbg=none")
