@@ -1,3 +1,9 @@
+#            _              
+#   _______| |__  _ __ ___ 
+#  |_  / __| '_ \| '__/ __|
+#   / /\__ \ | | | | | (__ 
+#  /___|___/_| |_|_|  \___|
+#  
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -68,12 +74,14 @@ bindkey -M visual '^[[P' vi-delete
 # Variables
 alias v="vim"
 alias n="nvim"
+alias sn="sudo nvim"
 alias b="btop"
 alias y="yay"
 alias t="tmux"
 alias h="htop"
 alias p="sudo pacman"
 alias pS="sudo pacman -S"
+alias pQ="sudo pacman -Q"
 alias pSS="sudo pacman -Ss"
 alias pR="sudo pacman -Rus"
 alias yS="yay -S"
@@ -82,7 +90,7 @@ alias yR="yay -R"
 alias yeet="yay -Rus"
 alias update="sudo pacman -Syu && yay -Syu "
 alias dev="npm run dev"
-alias ls="ls --color"
+alias ls="ls --color -hN"
 alias la="ls -la"
 alias ll="ls -l"
 alias rm="rm -rf"

@@ -10,7 +10,7 @@ return {
             -- csxy - change surroundings from x to y
             -- dsx - remove x surroundings
             -- with t the same stuff work in html
-            -- ysfw - wrap with function
+            -- yswf - wrap with function
             -- csf - change func name
             -- dsf - delete func name
         })

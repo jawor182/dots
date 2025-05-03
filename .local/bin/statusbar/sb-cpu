@@ -1,0 +1,5 @@
+#!/bin/sh
+
+temp=$(sensors | awk '/^Tctl:/ {print $2}' | sed 's/+//')
+
+printf "%s\n" "$temp"
