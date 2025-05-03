@@ -176,6 +176,7 @@ pipes.sh
 ventoy-bin
 qt5gtk2
 qt5-styleplugins
+betterlockscreen
 )
 install_packages() {
     local category=$1
