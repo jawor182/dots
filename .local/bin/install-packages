@@ -165,7 +165,8 @@ cava
 brave-bin
 bluetuith-bin
 selectdefaultapplication-git
-adwaita-qt5
+adwaita-qt5-git
+adwaita-qt6-git
 waypaper
 pipes.sh
 ventoy-bin
