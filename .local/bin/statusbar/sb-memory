@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mem=$(free -h --giga | awk '/^Mem:/ {print $3 "/" $2}')
+
+printf "%s\n" "$mem"
