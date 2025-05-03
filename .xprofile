@@ -3,7 +3,7 @@
 # Env
 export TERMINAL=st
 export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_STYLE_OVERRIDE=kvantum
+# export QT_STYLE_OVERRIDE=kvantum
 export XDG_CURRENT_DESKTOP=DWM
 export XDG_SESSION_TYPE=x11
 export XDG_CONFIG_HOME="$HOME/.config"

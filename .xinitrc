@@ -5,8 +5,8 @@
 # Apps autostart
 dwmblocks &
 picom -b &
-waypaper --random
-flameshot & 
+waypaper --random &
+# flameshot & 
 dunst &
 lxsession &
 
