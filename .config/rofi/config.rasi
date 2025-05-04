@@ -1,4 +1,12 @@
 @import "catppuccin-mocha"
+@theme "catppuccin-mocha"
+
+configuration {
+    font: "JetBrainsMonoNerdFont 16";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    combi-modes: [ window, drun, run, dmenu ];
+}
 
 * {
   selected-active-foreground:  @background;
