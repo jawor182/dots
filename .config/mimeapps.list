@@ -1,17 +1,15 @@
 [Default Applications]
-text/html=floorp.desktop
-x-scheme-handler/http=floorp.desktop
-x-scheme-handler/https=floorp.desktop
-x-scheme-handler/about=floorp.desktop
-x-scheme-handler/unknown=floorp.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 text/plain=nvim.desktop
 text/javascript=nvim.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-6ZR252.desktop
 message/rfc822=userapp-Thunderbird-6ZR252.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6ZR252.desktop
 application/x-zerosize=nvim.desktop
-application/xml=floorp.desktop
-application/pdf=org.pwmt.zathura.desktop
 application/epub=org.pwmt.zathura.desktop
 application/epub+zip=org.pwmt.zathura.desktop
 video/x-flv=mpv.desktop
@@ -70,3 +68,4 @@ image/x-portable-pixmap=nsxiv.desktop
 image/svg+xml=nsxiv.desktop
 image/x-portable-anymap=nsxiv.desktop
 application/postscript=nsxiv.desktop
+application/xhtml+xml=brave-browser.desktop
