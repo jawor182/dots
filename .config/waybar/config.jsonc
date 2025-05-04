@@ -23,8 +23,8 @@
         "format":"{}"
     },
     "tray": {
-        "icon-size": 18,
-        "spacing": 10
+        "icon-size": 24,
+        "spacing": 6
     },
     "clock": {
         "format" : "{:%a, %H:%M}",
@@ -108,7 +108,7 @@
         "tooltip": false,
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": "{icon} 󰖁",
-        "format-muted": "󰖁",
+        "format-muted": "",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -118,6 +118,7 @@
                 ""
             ]
         },
-        "on-click": "$TERMINAL -e pulsemixer"
+        "on-click": "$TERMINAL -e pulsemixer",
+        "on-click-middle" : "wpctl set-mute @DEFAULT_SINK@ toggle"
     }
 }

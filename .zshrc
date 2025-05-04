@@ -152,3 +152,14 @@ bindkey -s '^B' 'xrdb -m ~/.Xresources \n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+function precmd {
+    if ! builtin zle; then
+        print -n "\e]133;D\e\\"
+    fi
+}
+
+function preexec {
+    print -n "\e]133;C\e\\"
+}
+
