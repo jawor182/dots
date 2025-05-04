@@ -6,7 +6,6 @@
 dwmblocks &
 picom -b &
 waypaper --random &
-flameshot & 
 dunst &
 lxsession &
 

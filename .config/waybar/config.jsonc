@@ -5,7 +5,6 @@
     "margin": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "river/tags"
     ],
     "modules-center": [
         "clock"
@@ -18,13 +17,10 @@
         "battery",
         "pulseaudio",
         "bluetooth",
-        "network",
+        "network"
     ],
     "hyprland/workspaces":{
         "format":"{}"
-    },
-    "river/tags":{
-        "format": {}
     },
     "tray": {
         "icon-size": 18,
@@ -36,11 +32,11 @@
         "tooltip": false
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip-format":"{avg_frequency}"
     },
     "memory": {
-        "format": "{}% ",
+        "format": " {}%",
         "on-click": "$TERMINAL -e htop"
     },
     "temperature": {
@@ -108,10 +104,10 @@
         "on-click":"$TERMINAL -e bluetuith"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
         "tooltip": false,
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": "󰖁 {icon}",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "{icon} 󰖁",
         "format-muted": "󰖁",
         "format-source": "{volume}% ",
         "format-source-muted": "",
