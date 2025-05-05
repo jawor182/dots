@@ -1,0 +1,9 @@
+#!/bin/sh
+
+img="$(date '+%d:%m:%Y-%H:%M:%S').png"
+
+case "$1" in
+"save") import "$HOME/dox/pix/$img" && notify-send "Saved $img" ;;
+"copy") import clipboard:- && notify-send "Copied to clipboard";;
+*) ;;
+esac

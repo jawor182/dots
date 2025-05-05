@@ -22,5 +22,5 @@ case $BUTTON in
     1) notify-send "Battery stuff" ;;
 esac
 for battery in /sys/class/power_supply/BAT?*; do
-    echo "$(cat $battery/status 2>&1)";
+    printf "%s\n" "$(cat "$battery"/status 2>&1)";
 done
