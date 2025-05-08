@@ -2,7 +2,7 @@
 @theme "catppuccin-mocha"
 
 configuration {
-    font: "JetBrainsMonoNerdFont 16";
+    font: "JetBrainsMonoNerdFont 14";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     combi-modes: [ window, drun, run, dmenu ];

@@ -1,6 +1,7 @@
 Xft.dpi: 120
 *.alpha: 0.9
 *.font: JetBrainsMonoNerdFont:size=16
+*.font2: NotoColorEmoji:size=14
 
 /* !! gruvbox: */
 ! *.color0: #1d2021 

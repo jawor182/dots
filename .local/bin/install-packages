@@ -37,6 +37,7 @@ rofi-wayland
 )
 libs=(
 swaybg
+swww
 hyprpicker
 hyprcursor
 hyprgraphics

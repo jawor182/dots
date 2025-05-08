@@ -12,7 +12,6 @@
     "modules-right": [
         "tray",
         "cpu",
-        "temperature",
         "memory",
         "backlight",
         "battery",
@@ -37,7 +36,7 @@
         "tooltip-format":"{avg_frequency}"
     },
     "memory": {
-        "format": " {}%",
+        "format": " {}%",
         "on-click": "$TERMINAL -e htop"
     },
     "temperature": {
@@ -79,16 +78,11 @@
         "format-plugged": "{capacity}% 󱧥",
         "format-alt": "{time} {icon}",
         "format-icons": [
-            // "",
-            // "",
-            // "",
-            // "",
-            // ""
-            "󰂎",
-            "󰁼",
-            "󰁽",
-            "󰂀",
-            "󰁹",
+            "",
+            "",
+            "",
+            "",
+            ""
 
         ]
     },
