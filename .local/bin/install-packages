@@ -34,8 +34,12 @@ hyprland
 foot
 nwg-look
 rofi-wayland
+rofi-emoji
+rofi-calc
 )
 libs=(
+arch-wiki-docs
+7zip
 swaybg
 swww
 hyprpicker
@@ -120,6 +124,7 @@ os-prober
 perl-file-mimeinfo
 )
 cli=(
+dysk
 wikiman
 tree
 perl-image-exiftool

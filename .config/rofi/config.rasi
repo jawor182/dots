@@ -5,7 +5,7 @@ configuration {
     font: "JetBrainsMonoNerdFont 14";
     show-icons: true;
     icon-theme: "Papirus-Dark";
-    combi-modes: [ window, drun, run, dmenu ];
+    combi-modes: [ window, drun, run, dmenu, emoji, calc ];
 }
 
 * {
