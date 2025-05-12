@@ -131,10 +131,12 @@ keymap = [
 
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "d" ],       run = "cd ~/dots",        desc = "Go to dots" },
+	{ on = [ "g", "c" ],       run = "cd ~/dots",        desc = "Go to config dir" },
+	{ on = [ "g", "d" ],       run = "cd ~/dox",         desc = "Go to dox dir" },
 	{ on = [ "g", "n" ],       run = "cd ~/dox/notes",   desc = "Go to notes" },
+	{ on = [ "g", "p" ],       run = "cd ~/dox/pix",     desc = "Go to pix" },
 	{ on = [ "g", "w" ],       run = "cd ~/walls",       desc = "Go to walls" },
-	{ on = [ "g", "c" ],       run = "cd ~/Coding",      desc = "Go to coding" },
+	{ on = [ "g", "r" ],       run = "cd ~/Coding",      desc = "Go to coding" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 

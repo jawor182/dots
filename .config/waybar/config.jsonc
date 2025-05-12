@@ -1,10 +1,11 @@
 // -*- mode: jsonc -*-
 {
-    "height": 36, 
-    "spacing": 4, 
+    "height": 36,
+    "spacing": 4,
     "margin": 4,
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -17,27 +18,35 @@
         "battery",
         "pulseaudio",
         "bluetooth",
-        "network"
+        "network",
     ],
-    "hyprland/workspaces":{
-        "format":"{}"
+    "hyprland/workspaces": {
+        "format": "{}",
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            // "(.*) — Mozilla Firefox": "🌎 $1",
+        },
+        "separate-outputs": true,
+        "tooltip":false,
     },
     "tray": {
         "icon-size": 24,
-        "spacing": 6
+        "spacing": 6,
     },
     "clock": {
-        "format" : "{:%a, %H:%M}",
+        "format": "{:%a, %H:%M}",
         "format-alt": "{:%A, %d.%m.%Y}",
-        "tooltip": false
+        "tooltip": false,
     },
     "cpu": {
         "format": " {usage}%",
-        "tooltip-format":"{avg_frequency}"
+        "tooltip-format": "{avg_frequency}",
     },
     "memory": {
         "format": " {}%",
-        "on-click": "$TERMINAL -e htop"
+        "on-click": "$TERMINAL -e htop",
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -49,7 +58,7 @@
             "",
             "",
             ""
-        ]
+        ],
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -64,13 +73,13 @@
             "",
             "",
             ""
-        ]
+        ],
     },
     "battery": {
         "states": {
             "good": 65,
             "warning": 30,
-            "critical": 10
+            "critical": 10,
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
@@ -83,27 +92,26 @@
             "",
             "",
             ""
-
-        ]
+        ],
     },
     "network": {
         "format-wifi": " ",
         "format-ethernet": " ",
         "format-disconnected": "⚠",
-        "tooltip":false,
-        "on-click":"$TERMINAL -e speedtest",
-        "on-click-right":"$TERMINAL -e nm-connection-editor"
+        "tooltip": false,
+        "on-click": "$TERMINAL -e speedtest",
+        "on-click-right": "$TERMINAL -e nm-connection-editor",
     },
-     "bluetooth":{
-        "format":"",
-        "on-click":"$TERMINAL -e bluetuith"
+    "bluetooth": {
+        "format": "",
+        "on-click": "$TERMINAL -e bluetuith",
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": "{icon} 󰖁",
-        "format-muted": "",
+        "format-muted": " ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -111,9 +119,9 @@
                 "",
                 "",
                 ""
-            ]
+            ],
         },
         "on-click": "$TERMINAL -e pulsemixer",
-        "on-click-middle" : "wpctl set-mute @DEFAULT_SINK@ toggle"
-    }
+        "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    },
 }

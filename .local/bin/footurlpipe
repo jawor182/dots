@@ -2,7 +2,7 @@
 
 urls=$(xurls)
 
-[ -z "$urls" ] || selUrl=$(echo "$urls" | rofi -dmenu)
+[ -z "$urls" ] || selUrl=$(echo "$urls" | rofi -dmenu -p "Choose Link")
 
 [ -z "$selUrl" ] && exit 1
 

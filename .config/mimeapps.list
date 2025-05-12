@@ -1,3 +1,4 @@
+
 [Default Applications]
 text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
@@ -10,8 +11,7 @@ x-scheme-handler/mailto=userapp-Thunderbird-6ZR252.desktop
 message/rfc822=userapp-Thunderbird-6ZR252.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6ZR252.desktop
 application/x-zerosize=nvim.desktop
-application/epub=org.pwmt.zathura.desktop
-application/epub+zip=org.pwmt.zathura.desktop
+application/pdf=org.pwmt.zathura.desktop
 video/x-flv=mpv.desktop
 video/x-flic=mpv.desktop
 video/dv=mpv.desktop
@@ -69,3 +69,7 @@ image/svg+xml=imv.desktop
 image/x-portable-anymap=imv.desktop
 application/postscript=imv.desktop
 application/xhtml+xml=firefox.desktop
+application/epub=calibre-ebook-viewer.desktop
+application/epub+zip=calibre-ebook-viewer.desktop
+application/vnd.amazon.mobi8-ebook=calibre-ebook-viewer.desktop
+application/x-mobipocket-ebook=calibre-ebook-viewer.desktop

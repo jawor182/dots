@@ -105,4 +105,7 @@ window#waybar {
     border-top-left-radius:6px;
     border-bottom-left-radius:6px;
 }
-
+#window{
+padding-left: 10px;
+padding: 5px;
+;}

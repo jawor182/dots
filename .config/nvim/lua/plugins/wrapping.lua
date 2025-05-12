@@ -8,9 +8,11 @@ return {
                     "markdown",
                     "text",
                 },
+                create_commands = false,
+                create_keymaps = false,
                 auto_set_mode_heuristically = false,
-                set_nvim_opt_defaults = true,
-                notify_on_switch = true,
+                set_nvim_opt_defaults = false,
+                notify_on_switch = false,
             },
         })
 
