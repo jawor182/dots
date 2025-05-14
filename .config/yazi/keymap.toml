@@ -7,6 +7,10 @@
 on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
+[[manager.prepend_keymap]]
+on   = "A"
+run  = "create --dir"
+desc = "create directory"
 
 [manager]
 
@@ -130,15 +134,17 @@ keymap = [
 	{ on = [ ",", "r" ], run = "sort random --reverse=no",                      desc = "Sort randomly" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "c" ],       run = "cd ~/dots",        desc = "Go to config dir" },
-	{ on = [ "g", "d" ],       run = "cd ~/dox",         desc = "Go to dox dir" },
-	{ on = [ "g", "n" ],       run = "cd ~/dox/notes",   desc = "Go to notes" },
-	{ on = [ "g", "p" ],       run = "cd ~/dox/pix",     desc = "Go to pix" },
-	{ on = [ "g", "w" ],       run = "cd ~/walls",       desc = "Go to walls" },
-	{ on = [ "g", "r" ],       run = "cd ~/Coding",      desc = "Go to coding" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
-	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
+	{ on = [ "g", "h" ],       run = "cd ~",                        desc = "Go home" },
+	{ on = [ "g", "c" ],       run = "cd ~/dots",                   desc = "Go to config dir" },
+	{ on = [ "g", "o" ],       run = "cd ~/dots/.config",           desc = "Go to config dir" },
+	{ on = [ "g", "b" ],       run = "cd ~/dots/.local/bin",        desc = "Go to bins" },
+	{ on = [ "g", "d" ],       run = "cd ~/dox",                    desc = "Go to dox dir" },
+	{ on = [ "g", "n" ],       run = "cd ~/dox/notes",              desc = "Go to notes" },
+	{ on = [ "g", "p" ],       run = "cd ~/dox/pix",                desc = "Go to pix" },
+	{ on = [ "g", "w" ],       run = "cd ~/walls",                  desc = "Go to walls" },
+	{ on = [ "g", "r" ],       run = "cd ~/repos",                  desc = "Go to repos" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive",            desc = "Jump interactively" },
+	{ on = [ "g", "f" ],       run = "follow",                      desc = "Follow hovered symlink" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },

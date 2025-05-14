@@ -71,67 +71,95 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
-# Variables
+# Aliases
+# ─── EDITORS ──────────────────────────────────────────────
 alias v="vim"
 alias n="nvim"
 alias sn="sudo nvim"
-alias b="btop"
-alias y="yay"
-alias t="tmux"
-alias h="htop"
+
+# ─── PACKAGE MANAGEMENT: PACMAN ───────────────────────────
 alias p="sudo pacman"
-alias pS="sudo pacman -S"
 alias pQ="sudo pacman -Q"
-alias pSS="sudo pacman -Ss"
 alias pR="sudo pacman -Rus"
+alias pS="sudo pacman -S"
+alias pSS="sudo pacman -Ss"
+
+# ─── PACKAGE MANAGEMENT: YAY ──────────────────────────────
+alias y="yay"
+alias yR="yay -R"
 alias yS="yay -S"
 alias ySS="yay -Ss"
-alias yR="yay -R"
 alias yeet="yay -Rus"
-alias update="sudo pacman -Syu && yay -Syu "
-alias dev="npm run dev"
-alias ls="ls --color -hN"
-alias la="ls -la"
-alias ll="ls -l"
-alias rm="rm -rf"
+
+# ─── SYSTEM UPDATES ───────────────────────────────────────
+alias update="sudo pacman -Syu && yay -Syu"
+
+# ─── SYSTEM MONITORING & INFO ─────────────────────────────
+alias b="btop"
+alias h="htop"
+alias ff="fastfetch"
+alias grep="grep --color -i"
+alias ipa="ip a"
+alias lshw="sudo lshw"
+alias zb="zbarimg"
+
+# ─── SYSTEM CONTROL ───────────────────────────────────────
+alias cm="cmatrix"
+alias pp="pipes.sh"
+alias smci="sudo make clean install"
 alias SS="sudo systemctl"
 alias SU="systemctl --user"
-alias smci="sudo make clean install"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias gst="git status"
-alias gcm="git commit -m"
-alias gps="git push"
-alias gp="git pull"
-alias gc="git clone"
+
+# ─── GIT WORKFLOW ─────────────────────────────────────────
 alias gad="git add"
-alias lshw="sudo lshw"
-alias grep="grep --color -i"
-alias zb="zbarimg"
-alias zshupdate="source ~/dots/.zshrc"
-alias ff="fastfetch"
-alias f="$FILES"
-alias restow="stow -R ."
-alias ta="tmux attach"
-alias tn="tmux new"
-alias tns="tmux new -s"
-alias d="cd ~/dots"
-alias db="cd ~/dots/.local/bin"
-alias db="cd ~/dots/.local/bin"
-alias dbs="cd ~/dots/.local/bin/statusbar"
-alias dc="cd ~/dots/.config"
+alias gc="git clone"
+alias gcm="git commit -m"
+alias gp="git pull"
+alias gps="git push"
+alias gst="git status"
+
+# ─── NAVIGATION & DOTFILES ────────────────────────────────
+alias rr="cd ~/repos"
+alias c="cd ~/dots"
+alias cf="$EDITOR ~/dots/.config/foot/foot.ini"
+alias ch="$EDITOR ~/dots/.config/hypr/hyprland.conf"
+alias cz="$EDITOR ~/dots/.zshrc"
+alias cb="cd ~/dots/.local/bin"
+alias cbs="cd ~/dots/.local/bin/statusbar"
+alias cc="cd ~/dots/.config"
+alias cn="cd ~/dots/.config/nvim"
+alias cw="cd ~/dots/.config/waybar"
+alias cy="cd ~/dots/.config/yazi"
 alias ns="cd ~/new-suckless"
-alias no="cd ~/dox/notes"
+alias nsb="cd ~/new-suckless/blocks"
 alias nsd="cd ~/new-suckless/dwm"
 alias nsdm="cd ~/new-suckless/dmenu"
 alias nst="cd ~/new-suckless/st"
-alias nsb="cd ~/new-suckless/blocks"
-alias c="cd ~/Coding"
-alias cs="cd ~/Coding/szkola"
-alias ipa="ip a"
-alias cm="cmatrix"
-alias pp="pipes.sh"
-alias wia="wikiman -s arch"
+alias d="cd ~/dox"
+alias dn="cd ~/dox/notes"
+alias dp="cd ~/dox/pix"
+alias ds="cd ~/dox/szkola"
+alias ww="cd ~/walls"
+
+# ─── SHELL & ENVIRONMENT ──────────────────────────────────
+alias la="ls -la"
+alias ll="ls -l"
+alias ls="ls --color"
+alias rm="rm -rf"
+alias restow="stow -R ."
+alias zshupdate="source ~/dots/.zshrc"
+
+# ─── TMUX SESSIONS ────────────────────────────────────────
+alias t="tmux"
+alias ta="tmux attach"
+alias tn="tmux new"
+alias tns="tmux new -s"
+
+# ─── MISCELLANEOUS ────────────────────────────────────────
+alias dev="npm run dev"
 alias wi="wikiman"
+alias wia="wikiman -s arch"
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -146,7 +174,7 @@ bindkey -s '^S' 'fzf -e\n'
 bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'xset r rate 300 60 ; screen \n'
-bindkey -s '^N' '$EDITOR .\n'
+bindkey -s '^N' '$EDITOR\n'
 bindkey -s '^E' '$EDITOR $(fzf -e)\n'
 bindkey -s '^B' 'xrdb -m ~/.Xresources \n'
 

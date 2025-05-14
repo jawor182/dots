@@ -1,5 +1,5 @@
 #!/bin/sh
-tmpfile=$(mktemp /tmp/foot-outpyt-XXXXXX)
+tmpfile=$(mktemp /tmp/foot-output-XXXXXX)
 trap 'rm "$tmpfile"' 0 1 15
 sed -n "w $tmpfile"
 sed -i 's/\x0//g' "$tmpfile"

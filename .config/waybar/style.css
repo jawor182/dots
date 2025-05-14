@@ -108,4 +108,9 @@ window#waybar {
 #window{
 padding-left: 10px;
 padding: 5px;
-;}
+
+}
+tooltip{
+    background-color: @bg;
+    color: @fg;
+}
