@@ -145,7 +145,7 @@ alias ww="cd ~/walls"
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────
 alias la="ls -la"
 alias ll="ls -l"
-alias ls="ls --color"
+alias ls="ls --color -hN"
 alias rm="rm -rf"
 alias restow="stow -R ."
 alias zshupdate="source ~/dots/.zshrc"
