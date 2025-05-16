@@ -9,7 +9,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = false
 
 vim.opt.wrap = false
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 2
+vim.opt_local.conceallevel = 2
 
 vim.opt.termguicolors = true
 
