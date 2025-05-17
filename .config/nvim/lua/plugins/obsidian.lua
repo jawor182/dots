@@ -34,6 +34,7 @@ return {
 		{ "<leader>of", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
 		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search notes" },
 		{ "<leader>ol", "<cmd>ObsidianLinks<CR>", desc = "List links" },
+		{ "<leader>oi", "<cmd>ObsidianLink<CR>", desc = "Insert link" },
 		{ "<leader>op", "<cmd>ObsidianPasteImg<CR>", desc = "Paste image from clipboard" },
 		{ "<leader>or", "<cmd>ObsidianRename<CR>", desc = "Rename note" },
 		{ "<leader>oc", "<cmd>ObsidianToggleCheckbox<CR>", desc = "Toggle checkbox" },
