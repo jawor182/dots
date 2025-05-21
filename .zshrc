@@ -180,3 +180,5 @@ bindkey -s '^B' 'xrdb -m ~/.Xresources \n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="/home/jawor/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/jawor/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
