@@ -179,6 +179,7 @@ ventoy-bin
 qt5gtk2
 qt5-styleplugins
 betterlockscreen
+xurls
 )
 install_packages() {
     local category=$1
