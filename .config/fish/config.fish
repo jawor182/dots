@@ -24,11 +24,12 @@ if status is-interactive
 	    yazi $argv --cwd-file="$tmp"
     	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
     	    builtin cd -- "$cwd"
-          	end
+            commandline -f repaint
+        end
     	rm -f -- "$tmp"
     end
-    set -g fish_prompt_pwd_dir_length 255
-    set -g MANPAGER "nvim +Man!"
+    set -gx fish_prompt_pwd_dir_length 255
+    set -x MANPAGER "nvim +Man!"
     set -Ux FZF_DEFAULT_OPTS "\
     --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
     --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
@@ -45,10 +46,11 @@ if status is-interactive
     bind -M insert ctrl-r "source $XDG_CONFIG_HOME/fish/config.fish"
 
     alias grep "grep --color -i"
-    alias update-grub "sudo grub-mkconifg -o /boot/grub/grub.cfg" 
+    alias update-grub "sudo grub-mkconfig -o /boot/grub/grub.cfg" 
     alias ls "ls --color -hN"
     alias lshw "sudo lshw"
     alias restow "stow -R ."
+    alias rm "rm -rf"
 
     abbr p sudo pacman
     abbr pS sudo pacman -S 
@@ -62,7 +64,7 @@ if status is-interactive
     abbr t tmux
     abbr tn tmux new 
     abbr ta tmux attach  
-    abbr up "sudo pacman -Syu && yay -Syu"
+    abbr update "sudo pacman -Syu && yay -Syu"
     abbr b btop
     abbr h htop
     abbr ff fastfetch
@@ -77,8 +79,8 @@ if status is-interactive
     abbr gp "git pull"
     abbr gps "git push"
     abbr gst "git status"
-    abbr rr "cd $HOME/repos"
-    abbr c "cd $HOME/dots"
+    abbr rr "cd ~/repos"
+    abbr c "cd ~/dots"
     abbr cff "$EDITOR ~/dots/.config/fish/config.fish"
     abbr cfk "$EDITOR ~/dots/.config/kitty/kitty.conf"
     abbr cfh "$EDITOR ~/dots/.config/hypr/hyprland.conf"
