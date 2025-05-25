@@ -51,6 +51,7 @@ if status is-interactive
     alias lshw "sudo lshw"
     alias restow "stow -R ."
     alias rm "rm -rf"
+    alias echo "echo -e"
 
     abbr p sudo pacman
     abbr pS sudo pacman -S 

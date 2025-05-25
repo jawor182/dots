@@ -47,7 +47,7 @@ Xft.dpi: 120
 *.normbgcolor : #1e1e2e
 *.normbordercolor : #585b70
 *.normfgcolor : #cdd6f4
-*.selbgcolor : #89b4fa
+*.selbgcolor : #cba6f7
 *.selbordercolor : #cba6f7
 *.selfgcolor : #181926
 
