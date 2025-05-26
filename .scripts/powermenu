@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+    option=$(printf 'Power Off\nReboot\nSuspend\nLock Screen' | dmenu -c -l 4 -p "What do you want to do?")
+    LOCK="betterlockscreen -l"
+else
+    option=$(printf 'Power Off\nReboot\nSuspend\nLock Screen' | rofi -dmenu -p "What do you want to do?")
+    LOCK="gtklock"
+fi
+
+case $option in
+"Power Off") systemctl poweroff ;;
+"Reboot") systemctl reboot ;;
+"Suspend") systemctl suspend ;;
+"Lock Screen") $LOCK ;;
+*) ;;
+esac

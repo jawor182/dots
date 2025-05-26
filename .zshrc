@@ -174,10 +174,9 @@ export FZF_DEFAULT_OPTS=" \
 bindkey -s '^S' 'fzf -e\n'
 bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
-bindkey -s '^X' 'xset r rate 300 60 ; screen \n'
+bindkey -s '^X' 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources\n'
 bindkey -s '^N' '$EDITOR\n'
 bindkey -s '^E' '$EDITOR $(fzf -e)\n'
-bindkey -s '^B' 'xrdb -m ~/.Xresources \n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

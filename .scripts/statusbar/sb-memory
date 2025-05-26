@@ -3,7 +3,8 @@
 mem=$(free -h --giga | awk '/^Mem:/ {print $3 "/" $2}')
 
 case $BLOCK_BUTTON in
-    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+1) setsid -f "$TERMINAL" -e "htop" ;;
+6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 printf "%s\n" " $mem"

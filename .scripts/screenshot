@@ -1,9 +1,66 @@
 #!/bin/sh
 
-img="$(date '+%d:%m:%Y-%H:%M:%S').png"
+TIMESTAMP="$(date '+%Y-%m-%d-%H-%M-%S')"
+IMG_NAME="${TIMESTAMP}.png"
+SAVE_DIR="$HOME/dox/pix"
+TEMP_FILE="/tmp/screenshot_temp_${TIMESTAMP}.png" # Temporary file to hold the selection
 
-case "$1" in
-"save") import "$HOME/dox/pix/$img" && notify-send "Saved $img" ;;
-"copy") import clipboard:- && notify-send "Copied to clipboard";;
-*) ;;
+mkdir -p "$SAVE_DIR"
+
+import "$TEMP_FILE"
+
+if [ $? -ne 0 ] || [ ! -f "$TEMP_FILE" ]; then
+    notify-send "Screenshot Aborted" "No selection made."
+    exit 1
+fi
+
+if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+    OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | dmenu -c -l 4 -p "What do you want to do?")
+else
+    OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | rofi -dmenu -l 4 -p "What do you want to do?")
+fi
+
+if [ -z "$OPTION" ]; then
+    notify-send "Screenshot Aborted" "Action selection cancelled."
+    rm -f "$TEMP_FILE"
+    exit 0
+fi
+
+case "$OPTION" in
+"Save")
+    mv "$TEMP_FILE" "$SAVE_DIR/$IMG_NAME"
+    if [ $? -eq 0 ]; then
+        notify-send "Screenshot Saved" "Selected area saved to: $SAVE_DIR/$IMG_NAME"
+    else
+        notify-send "Screenshot Error" "Failed to move screenshot to $SAVE_DIR/$IMG_NAME."
+    fi
+    ;;
+"Copy to Clipboard")
+    if command -v xclip >/dev/null 2>&1 && [ "$XDG_SESSION_TYPE" = "x11" ]; then
+        xclip -selection clipboard -target image/png -i "$TEMP_FILE"
+        notify-send "Screenshot Copied" "Selected area copied to clipboard."
+    elif command -v wl-copy >/dev/null 2>&1 && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        wl-copy <"$TEMP_FILE"
+        notify-send "Screenshot Copied" "Selected area copied to clipboard."
+    else
+        notify-send "Screenshot Error" "Clipboard tool (xclip/wl-copy) not found or not suitable for your session type."
+    fi
+    rm -f "$TEMP_FILE"
+    ;;
+"Open")
+    xdg-open "$TEMP_FILE" >/dev/null 2>&1 & # Run in background
+    notify-send "Screenshot Opened" "Selected area opened in default viewer."
+    ;;
+"Cancel")
+    notify-send "Screenshot Cancelled" "No action performed."
+    rm -f "$TEMP_FILE"
+    ;;
+*)
+    notify-send "Screenshot Error" "Unknown option selected: $OPTION"
+    rm -f "$TEMP_FILE"
+    ;;
 esac
+
+if [ -f "$TEMP_FILE" ] && [ "$OPTION" != "Open" ]; then
+    rm -f "$TEMP_FILE"
+fi
