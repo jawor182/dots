@@ -2,6 +2,10 @@ Xft.dpi: 120
 *.alpha: 0.9
 *.font: JetBrainsMonoNerdFont:size=16
 *.font2: NotoColorEmoji:size=14
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
 
 /* !! gruvbox: */
 ! *.color0: #1d2021 
