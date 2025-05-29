@@ -75,7 +75,7 @@ bindkey -M visual '^[[P' vi-delete
 # ─── EDITORS ──────────────────────────────────────────────
 alias v="vim"
 alias n="nvim"
-alias sn="sudo nvim"
+alias sn="sudoedit"
 
 # ─── PACKAGE MANAGEMENT: PACMAN ───────────────────────────
 alias p="sudo pacman"

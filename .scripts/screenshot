@@ -14,11 +14,7 @@ if [ $? -ne 0 ] || [ ! -f "$TEMP_FILE" ]; then
     exit 1
 fi
 
-if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-    OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | dmenu -c -l 4 -p "What do you want to do?")
-else
-    OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | rofi -dmenu -l 4 -p "What do you want to do?")
-fi
+OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | dmenu -c -l 4 -p "What do you want to do?")
 
 if [ -z "$OPTION" ]; then
     notify-send "Screenshot Aborted" "Action selection cancelled."
@@ -36,14 +32,11 @@ case "$OPTION" in
     fi
     ;;
 "Copy to Clipboard")
-    if command -v xclip >/dev/null 2>&1 && [ "$XDG_SESSION_TYPE" = "x11" ]; then
+    if command -v xclip >/dev/null 2>&1; then
         xclip -selection clipboard -target image/png -i "$TEMP_FILE"
         notify-send "Screenshot Copied" "Selected area copied to clipboard."
-    elif command -v wl-copy >/dev/null 2>&1 && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-        wl-copy <"$TEMP_FILE"
-        notify-send "Screenshot Copied" "Selected area copied to clipboard."
     else
-        notify-send "Screenshot Error" "Clipboard tool (xclip/wl-copy) not found or not suitable for your session type."
+        notify-send "Screenshot Error" "Clipboard tool (xclip) not found."
     fi
     rm -f "$TEMP_FILE"
     ;;
