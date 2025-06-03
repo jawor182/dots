@@ -150,6 +150,7 @@ alias ls="ls --color -hN"
 alias rm="rm -rf"
 alias restow="stow -R ."
 alias zshupdate="source ~/dots/.zshrc"
+alias xcopy="xclip -selection clipboard"
 
 # ─── TMUX SESSIONS ────────────────────────────────────────
 alias t="tmux"
@@ -175,8 +176,6 @@ bindkey -s '^S' 'fzf -e\n'
 bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources\n'
-bindkey -s '^N' '$EDITOR\n'
-bindkey -s '^E' '$EDITOR $(fzf -e)\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
