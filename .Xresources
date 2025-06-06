@@ -4,29 +4,37 @@ Xft.dpi: 120
 *.font2: NotoColorEmoji:size=14
 Xft.antialias: true
 Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
 Xft.rgba: rgb
 
-/* !! gruvbox: */
-! *.color0: #1d2021 
-! *.color1: #cc241d 
-! *.color2: #98971a 
-! *.color3: #d79921 
-! *.color4: #458588 
-! *.color5: #b16286 
-! *.color6: #689d6a 
-! *.color7: #a89984 
-! *.color8: #928374 
-! *.color9: #fb4934 
-! *.color10: #b8bb26 
-! *.color11: #fabd2f 
-! *.color12: #83a598 
-! *.color13: #d3869b 
-! *.color14: #8ec07c 
-! *.color15: #ebdbb2 
-! *.color256: #1d2021 
-! *.color257: #ebdbb2 
-/* Catppuccin Mocha*/
+// Gruvbox
+! *.color0:           #1d2021  // hard background
+! *.color1:           #cc241d  // red
+! *.color2:           #98971a  // green
+! *.color3:           #d79921  // yellow
+! *.color4:           #458588  // blue
+! *.color5:           #b16286  // purple
+! *.color6:           #689d6a  // aqua
+! *.color7:           #a89984  // light gray (fg1)
+! *.color8:           #928374  // dark gray (gray1)
+! *.color9:           #fb4934  // bright red
+! *.color10:          #b8bb26  // bright green
+! *.color11:          #fabd2f  // bright yellow
+! *.color12:          #83a598  // bright blue
+! *.color13:          #d3869b  // bright purple
+! *.color14:          #8ec07c  // bright aqua
+! *.color15:          #ebdbb2  // bright white (fg2)
+! *.background:       #1d2021  // background
+! *.foreground:       #ebdbb2  // foreground
+! *.cursorColor:      #fe8019  // orange (cursor)
+! *.normbgcolor:      #1d2021  // normal background
+! *.normbordercolor:  #3c3836  // normal border
+! *.normfgcolor:      #ebdbb2  // normal foreground
+! *.selbgcolor:       #fe8019  // selected background (orange)
+! *.selbordercolor:   #d65d0e  // selected border (dark orange)
+! *.selfgcolor:       #1d2021  // selected foreground (dark text)
+
+// Catppuccin Mocha
 *.color0: #1e1e2e
 *.color1: #f38ba8
 *.color2: #a6e3a1
@@ -46,8 +54,6 @@ Xft.rgba: rgb
 *.background: #1e1e2e
 *.foreground: #cdd6f4
 *.cursorColor: #f5e0dc
-
-/* dwm/dmenu Catppuccin */
 *.normbgcolor : #1e1e2e
 *.normbordercolor : #585b70
 *.normfgcolor : #cdd6f4
@@ -55,8 +61,138 @@ Xft.rgba: rgb
 *.selbordercolor : #cba6f7
 *.selfgcolor : #181926
 
-/* !! nsxiv */
-! Nsxiv.window.background:#000000
-! Nsxiv.window.foreground:#ffffff
-! Nsxiv.window.background: #1e1e2e
-! Nsxiv.window.foreground: #cdd6f4
+// Nord
+! *.color0:           #2e3440  // polar night (dark)
+! *.color1:           #bf616a  // aurora red
+! *.color2:           #a3be8c  // aurora green
+! *.color3:           #ebcb8b  // aurora yellow
+! *.color4:           #81a1c1  // aurora frost blue
+! *.color5:           #b48ead  // aurora frost purple
+! *.color6:           #88c0d0  // aurora frost cyan
+! *.color7:           #e5e9f0  // snow storm (light gray)
+! *.color8:           #4c566a  // polar night (medium)
+! *.color9:           #bf616a  // aurora red (bright)
+! *.color10:          #a3be8c  // aurora green (bright)
+! *.color11:          #ebcb8b  // aurora yellow (bright)
+! *.color12:          #81a1c1  // aurora frost blue (bright)
+! *.color13:          #b48ead  // aurora frost purple (bright)
+! *.color14:          #8fbcbb  // aurora frost cyan (bright)
+! *.color15:          #eceff4  // snow storm (bright white)
+! *.background:       #2e3440  // background
+! *.foreground:       #d8dee9  // foreground
+! *.cursorColor:      #d08770  // orange cursor
+! *.normbgcolor:      #2e3440  // normal background
+! *.normbordercolor:  #3b4252  // normal border
+! *.normfgcolor:      #d8dee9  // normal foreground
+! *.selbgcolor:       #81a1c1  // selected background (default blue)
+! *.selbordercolor:   #5e81ac  // selected border (default darker blue)
+! *.selfgcolor:       #2e3440  // selected foreground (dark text)
+
+// Solarized Dark
+! *.color0:           #073642  // base02 (dark background)
+! *.color1:           #dc322f  // red
+! *.color2:           #859900  // green
+! *.color3:           #b58900  // yellow
+! *.color4:           #268bd2  // blue
+! *.color5:           #d33682  // magenta
+! *.color6:           #2aa198  // cyan
+! *.color7:           #eee8d5  // base2 (light foreground)
+! *.color8:           #002b36  // base03 (darker background)
+! *.color9:           #cb4b16  // orange red
+! *.color10:          #586e75  // base01 (dark gray)
+! *.color11:          #657b83  // base00 (gray)
+! *.color12:          #839496  // base0 (gray)
+! *.color13:          #6c71c4  // violet
+! *.color14:          #93a1a1  // base1 (light gray)
+! *.color15:          #fdf6e3  // base3 (light background)
+! *.background:       #002b36  // background
+! *.foreground:       #839496  // foreground
+! *.cursorColor:      #cb4b16  // orange cursor
+! *.normbgcolor:      #002b36  // normal background
+! *.normbordercolor:  #073642  // normal border
+! *.normfgcolor:      #839496  // normal foreground
+! *.selbgcolor:       #268bd2  // selected background (default blue)
+! *.selbordercolor:   #005f87  // selected border (default darker blue)
+! *.selfgcolor:       #fdf6e3  // selected foreground (light text)
+
+// Dracula
+! *.color0:           #282a36  // background
+! *.color1:           #ff5555  // red
+! *.color2:           #50fa7b  // green
+! *.color3:           #f1fa8c  // yellow
+! *.color4:           #bd93f9  // purple
+! *.color5:           #ff79c6  // pink
+! *.color6:           #8be9fd  // cyan
+! *.color7:           #f8f8f2  // foreground
+! *.color8:           #6272a4  // comment gray
+! *.color9:           #ff6e6e  // bright red
+! *.color10:          #69ff94  // bright green
+! *.color11:          #ffffa5  // bright yellow
+! *.color12:          #d6acff  // bright purple
+! *.color13:          #ff92df  // bright pink
+! *.color14:          #a4ffff  // bright cyan
+! *.color15:          #ffffff  // white
+! *.background:       #282a36  // background
+! *.foreground:       #f8f8f2  // foreground
+! *.cursorColor:      #ffb86c  // orange cursor
+! *.normbgcolor:      #282a36  // normal background
+! *.normbordercolor:  #44475a  // normal border
+! *.normfgcolor:      #f8f8f2  // normal foreground
+! *.selbgcolor:       #44475a  // selected background (gray)
+! *.selbordercolor:   #6272a4  // selected border (blue-gray)
+! *.selfgcolor:       #f8f8f2  // selected foreground (light text)
+
+// Doom One
+! *.color-1:           #282c34  // bg
+! *.color1:           #ff6c6b  // red
+! *.color2:           #98be65  // green
+! *.color3:           #da8548  // orange
+! *.color4:           #51afef  // blue
+! *.color5:           #c678dd  // purple
+! *.color6:           #46d9ff  // cyan
+! *.color7:           #dfdfdf  // light gray
+! *.color8:           #4b5263  // medium gray
+! *.color9:           #ff6c6b  // bright red
+! *.color10:          #98be65  // bright green
+! *.color11:          #da8548  // bright orange
+! *.color12:          #51afef  // bright blue
+! *.color13:          #c678dd  // bright purple
+! *.color14:          #46d9ff  // bright cyan
+! *.color15:          #ffffff  // white
+! *.background:       #282c34  // background
+! *.foreground:       #dfdfdf  // foreground
+! *.cursorColor:      #da8548  // orange cursor
+! *.normbgcolor:      #282c34  // normal background
+! *.normbordercolor:  #3b4048  // normal border
+! *.normfgcolor:      #dfdfdf  // normal foreground
+! *.selbgcolor:       #da8548  // selected background (orange)
+! *.selbordercolor:   #a56338  // selected border (dark orange)
+! *.selfgcolor:       #282c34  // selected foreground (dark text)
+
+// One Dark
+! *.color0:           #282c34  // background
+! *.color1:           #e06c75  // red
+! *.color2:           #98c379  // green
+! *.color3:           #e5c07b  // yellow
+! *.color4:           #61afef  // blue
+! *.color5:           #c678dd  // purple
+! *.color6:           #56b6c2  // cyan
+! *.color7:           #dcdfe4  // foreground
+! *.color8:           #5a6374  // medium gray
+! *.color9:           #e06c75  // bright red
+! *.color10:          #98c379  // bright green
+! *.color11:          #e5c07b  // bright yellow
+! *.color12:          #61afef  // bright blue
+! *.color13:          #c678dd  // bright purple
+! *.color14:          #56b6c2  // bright cyan
+! *.color15:          #ffffff  // white
+! *.background:       #282c34  // background
+! *.foreground:       #dcdfe4  // foreground
+! *.cursorColor:      #528bff  // cursor blue
+! *.normbgcolor:      #282c34
+! *.normbordercolor:  #3a3f4b
+! *.normfgcolor:      #dcdfe4
+! *.selbgcolor:       #528bff
+! *.selbordercolor:   #1e50ff
+! *.selfgcolor:       #282c34
+
