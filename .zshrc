@@ -11,7 +11,7 @@ setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
-export MANPAGER="nvim +Man!"
+export MANPAGER="$EDITOR +Man!"
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -142,6 +142,7 @@ alias dn="cd ~/dox/notes"
 alias dp="cd ~/dox/pix"
 alias ds="cd ~/dox/szkola"
 alias ww="cd ~/walls"
+alias f="$FILES"
 
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────
 alias la="ls -la"
@@ -173,7 +174,7 @@ export FZF_DEFAULT_OPTS=" \
 
 # Custom keybinds
 bindkey -s '^S' 'fzf -e\n'
-bindkey -s '^F' '$FILES \n'
+# bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources\n'
 

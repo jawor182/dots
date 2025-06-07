@@ -1,7 +1,14 @@
 if status is-interactive
-    fish_vi_key_bindings
     function fish_mode_prompt; end
     function fish_greeting; end
+    function fish_user_key_bindings
+        fish_default_key_bindings -M insert
+        fish_vi_key_bindings --no-erase insert # or other modes you use
+    end
+    function fish_title
+        set -q argv[1]
+        echo "$argv" (fish_prompt_pwd_dir_length=255 prompt_pwd)
+    end
     function fish_prompt
         set_color red --bold
         printf "["
@@ -29,7 +36,7 @@ if status is-interactive
     	rm -f -- "$tmp"
     end
     set -gx fish_prompt_pwd_dir_length 255
-    set -x MANPAGER "nvim +Man!"
+    set -x MANPAGER "$EDITOR +Man!"
     set -Ux FZF_DEFAULT_OPTS "\
     --color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
     --color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
@@ -41,8 +48,8 @@ if status is-interactive
     bind -M insert k 'commandline -P; and up-or-search; or commandline -i k'
     bind -M insert h 'commandline -P; and commandline -f backward-char; or commandline -i h'
     bind -M insert l 'commandline -P; and commandline -f forward-char; or commandline -i l'
-    bind -M insert ctrl-f $FILES
-    bind -M insert ctrl-b "xrdb -m $HOME/.Xresources"
+    # bind -M insert ctrl-f $FILES
+    bind -M insert ctrl-b "xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources"
     bind -M insert ctrl-r "source $XDG_CONFIG_HOME/fish/config.fish"
 
     alias grep "grep --color -i"
@@ -53,27 +60,28 @@ if status is-interactive
     alias rm "rm -rf"
     alias echo "echo -e"
 
-    abbr p sudo pacman
-    abbr pS sudo pacman -S 
-    abbr pR sudo pacman -R
-    abbr y yay
-    abbr yS yay -S
-    abbr yR yay -R
-    abbr n nvim
-    abbr v vim
-    abbr sn sudo nvim
-    abbr t tmux
-    abbr tn tmux new 
-    abbr ta tmux attach  
+    abbr p "sudo pacman"
+    abbr pS "sudo pacman -S" 
+    abbr pR "sudo pacman -R"
+    abbr y "yay"
+    abbr yS "yay -S"
+    abbr yR "yay -R"
+    abbr f "$FILES"
+    abbr n "nvim"
+    abbr v "vim"
+    abbr sn "sudoedit"
+    abbr t "tmux"
+    abbr tn "tmux new" 
+    abbr ta "tmux attach"  
     abbr update "sudo pacman -Syu && yay -Syu"
-    abbr b btop
-    abbr h htop
-    abbr ff fastfetch
-    abbr zb zbarimg
-    abbr SS sudo systemctl
-    abbr SU systemctl --user
-    abbr smci sudo make clean install
-    abbr dev npm run dev
+    abbr b "btop"
+    abbr h "htop"
+    abbr ff "fastfetch"
+    abbr zb "zbarimg"
+    abbr SS "sudo systemctl"
+    abbr SU "systemctl --user"
+    abbr smci "sudo make clean install"
+    abbr dev "npm run dev"
     abbr gad "git add"
     abbr gc "git clone"
     abbr gcm "git commit -m"

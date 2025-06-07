@@ -14,7 +14,7 @@ if [ $? -ne 0 ] || [ ! -f "$TEMP_FILE" ]; then
     exit 1
 fi
 
-OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | dmenu -c -l 4 -p "What do you want to do?")
+OPTION=$(printf 'Save\nCopy to Clipboard\nOpen\nCancel' | dmenu -i -c -l 4 -p "What do you want to do?")
 
 if [ -z "$OPTION" ]; then
     notify-send "Screenshot Aborted" "Action selection cancelled."

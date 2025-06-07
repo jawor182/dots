@@ -173,7 +173,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
     
     # Custom 
-    { on = "W", run = "shell --confirm 'swww img --transition-type=grow --transition-duration=0.66 $1'", desc = "Set wallpaper" },
+    # { on = "W", run = "shell --confirm 'swww img --transition-type=grow --transition-duration=0.66 $1'", desc = "Set wallpaper" },
     { on = "W", run = "shell --confirm 'feh --bg-scale $1'", desc = "Set wallpaper" },
 ]
 
