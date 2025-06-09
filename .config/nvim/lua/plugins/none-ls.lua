@@ -12,7 +12,7 @@ return {
             debug = true,
             sources = {
                 null_ls.builtins.formatting.stylua,
-                null_ls.builtins.formatting.prettier,
+                null_ls.builtins.formatting.prettierd,
                 null_ls.builtins.formatting.gofumpt,
                 null_ls.builtins.diagnostics.golangci_lint,
                 null_ls.builtins.diagnostics.pylint,
@@ -38,7 +38,6 @@ return {
                 "phpstan",
                 "phpcbf",
                 "markdownlint",
-                "ast_grep",
                 "cpplint",
                 "eslint_d",
                 "hadolint",

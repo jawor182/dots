@@ -24,15 +24,14 @@ return {
             cmp_lsp.default_capabilities()
         )
 
-        -- require("fidget").setup({})
         require("mason").setup({
             ui = {
                 icons = {
                     package_installed = " ",
                     package_pending = " ",
-                    package_uninstalled = " "
-                }
-            }
+                    package_uninstalled = " ",
+                },
+            },
         })
         require("mason-lspconfig").setup({
             ensure_installed = {
@@ -93,7 +92,7 @@ return {
                         filetypes = { "php" },
                         root_dir = function()
                             return vim.loop.cwd()
-                        end,                                                      -- Force current directory as root
+                        end,
                         init_options = {
                             storagePath = vim.fn.expand("~/.cache/intelephense"), -- Optional
                         },
@@ -145,10 +144,12 @@ return {
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
+                { name = "otter" },
                 { name = "nvim_lsp" },
-                { name = "luasnip" }, -- For luasnip users.
+                { name = "luasnip" },
             }, {
                 { name = "buffer" },
+                { name = "path" }
             }),
         })
         require("luasnip.loaders.from_vscode").lazy_load()
@@ -164,6 +165,7 @@ return {
             },
         })
         require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-        require('luasnip').filetype_extend("javascript", { "html" })
+        require("luasnip").filetype_extend("javascript", { "html" })
+        require("luasnip").filetype_extend("html", { "javascript","css" })
     end,
 }

@@ -49,8 +49,8 @@ if status is-interactive
     bind -M insert h 'commandline -P; and commandline -f backward-char; or commandline -i h'
     bind -M insert l 'commandline -P; and commandline -f forward-char; or commandline -i l'
     # bind -M insert ctrl-f $FILES
-    bind -M insert ctrl-b "xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources"
-    bind -M insert ctrl-r "source $XDG_CONFIG_HOME/fish/config.fish"
+    bind -M insert ctrl-x "commandline 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources'; commandline -f execute"
+    bind -M insert ctrl-r "commandline 'source $XDG_CONFIG_HOME/fish/config.fish'; commandline -f execute"
 
     alias grep "grep --color -i"
     alias update-grub "sudo grub-mkconfig -o /boot/grub/grub.cfg" 
@@ -110,6 +110,7 @@ if status is-interactive
     abbr dp "cd ~/dox/pix"
     abbr ds "cd ~/dox/szkola"
     abbr ww "cd ~/walls"
+    abbr xcopy "xclip -selection clipboard"
 
     if set -q KITTY_INSTALLATION_DIR
         set --global KITTY_SHELL_INTEGRATION enabled
