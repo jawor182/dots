@@ -4,8 +4,9 @@
 
 # Apps autostart
 dwmblocks &
-picom -b &
-waypaper --random &
+# picom -b &
+fastcompmgr &
+wallpaper random &
 dunst &
 lxsession &
 
