@@ -5,7 +5,7 @@ calibre
 gtklock
 tmux
 discord
-firefox
+firefox-nightly
 flameshot
 keepassxc
 lxappearance-gtk3
@@ -39,6 +39,8 @@ rofi-calc
 )
 libs=(
 arch-wiki-docs
+udisks2
+imagemagick
 7zip
 swaybg
 swww
@@ -92,9 +94,9 @@ npm
 openbsd-netcat
 pamixer
 picom
+fastcompmgr
 playerctl
 pciutils
-usbutils
 php
 pnpm
 powertop
@@ -121,6 +123,8 @@ zsh-completions
 zsh-syntax-highlighting
 xsecurelock
 bluez-utils
+bluez
+bluez-deprecaed-utils
 os-prober
 perl-file-mimeinfo
 )
@@ -165,6 +169,7 @@ ttf-liberation
 ttf-nerd-fonts-symbols 
 ttf-nerd-fonts-symbols-common 
 ttf-sazanami 
+ttf-roboto
 gnome-themes-extra
 )
 yay_stuff=(
@@ -172,8 +177,7 @@ cava
 brave-bin
 bluetuith-bin
 selectdefaultapplication-git
-adwaita-qt5-git
-adwaita-qt6-git
+catppuccin-gtk-theme-mocha
 waypaper
 pipes.sh
 ventoy-bin

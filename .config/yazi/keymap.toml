@@ -174,7 +174,7 @@ keymap = [
     
     # Custom 
     # { on = "W", run = "shell --confirm 'swww img --transition-type=grow --transition-duration=0.66 $1'", desc = "Set wallpaper" },
-    { on = "W", run = "shell --confirm 'feh --bg-scale $1'", desc = "Set wallpaper" },
+    { on = "W", run = "shell --confirm 'wallpaper set $1'", desc = "Set wallpaper" },
 ]
 
 [tasks]
