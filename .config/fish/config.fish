@@ -48,7 +48,7 @@ if status is-interactive
     bind -M insert k 'commandline -P; and up-or-search; or commandline -i k'
     bind -M insert h 'commandline -P; and commandline -f backward-char; or commandline -i h'
     bind -M insert l 'commandline -P; and commandline -f forward-char; or commandline -i l'
-    # bind -M insert ctrl-f $FILES
+    bind -M insert ctrl-f "commandline '$FILES'; commandline -f execute"
     bind -M insert ctrl-x "commandline 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources'; commandline -f execute"
     bind -M insert ctrl-r "commandline 'source $XDG_CONFIG_HOME/fish/config.fish'; commandline -f execute"
 
@@ -105,6 +105,7 @@ if status is-interactive
     abbr nsd "cd ~/new-suckless/dwm"
     abbr nsdm "cd ~/new-suckless/dmenu"
     abbr nst "cd ~/new-suckless/st"
+    abbr nsn "cd ~/new-suckless/nsxiv"
     abbr d "cd ~/dox"
     abbr dn "cd ~/dox/notes"
     abbr dp "cd ~/dox/pix"

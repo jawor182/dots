@@ -1,0 +1,8 @@
+#!/bin/sh
+
+randomWall=$( find "$HOME/walls" -type f -iname "*.png" -print0 | shuf -n 1 -z)
+
+case "$1" in
+    "random") xwallpaper --stretch "$randomWall" ;;
+    "set") xwallpaper --stretch "$2";;
+esac
