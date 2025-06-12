@@ -27,3 +27,4 @@ xrdb -merge ~/.Xresources
 
 # Screen 
 screen &
+wallpaper random

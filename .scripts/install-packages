@@ -174,6 +174,7 @@ gnome-themes-extra
 )
 yay_stuff=(
 cava
+pypr
 brave-bin
 bluetuith-bin
 selectdefaultapplication-git

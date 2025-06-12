@@ -1,0 +1,50 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.term]
+animation = ""
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"
+
+[scratchpads.volume]
+animation = ""
+command = "kitty --class kitty-dropvol -e pulsemixer"
+class = "kitty-dropvol"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"
+
+[scratchpads.bluetooth]
+animation = ""
+command = "kitty --class kitty-dropbt -e bluetuith"
+class = "kitty-dropbt"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"
+
+[scratchpads.monitor]
+animation = ""
+command = "kitty --class kitty-dropmon -e btop"
+class = "kitty-dropmon"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"
+
+[scratchpads.notes]
+animation = ""
+command = "kitty --class kitty-dropnotes -e sh -c 'cd ~/dox/notes/ && $EDITOR'"
+class = "kitty-dropnotes"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"
+
+[scratchpads.files]
+animation = ""
+command = "kitty --class kitty-dropfiles -e yazi"
+class = "kitty-dropfiles"
+size = "50% 70%"
+max_size = "1920px 100%"
+lazy="true"

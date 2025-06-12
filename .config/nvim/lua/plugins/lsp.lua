@@ -51,7 +51,7 @@ return {
                 "ts_ls",
                 "tailwindcss",
                 "yamlls",
-                "marksman",
+                "markdown_oxide",
             },
             handlers = {
                 function(server_name) -- default handler (optional)

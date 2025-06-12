@@ -6,7 +6,6 @@
 dwmblocks &
 # picom -b &
 fastcompmgr &
-wallpaper random &
 dunst &
 lxsession &
 
