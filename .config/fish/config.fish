@@ -126,7 +126,7 @@ if status is-login
     set -gx EDITOR "nvim"
     set -gx FILES "yazii"
     if test -z "$DISPLAY" -a "$XDG_VTNR" = "1"
-        exec uwsm start Hyprland
-        # exec startx
+        # exec uwsm start Hyprland
+        exec startx
     end
 end
