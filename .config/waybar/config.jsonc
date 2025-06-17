@@ -4,8 +4,8 @@
     "spacing": 4,
     "margin": 4,
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces"
+        // "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -26,10 +26,12 @@
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
-            // "(.*) — Mozilla Firefox": "🌎 $1",
+            // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
+
         },
         "separate-outputs": true,
         "tooltip":false,
+        "icon":false,
     },
     "tray": {
         "icon-size": 24,

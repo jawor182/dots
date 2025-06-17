@@ -4,7 +4,6 @@
 
 # Apps autostart
 dwmblocks &
-# picom -b &
 fastcompmgr &
 dunst &
 lxsession &

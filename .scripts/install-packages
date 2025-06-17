@@ -44,6 +44,7 @@ imagemagick
 7zip
 swaybg
 swww
+hyprsunset
 hyprpicker
 hyprcursor
 hyprgraphics
@@ -186,6 +187,7 @@ qt5gtk2
 qt5-styleplugins
 betterlockscreen
 xurls
+hyprsysteminfo
 )
 install_packages() {
     local category=$1

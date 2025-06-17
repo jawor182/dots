@@ -16,6 +16,7 @@ return {
                 null_ls.builtins.formatting.gofumpt,
                 null_ls.builtins.diagnostics.golangci_lint,
                 null_ls.builtins.diagnostics.pylint,
+                null_ls.builtins.formatting.pyink,
                 null_ls.builtins.diagnostics.sqlfluff.with({
                     extra_args = { "--dialect", "postgres" },
                 }),
