@@ -77,14 +77,12 @@ alias v="vim"
 alias n="nvim"
 alias sn="sudoedit"
 
-# ─── PACKAGE MANAGEMENT: PACMAN ───────────────────────────
+# ─── PACKAGE MANAGEMENT
 alias p="sudo pacman"
 alias pQ="sudo pacman -Q"
 alias pR="sudo pacman -Rus"
 alias pS="sudo pacman -S"
 alias pSS="sudo pacman -Ss"
-
-# ─── PACKAGE MANAGEMENT: YAY ──────────────────────────────
 alias y="yay"
 alias yR="yay -R"
 alias yS="yay -S"
@@ -134,6 +132,7 @@ alias cfw="cd ~/dots/.config/waybar"
 alias cfy="cd ~/dots/.config/yazi"
 alias ns="cd ~/new-suckless"
 alias nsb="cd ~/new-suckless/blocks"
+alias nsn="cd ~/new-suckless/nsxiv/"
 alias nsd="cd ~/new-suckless/dwm"
 alias nsdm="cd ~/new-suckless/dmenu"
 alias nst="cd ~/new-suckless/st"
@@ -171,21 +170,13 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --color=border:#313244,label:#cdd6f4"
 
-
 # Custom keybinds
-bindkey -s '^S' 'fzf -e\n'
-# bindkey -s '^F' '$FILES \n'
+bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
-bindkey -s '^X' 'xset r rate 300 60 ; screen ; xrdb -m ~/.Xresources\n'
+bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m ~/.Xresources\n'
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="/home/jawor/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/jawor/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
-if test -n "$KITTY_INSTALLATION_DIR"; then
-    export KITTY_SHELL_INTEGRATION="enabled"
-    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
-    kitty-integration
-    unfunction kitty-integration
-fi
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
