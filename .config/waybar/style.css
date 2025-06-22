@@ -114,3 +114,6 @@ tooltip{
     background-color: @bg;
     color: @fg;
 }
+#window{
+padding-right:150px;
+}

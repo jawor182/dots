@@ -25,7 +25,7 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
-compinit
+compinit -d "~/.local/.zcompdump"
 _comp_options+=(globdots)
 autoload -U zsh-autosuggestions
 # vi mode

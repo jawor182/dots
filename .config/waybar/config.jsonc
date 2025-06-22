@@ -4,8 +4,8 @@
     "spacing": 4,
     "margin": 4,
     "modules-left": [
-        "hyprland/workspaces"
-        // "hyprland/window"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -31,10 +31,10 @@
         },
         "separate-outputs": true,
         "tooltip":false,
-        "icon":false,
+        "icon":true,
     },
     "tray": {
-        "icon-size": 24,
+        "icon-size": 28,
         "spacing": 6,
     },
     "clock": {
