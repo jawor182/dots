@@ -90,15 +90,6 @@ window#waybar {
     border-bottom-left-radius:6px;
 }
 
-#workspaces button.focused {
-    background-color: #64727D;
-}
-#workspaces button.focused:hover:first-child {
-    background-color: #64727D;
-    border-top-left-radius:6px;
-    border-bottom-left-radius:6px;
-}
-
 #workspaces button.urgent:hover {
     background-color: @red;
     border-radius:0px;

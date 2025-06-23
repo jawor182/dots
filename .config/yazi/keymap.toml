@@ -12,8 +12,6 @@ on   = "A"
 run  = "create --dir"
 desc = "create directory"
 
-[mgr]
-
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },

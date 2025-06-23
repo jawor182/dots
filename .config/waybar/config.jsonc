@@ -32,9 +32,10 @@
         "separate-outputs": true,
         "tooltip":false,
         "icon":true,
+        "icon-size": 24,
     },
     "tray": {
-        "icon-size": 28,
+        "icon-size": 24,
         "spacing": 6,
     },
     "clock": {
