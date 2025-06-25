@@ -28,7 +28,8 @@ window#waybar {
     background-color: @bg;
     color: @fg;
     transition-property: background-color;
-    border-radius:6px;
+    /* border-radius:6px; */
+    border-radius:0px;
 }
 #tray,#network,#memory,#backlight,#battery,#clock{
     padding:5px;
@@ -66,8 +67,8 @@ window#waybar {
 #workspaces button:first-child{
     padding: 5px;
     color: @fg;
-    border-top-left-radius:6px;
-    border-bottom-left-radius:6px;
+    /* border-top-left-radius:6px; */
+    /* border-bottom-left-radius:6px; */
 }
 #workspaces button.active{
     background-color: @orange;
@@ -76,8 +77,8 @@ window#waybar {
 #workspaces button.active:first-child{
     background-color: @orange;
     border-radius:0px;
-    border-top-left-radius:6px;
-    border-bottom-left-radius:6px;
+    /* border-top-left-radius:6px; */
+    /* border-bottom-left-radius:6px; */
 }
 #workspaces button:hover {
     background: @purple;
@@ -86,15 +87,15 @@ window#waybar {
 #workspaces button:hover:first-child {
     background: @purple;
     border-radius:0px;
-    border-top-left-radius:6px;
-    border-bottom-left-radius:6px;
+    /* border-top-left-radius:6px; */
+    /* border-bottom-left-radius:6px; */
 }
 
 #workspaces button.urgent:hover {
     background-color: @red;
     border-radius:0px;
-    border-top-left-radius:6px;
-    border-bottom-left-radius:6px;
+    /* border-top-left-radius:6px; */
+    /* border-bottom-left-radius:6px; */
 }
 #window{
 padding-left: 10px;
