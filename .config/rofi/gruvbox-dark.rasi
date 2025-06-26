@@ -1,0 +1,29 @@
+* {
+  /* Gruvbox Dark Palette */
+  rosewater: #ebdbb2; /* Replaced with a light background tone */
+  flamingo: #d5c4a1; /* Replaced with a softer background tone */
+  pink: #d3869b; /* Replaced with Gruvbox red/pink */
+  mauve: #b16286; /* Replaced with Gruvbox purple */
+  red: #cc241d; /* Gruvbox Red */
+  maroon: #9d0006; /* Gruvbox Dark Red */
+  peach: #fe8019; /* Gruvbox Orange */
+  yellow: #d79921; /* Gruvbox Yellow */
+  green: #98971a; /* Gruvbox Green */
+  teal: #8ec07c; /* Replaced with a lighter Gruvbox green/aqua */
+  sky: #83a598; /* Replaced with Gruvbox aqua */
+  sapphire: #458588; /* Gruvbox Aqua */
+  blue: #458588; /* Gruvbox Blue (same as sapphire for consistency) */
+  lavender: #bdae93; /* Replaced with a warmer, less saturated tone */
+  text: #ebdbb2; /* Gruvbox Light Text */
+  subtext1: #d5c4a1; /* Gruvbox Muted Text */
+  subtext0: #bdae93; /* Gruvbox Faded Text */
+  overlay2: #a89984; /* Gruvbox Grey 1 */
+  overlay1: #928374; /* Gruvbox Grey 2 */
+  overlay0: #83a598; /* Gruvbox Grey 3 */
+  surface2: #665c54; /* Gruvbox Grey 4 */
+  surface1: #504945; /* Gruvbox Grey 5 */
+  surface0: #3c3836; /* Gruvbox Dark Background Soft */
+  base: #282828; /* Gruvbox Dark Background */
+  mantle: #282828; /* Gruvbox Dark Background (same as base for consistency) */
+  crust: #1d2021; /* Gruvbox Dark Background Hard */
+}

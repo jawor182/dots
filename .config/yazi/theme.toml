@@ -1,7 +1,7 @@
 [flavor]
-dark = "catppuccin-mocha"
+dark = "gruvbox-dark"
 
-# # : Mode {{{
+# : Mode {{{
 #
 # [mode]
 # normal_main = { fg = "#282828", bg = "#a89984", bold = true }
