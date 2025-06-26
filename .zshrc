@@ -80,6 +80,7 @@ alias sn="sudoedit"
 # ─── PACKAGE MANAGEMENT
 alias p="sudo pacman"
 alias pQ="sudo pacman -Q"
+alias pQS="sudo pacman -Qs"
 alias pR="sudo pacman -Rus"
 alias pS="sudo pacman -S"
 alias pSS="sudo pacman -Ss"

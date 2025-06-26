@@ -1,6 +1,5 @@
 /* Gruvbox */
 /* @define-color bg #282828; */
-/* @define-color gray #928374; */
 /* @define-color red #fb4934; */
 /* @define-color green #b8bb26; */
 /* @define-color yellow #fabd2f; */
@@ -98,14 +97,9 @@ window#waybar {
     /* border-bottom-left-radius:6px; */
 }
 #window{
-padding-left: 10px;
-padding: 5px;
-
+padding-right:150px;
 }
 tooltip{
     background-color: @bg;
     color: @fg;
-}
-#window{
-padding-right:150px;
 }
