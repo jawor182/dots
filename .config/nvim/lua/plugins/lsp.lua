@@ -149,7 +149,7 @@ return {
                 { name = "luasnip" },
             }, {
                 { name = "buffer" },
-                { name = "path" }
+                { name = "path" },
             }),
         })
         require("luasnip.loaders.from_vscode").lazy_load()
@@ -166,6 +166,6 @@ return {
         })
         require("luasnip").filetype_extend("javascript", { "javascriptreact" })
         require("luasnip").filetype_extend("javascript", { "html" })
-        require("luasnip").filetype_extend("html", { "javascript","css" })
+        require("luasnip").filetype_extend("html", { "javascript", "css" })
     end,
 }

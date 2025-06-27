@@ -144,7 +144,7 @@ alias d="cd ~/dox"
 alias dn="cd ~/dox/notes"
 alias dp="cd ~/dox/pix"
 alias ds="cd ~/dox/szkola"
-alias ww="cd ~/walls"
+alias w="cd ~/walls"
 alias f="$FILES"
 
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────

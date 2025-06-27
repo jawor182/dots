@@ -5,7 +5,7 @@ return {
     config = function()
         require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
-            -- ysxy - surround a x with 
+            -- ysxy - surround a x with
             -- S X - in visual mode surround selected with X
             -- csxy - change surroundings from x to y
             -- dsx - remove x surroundings
@@ -14,6 +14,5 @@ return {
             -- csf - change func name
             -- dsf - delete func name
         })
-    end
+    end,
 }
-
