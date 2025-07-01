@@ -63,10 +63,10 @@ t = slideshow +1
 <Shift+T> = slideshow -1
 [options]
 # Catppuccin
-# background=1e1e2e
-# overlay_text_color=cdd6f4
-# overlay_background_color=11111b
+background=1e1e2e
+overlay_text_color=cdd6f4
+overlay_background_color=11111b
 # Gruvbox
-background=282828
-overlay_text_color=ebddb2
-overlay_background_color=1d2021
+# background=282828
+# overlay_text_color=ebddb2
+# overlay_background_color=1d2021

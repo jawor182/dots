@@ -1,23 +1,23 @@
 /* Gruvbox */
-@define-color bg #282828;
-@define-color fg #ebdbb2;
-@define-color red #fb4934;
-@define-color green #b8bb26;
-@define-color yellow #fabd2f;
-@define-color blue #83a598;
-@define-color purple #d3869b;
-@define-color aqua #8ec07c;
-@define-color orange #d65d0e;
-/* Catppuccin */
-/* @define-color fg #cdd6f4; */
-/* @define-color bg #1e1e2e; */
-/* @define-color red #f38ba8; */
-/* @define-color purple #cba6f7; */
-/* @define-color yellow #f9e2af; */
-/* @define-color aqua #94e2d5 ; */
-/* @define-color green #a6e3a1 ; */
-/* @define-color blue #89b4fa ; */
+/* @define-color bg #282828; */
+/* @define-color fg #ebdbb2; */
+/* @define-color red #fb4934; */
+/* @define-color green #b8bb26; */
+/* @define-color yellow #fabd2f; */
+/* @define-color blue #83a598; */
+/* @define-color purple #d3869b; */
+/* @define-color aqua #8ec07c; */
 /* @define-color orange #d65d0e; */
+/* Catppuccin */
+@define-color fg #cdd6f4;
+@define-color bg #1e1e2e;
+@define-color red #f38ba8;
+@define-color purple #cba6f7;
+@define-color yellow #f9e2af;
+@define-color aqua #94e2d5 ;
+@define-color green #a6e3a1 ;
+@define-color blue #89b4fa ;
+@define-color orange #d65d0e;
 
 * {
     font-family: JetBrainsMonoNerdFont,otf-font-awesome,monospace;

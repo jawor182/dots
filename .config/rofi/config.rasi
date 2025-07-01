@@ -1,5 +1,5 @@
-@import "gruvbox-dark"
-@theme "gruvbox-dark"
+@import "catppuccin-mocha"
+@theme "catppuccin-mocha"
 
 configuration {
     font: "JetBrainsMonoNerdFont 14";
