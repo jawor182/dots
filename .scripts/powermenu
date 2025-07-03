@@ -11,7 +11,7 @@ fi
 case $option in
 "Power Off") systemctl poweroff ;;
 "Reboot") systemctl reboot ;;
-"Suspend") systemctl suspend ;;
+"Suspend") systemctl suspend && [ "$XDG_SESSION_TYPE" = "x11" ] && "$LOCK" ;;
 "Lock Screen") $LOCK ;;
 *) ;;
 esac
