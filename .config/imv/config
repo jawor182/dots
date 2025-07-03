@@ -13,8 +13,8 @@ suppress_default_binds = true
 
 [binds]
 # Define some key bindings
+<Shift+W> = exec  swww img --transition-type=grow --transition-duration=0.66 $imv_current_file
 q = quit
-y = exec echo working!
 
 # Image navigation
 <p> = prev
