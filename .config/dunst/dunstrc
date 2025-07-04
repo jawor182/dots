@@ -4,7 +4,7 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = 1
+    monitor = 0
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -333,11 +333,11 @@
     # Gruvbox
     # background = "#282828"
     # foreground = "#ebdbb2"
-    frame_color = "#d65d0e"
+    # frame_color = "#d65d0e"
     # Catppuccin 
     background = "#1e1e2e"
     foreground = "#cdd6f4"
-    # frame_color = "#a6e3a1"
+    frame_color = "#a6e3a1"
 
     timeout = 2
     # Icon for notifications with low urgency, uncomment to enable
@@ -351,7 +351,7 @@
     # Catppuccin
     background = "#1e1e2e"
     foreground = "#cdd6f4"
-    frame_color = "#89b4fa"
+    frame_color = "#cba6f7"
     timeout = 5
 
     override_pause_level = 30
