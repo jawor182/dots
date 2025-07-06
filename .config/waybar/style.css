@@ -57,6 +57,15 @@ window#waybar {
 #battery{
     color:@green;
 }
+#tags button:not(.occupied):not(.focused):not(.overview):not(.urgent) {
+  font-size: 0;
+  min-width: 0;
+  min-height: 0;
+  margin: -16px;
+  padding: 0;
+  color: transparent;
+  background-color: transparent;
+}
 #workspaces,#tags button{
     padding: 5px;
     color: @fg;
@@ -80,14 +89,14 @@ window#waybar {
     /* border-bottom-left-radius:6px; */
 }
 #tags button.focused{
-    background-color: @purple;
+    background-color: @orange;
     border-radius:0px;
 }
 #tags button.focused.occupied {
-    background-color: @purple; /* Make it purple when both focused and occupied */
+    background-color: @orange; /* Make it purple when both focused and occupied */
 }
 #tags button.occupied{
-    background-color: @orange;
+    background-color: @bg;
     border-radius:0px;
 }
 #workspaces,#tags button:hover {
