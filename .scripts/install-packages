@@ -1,6 +1,7 @@
 #!/bin/bash
 
 apps=(
+librewolf
 calibre
 gtklock
 tmux
@@ -24,6 +25,7 @@ virt-manager
 virt-viewer
 spotify-launcher
 thunar
+nautilus
 zsh
 nm-connection-editor
 nsxiv
@@ -56,6 +58,7 @@ hyprland-protocols
 hyprland-qt-support
 hyprland-qtutils
 hyprlang
+hyprlock
 hyprpolkitagent
 xdg-desktop-portal-hyprland 
 brightnessctl
@@ -99,6 +102,9 @@ openbsd-netcat
 pamixer
 picom
 fastcompmgr
+xcompmgr
+xcolor
+scrot
 playerctl
 pciutils
 php
@@ -182,7 +188,8 @@ pypr
 brave-bin
 bluetuith-bin
 selectdefaultapplication-git
-catppuccin-gtk-theme-mocha
+catppuccin-gtk-theme-mocha-revamped
+thunderbird-nightly
 waypaper
 pipes.sh
 ventoy-bin
