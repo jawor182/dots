@@ -5,7 +5,9 @@
     // "margin": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/window",
+        "dwl/tags",
+        "dwl/window"
     ],
     "modules-center": [
         "clock"
@@ -24,6 +26,20 @@
         "format": "{}",
     },
     "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
+
+        },
+        "separate-outputs": true,
+        "tooltip":false,
+        "icon":true,
+        "icon-size": 24,
+    },
+    "hyprland/tags": {
+        "format": "{}",
+    },
+    "dwl/window": {
         "format": "{}",
         "rewrite": {
             // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",

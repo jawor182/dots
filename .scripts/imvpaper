@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case "$1" in
+"open")
+    find "$HOME"/walls -type f -iname '*.png' -or -iname '*.jpg' -or -iname '*.jpeg' | shuf | imv
+    ;;
+"random")
+    find "$HOME"/walls -type f -iname '*.png' -or -iname '*.jpg' -or -iname '*.jpeg' | shuf -n 1 | xargs swww img --transition-duration=0.66 --transition-type=grow --resize=stretch
+    ;;
+esac
