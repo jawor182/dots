@@ -91,7 +91,7 @@ alias ySS="yay -Ss"
 alias yeet="yay -Rus"
 
 # ─── SYSTEM UPDATES ───────────────────────────────────────
-alias update="sudo pacman -Syu && yay -Syu"
+alias update="sudo pacman -Syyuu && yay -Syyu"
 
 # ─── SYSTEM MONITORING & INFO ─────────────────────────────
 alias b="btop"

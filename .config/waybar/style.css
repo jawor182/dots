@@ -66,55 +66,48 @@ window#waybar {
   color: transparent;
   background-color: transparent;
 }
-#workspaces,#tags button{
-    padding: 5px;
+#workspaces button{
     color: @fg;
-    border-radius:0px;
+    background-color:@bg;
+    padding:5px;
     min-width: 16px;
 }
-#workspaces button:first-child{
-    padding: 5px;
+#tags button{
     color: @fg;
-    /* border-top-left-radius:6px; */
-    /* border-bottom-left-radius:6px; */
+    background-color:@bg;
+    padding:5px;
+    min-width: 16px;
 }
+
 #workspaces button.active{
     background-color: @orange;
     border-radius:0px;
-}
-#workspaces button.active:first-child{
-    background-color: @orange;
-    border-radius:0px;
-    /* border-top-left-radius:6px; */
-    /* border-bottom-left-radius:6px; */
 }
 #tags button.focused{
     background-color: @orange;
     border-radius:0px;
 }
 #tags button.focused.occupied {
-    background-color: @orange; /* Make it purple when both focused and occupied */
+    background-color: @orange;
 }
 #tags button.occupied{
     background-color: @bg;
-    border-radius:0px;
 }
-#workspaces,#tags button:hover {
+#workspaces button:hover {
     background: @purple;
     border-radius:0px;
 }
-#workspaces,#tags button:hover:first-child {
+#tags button:hover {
     background: @purple;
     border-radius:0px;
-    /* border-top-left-radius:6px; */
-    /* border-bottom-left-radius:6px; */
 }
-
-#workspaces,#tags button.urgent:hover {
+#workspaces button.urgent:hover {
     background-color: @red;
     border-radius:0px;
-    /* border-top-left-radius:6px; */
-    /* border-bottom-left-radius:6px; */
+}
+#tags button.urgent:hover {
+    background-color: @red;
+    border-radius:0px;
 }
 #window{
 padding-right:150px;
