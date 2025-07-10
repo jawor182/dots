@@ -1,10 +1,10 @@
 {
     "height": 36,
     "spacing": 4,
-    // "margin": 4,
+    "margin": 4,
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces"
+        // "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -16,7 +16,7 @@
         "backlight",
         "battery",
         "pulseaudio",
-        "bluetooth",
+        // "bluetooth",
         "network",
     ],
     "hyprland/workspaces": {
@@ -38,8 +38,8 @@
         "spacing": 6,
     },
     "clock": {
-        "format": "{:%a, %H:%M}",
-        "format-alt": "{:%A, %d.%m.%Y}",
+        "format": " {:%a, %H:%M}",
+        "format-alt": " {:%A, %d.%m.%Y}",
         "tooltip": false,
     },
     "cpu": {
