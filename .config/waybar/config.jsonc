@@ -1,13 +1,10 @@
-// -*- mode: jsonc -*-
 {
     "height": 36,
     "spacing": 4,
     // "margin": 4,
     "modules-left": [
-        // "hyprland/workspaces",
-        // "hyprland/window"
-        "dwl/tags",
-        "dwl/window"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -26,20 +23,6 @@
         "format": "{}",
     },
     "hyprland/window": {
-        "format": "{}",
-        "rewrite": {
-            // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
-
-        },
-        "separate-outputs": true,
-        "tooltip":false,
-        "icon":true,
-        "icon-size": 24,
-    },
-    "hyprland/tags": {
-        "format": "{}",
-    },
-    "dwl/window": {
         "format": "{}",
         "rewrite": {
             // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
@@ -144,3 +127,4 @@
         "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
     },
 }
+// -*- mode: jsonc -*-
