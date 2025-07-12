@@ -20,7 +20,7 @@
 @define-color orange #d65d0e;
 
 * {
-    font-family: JetBrainsMonoNerdFont, otf-font-awesome, monospace;
+    font-family: JetBrainsMonoNerdFont Propo, otf-font-awesome, monospace;
     font-size: 16px;
 }
 
@@ -112,6 +112,8 @@ window#waybar {
     background-color: @bg;
     border: 2px solid @purple;
     border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #workspaces {

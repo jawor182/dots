@@ -4,7 +4,7 @@
     "margin": 4,
     "modules-left": [
         "hyprland/workspaces"
-        // "hyprland/window"
+
     ],
     "modules-center": [
         "clock"
@@ -35,7 +35,7 @@
     },
     "tray": {
         "icon-size": 24,
-        "spacing": 6,
+        "spacing": 8,
     },
     "clock": {
         "format": " {:%a, %H:%M}",
@@ -97,9 +97,9 @@
         ],
     },
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": " ",
-        "format-disconnected": "⚠",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
         "tooltip": false,
         "on-click": "$TERMINAL -e speedtest",
         "on-click-right": "$TERMINAL -e nm-connection-editor",
@@ -118,7 +118,7 @@
         "format-source-muted": "",
         "format-icons": {
             "default": [
-                "",
+                // "",
                 "",
                 ""
             ],
