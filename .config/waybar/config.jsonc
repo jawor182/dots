@@ -3,7 +3,8 @@
     "spacing": 4,
     "margin": 4,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "dwl/tags"
 
     ],
     "modules-center": [
