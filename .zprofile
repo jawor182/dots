@@ -4,7 +4,7 @@ export EDITOR="nvim"
 export FILES="yazii"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    # exec uwsm start Hyprland 
-    exec maomao
+    exec uwsm start Hyprland 
+    # exec maomao
     # exec startx
 fi

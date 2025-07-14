@@ -187,6 +187,21 @@ window#waybar {
     border-top-right-radius: 5px;
 }
 
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+#workspaces button.urgent:first-child {
+    background-color: @red;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#workspaces button.urgent:last-child {
+    background-color: @red;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
 #workspaces button.urgent:hover {
     background-color: @red;
 }
