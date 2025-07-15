@@ -39,6 +39,7 @@ window#waybar {
 #memory,
 #backlight,
 #battery,
+#custom-swaync,
 #clock {
   padding: 5px;
 }
@@ -129,6 +130,14 @@ window#waybar {
   padding-right: 8px;
 }
 
+#custom-swaync {
+  color: @purple;
+  background-color: @bg;
+  border: 2px solid @purple;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
 #workspaces {
   border: 2px solid @orange;
   border-radius: 8px;

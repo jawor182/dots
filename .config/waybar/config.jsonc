@@ -18,8 +18,14 @@
         "battery",
         "pulseaudio",
         // "bluetooth",
+        "custom/swaync",
         "network",
     ],
+    "custom/swaync" : {
+        "format":"",
+        "on-click":"swaync-client -t",
+        "tooltip":false,
+    },
     "hyprland/workspaces": {
         "format": "{}",
     },
