@@ -20,18 +20,18 @@
 @define-color orange #d65d0e;
 
 * {
-  font-family:
-    JetBrainsMonoNerdFont Propo,
-    otf-font-awesome,
-    monospace;
-  font-size: 16px;
+    font-family:
+        JetBrainsMonoNerdFont Propo,
+        otf-font-awesome,
+        monospace;
+    font-size: 16px;
 }
 
 window#waybar {
-  /* background-color: @bg; */
-  background-color: transparent;
-  color: @fg;
-  transition-property: background-color;
+    /* background-color: @bg; */
+    background-color: transparent;
+    color: @fg;
+    transition-property: background-color;
 }
 
 #tray,
@@ -39,206 +39,197 @@ window#waybar {
 #memory,
 #backlight,
 #battery,
-#custom-swaync,
 #clock {
-  padding: 5px;
+    padding: 5px;
 }
 
 #clock {
-  background-color: @bg;
-  border-radius: 10px;
-  border: 2px solid @purple;
+    background-color: @bg;
+    border-radius: 10px;
+    border: 2px solid @purple;
 }
 
 #cpu {
-  color: @red;
-  background-color: @bg;
-  border: 2px solid @red;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: @red;
+    background-color: @bg;
+    border: 2px solid @red;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #pulseaudio,
 #network {
-  padding-right: 8px;
+    padding-right: 8px;
 }
 
 #memory {
-  color: @purple;
-  background-color: @bg;
-  border: 2px solid @purple;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: @purple;
+    background-color: @bg;
+    border: 2px solid @purple;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #pulseaudio {
-  color: @yellow;
-  background-color: @bg;
-  border: 2px solid @yellow;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: @yellow;
+    background-color: @bg;
+    border: 2px solid @yellow;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #backlight {
-  color: @aqua;
-  background-color: @bg;
-  border: 2px solid @aqua;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+    color: @aqua;
+    background-color: @bg;
+    border: 2px solid @aqua;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #network,
 #bluetooth {
-  padding: 5px;
-  background-color: @bg;
-  color: @blue;
-  border-radius: 5px;
-  border: 2px solid @blue;
+    padding: 5px;
+    background-color: @bg;
+    color: @blue;
+    border-radius: 5px;
+    border: 2px solid @blue;
 }
 
 #bluetooth {
-  padding-left: 8px;
-  padding-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #battery {
-  background-color: @bg;
-  border: 2px solid @green;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: @green;
+    background-color: @bg;
+    border: 2px solid @green;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: @green;
 }
 
 #battery.critical {
-  color: @red;
+    color: @red;
 }
 
 #battery.warning {
-  color: @red;
+    color: @red;
 }
 
 #tray {
-  background-color: @bg;
-  border: 2px solid @purple;
-  border-radius: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
+    background-color: @bg;
+    border: 2px solid @purple;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
-#custom-swaync {
-  color: @purple;
-  background-color: @bg;
-  border: 2px solid @purple;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 5px;
-}
 #workspaces {
-  border: 2px solid @orange;
-  border-radius: 8px;
+    border: 2px solid @orange;
+    border-radius: 8px;
 }
 
 #workspaces button {
-  color: @fg;
-  background-color: @bg;
-  padding: 5px;
-  min-width: 16px;
-  border-radius: 0px;
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-radius: 0px;
 }
 
 #workspaces button:first-child {
-  color: @fg;
-  background-color: @bg;
-  padding: 5px;
-  min-width: 16px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #workspaces button:last-child {
-  color: @fg;
-  background-color: @bg;
-  padding: 5px;
-  min-width: 16px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #workspaces button.active {
-  background-color: @orange;
-  color: @bg;
+    background-color: @orange;
+    color: @bg;
 }
 
 #workspaces button.active:first-child {
-  background-color: @orange;
-  color: @bg;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+    background-color: @orange;
+    color: @bg;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #workspaces button.active:last-child {
-  background-color: @orange;
-  color: @bg;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+    background-color: @orange;
+    color: @bg;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #workspaces button:hover {
-  background: @purple;
+    background: @purple;
 }
 
 #workspaces button:hover:first-child {
-  background: @purple;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+    background: @purple;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #workspaces button:hover:last-child {
-  background: @purple;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+    background: @purple;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #workspaces button.urgent {
-  background-color: @red;
+    background-color: @red;
 }
 
 #workspaces button.urgent:first-child {
-  background-color: @red;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+    background-color: @red;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #workspaces button.urgent:last-child {
-  background-color: @red;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+    background-color: @red;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #workspaces button.urgent:hover {
-  background-color: @red;
+    background-color: @red;
 }
 
 #workspaces button.urgent:hover:first-child {
-  background-color: @red;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+    background-color: @red;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 #workspaces button.urgent:hover:last-child {
-  background-color: @red;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+    background-color: @red;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #window {
-  padding-right: 150px;
-  padding-left: 5px;
+    padding-right: 150px;
+    padding-left: 5px;
 }
 
 /* #tags button:not(.occupied):not(.focused):not(.overview):not(.urgent) { */
@@ -252,43 +243,107 @@ window#waybar {
 /* } */
 
 #tags button {
-  color: @fg;
-  background-color: @bg;
-  padding: 5px;
-  min-width: 16px;
-  border-radius: 0px;
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-radius: 0px;
+}
+
+#tags button:first-child {
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#tags button:last-child {
+    color: @fg;
+    background-color: @bg;
+    padding: 5px;
+    min-width: 16px;
+    border-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #tags button.focused {
-  background-color: @orange;
-  border-radius: 0px;
-  color: @bg;
+    background-color: @orange;
+    border-radius: 0px;
+    color: @bg;
+}
+
+#tags button.focused:first-child {
+    background-color: @orange;
+    border-radius: 0px;
+    color: @bg;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#tags button.focused:last-child {
+    background-color: @orange;
+    border-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: @bg;
 }
 
 #tags button.focused.occupied {
-  background-color: @orange;
-  color: @bg;
+    background-color: @orange;
+    color: @bg;
+}
+
+#tags button.focused.occupied:first-child {
+    background-color: @orange;
+    color: @bg;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#tags button.focused.occupied:last-child {
+    background-color: @orange;
+    color: @bg;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #tags button.occupied {
-  background-color: @bg;
-  color: @orange;
+    background-color: @bg;
+    color: @orange;
+}
+
+#tags button.occupied:first-child {
+    background-color: @bg;
+    color: @orange;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#tags button.occupied:last-child {
+    background-color: @bg;
+    color: @orange;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #tags button.focused {
-  background-color: @orange;
-  border-radius: 0px;
+    background-color: @orange;
+    border-radius: 0px;
 }
 
 #tags button.focused.occupied {
-  background-color: @orange;
+    background-color: @orange;
 }
 
 #tags button.occupied {
-  background-color: @bg;
+    background-color: @bg;
 }
 
 tooltip {
-  background-color: @bg;
-  color: @fg;
+    background-color: @bg;
+    color: @fg;
 }
