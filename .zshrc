@@ -115,7 +115,8 @@ alias gc="git clone"
 alias gcm="git commit -m"
 alias gp="git pull"
 alias gps="git push"
-alias gst="git status"
+alias gs="git status"
+alias gd="git diff"
 
 # ─── NAVIGATION & DOTFILES ────────────────────────────────
 alias rr="cd ~/repos"
