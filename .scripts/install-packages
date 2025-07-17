@@ -17,6 +17,7 @@ xdotool
 qt5ct
 mpv
 mpd
+mpd-mpris
 ncmpcpp
 solaar
 thunderbird

@@ -4,8 +4,8 @@
     "margin": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "dwl/tags"
-
+        "dwl/tags",
+        "mpd"
     ],
     "modules-center": [
         "clock"
@@ -15,11 +15,37 @@
         "cpu",
         "memory",
         "backlight",
-        "temperature",
+        // "temperature",
         "battery",
         "pulseaudio",
         "network",
     ],
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S} ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "interval": 10,
+        "consume-icons": {
+            "on": " ", // Icon shows only when "consume" is on
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+            "on": " ",
+        },
+        "repeat-icons": {
+            "on": " ",
+        },
+        "single-icons": {
+            "on": " ",
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": "",
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "playerctl -p mpd play-pause"
+    },
     "hyprland/workspaces": {
         "format": "{}",
     },
@@ -27,11 +53,10 @@
         "format": "{}",
         "rewrite": {
             // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
-
         },
         "separate-outputs": true,
-        "tooltip":false,
-        "icon":true,
+        "tooltip": false,
+        "icon": true,
         "icon-size": 24,
     },
     "tray": {
@@ -56,7 +81,7 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "tooltip":false,
+        "tooltip": false,
         "format": "{icon} {temperatureC}°C",
         "format-icons": [
             "",
@@ -122,7 +147,7 @@
             "default": [
                 // "",
                 "",
-                ""
+                "",
             ],
         },
         "on-click": "$TERMINAL -e pulsemixer",
