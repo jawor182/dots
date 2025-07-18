@@ -2,13 +2,16 @@
 
 . "$HOME/.xprofile"
 
-# Apps autostart
+eval $(dbus-launch --exit-with-session --sh-syntax)
+dbus-update-activation-environment --all --systemd DISPLAY XAUTHORITY DBUS_SESSION_BUS_ADDRESS SSH_AUTH_SOCK SSH_AGENT_PID
+
+lxsession &
 dwmblocks &
 picom &
 dunst &
-lxsession &
+snixembed --fork &
+mpd-mpris &
 
-dbus-update-activation-environment --all
 while :; do
-	dbus-launch ssh-agent dwm
+    dwm
 done
