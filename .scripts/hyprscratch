@@ -14,7 +14,7 @@ toggle_scratchpad() {
         hyprctl dispatch togglespecialworkspace "$ws"
     fi
 }
-term="foot --app-id floatingterm"
+term="kitty --app-id floatingterm"
 
 case "$1" in
 terminal)
