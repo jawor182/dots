@@ -8,6 +8,5 @@ picom &
 dunst &
 lxsession &
 
-while :; do
-    exec dwm
-done
+dbus-update-activation-environment --all
+exec dwm

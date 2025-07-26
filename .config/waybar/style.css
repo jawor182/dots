@@ -258,6 +258,11 @@ window#waybar {
 /*     background-color: transparent; */
 /* } */
 
+#tags {
+    border: 2px solid @orange;
+    border-radius: 8px;
+}
+
 #tags button {
     color: @fg;
     background-color: @bg;
