@@ -122,16 +122,11 @@ alias gr="git restore"
 # ─── NAVIGATION & DOTFILES ────────────────────────────────
 alias rr="cd ~/repos"
 alias c="cd ~/dots"
-alias cff="$EDITOR ~/dots/.config/foot/foot.ini"
 alias cft="$EDITOR ~/dots/.config/tmux/tmux.conf"
 alias cfd="$EDITOR ~/dots/.config/dunst/dunstrc"
-alias cfh="$EDITOR ~/dots/.config/hypr/hyprland.conf"
-alias cfl="$EDITOR ~/dots/.config/hypr/hyprlock.conf"
-alias cfi="$EDITOR ~/dots/.config/hypr/hypridle.conf"
 alias cfp="$EDITOR ~/dots/.config/picom/picom.conf"
-alias cfr="$EDITOR ~/dots/.config/rofi/config.rasi"
-alias cft="$EDITOR ~/dots/.config/tmux/tmux.conf"
-alias cfm="$EDITOR ~/dots/.config/maomao/config.conf"
+alias cfr="$EDITOR ~/dots/.config/rmpc/config.ron"
+alias cfm="$EDITOR ~/dots/.config/mpd/mpd.conf"
 alias cfz="$EDITOR ~/dots/.zshrc"
 alias cs="cd ~/dots/.scripts"
 alias css="cd ~/dots/.scripts/statusbar"
@@ -174,19 +169,19 @@ alias wi="wikiman"
 alias wia="wikiman -s arch"
 
 # Catppuccin
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#45475a \
---color=border:#313244,label:#cdd6f4"
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+# --color=selected-bg:#45475a \
+# --color=border:#313244,label:#cdd6f4"
 
 # Gruvbox
-# export FZF_DEFAULT_OPTS=" \
-#     --color=fg:#ebdbb2,bg:#282828,hl:#b16286 \
-#     --color=fg+:#689d6a,bg+:#32302f,hl+:#d3869b \
-#     --color=info:#d65d0e,prompt:#458588,pointer:#fe8019 \
-#     --color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f"
+export FZF_DEFAULT_OPTS=" \
+    --color=fg:#ebdbb2,bg:#282828,hl:#b16286 \
+    --color=fg+:#689d6a,bg+:#32302f,hl+:#d3869b \
+    --color=info:#d65d0e,prompt:#458588,pointer:#fe8019 \
+    --color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f"
 
 
 
