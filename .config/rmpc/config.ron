@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     password: None,
-    theme: None,
+    theme: "default",
     cache_dir: None,
     on_song_change: None,
     volume_step: 5,
@@ -34,13 +34,10 @@
             ".":       VolumeUp,
             "<Tab>":   NextTab,
             "<S-Tab>": PreviousTab,
-            "1":       SwitchToTab("Queue"),
-            "2":       SwitchToTab("Directories"),
-            "3":       SwitchToTab("Artists"),
-            "4":       SwitchToTab("Album Artists"),
-            "5":       SwitchToTab("Albums"),
-            "6":       SwitchToTab("Playlists"),
-            "7":       SwitchToTab("Search"),
+            "1":       SwitchToTab("Playing"),
+            "4":       SwitchToTab("Dir"),
+            "3":       SwitchToTab("Playlists"),
+            "2":       SwitchToTab("Find"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -52,12 +49,9 @@
             "v":       ToggleSingle,
             "b":       SeekBack,
             "~":       ShowHelp,
-            "u":       Update,
-            "U":       Rescan,
             "I":       ShowCurrentSongInfo,
             "O":       ShowOutputs,
             "P":       ShowDecoders,
-            "R":       AddRandom,
         },
         navigation: {
             "k":         Up,
@@ -91,7 +85,6 @@
             "<Esc>":     Close,
             "K":         MoveUp,
             "D":         Delete,
-            "B":         ShowInfo,
         },
         queue: {
             "D":       DeleteAll,
@@ -99,6 +92,7 @@
             "<C-s>":   Save,
             "a":       AddToPlaylist,
             "d":       Delete,
+            "I":       ShowInfo,
             "C":       JumpToCurrent,
             "X":       Shuffle,
         },
@@ -108,10 +102,9 @@
         mode: Contains,
         tags: [
             (value: "any",         label: "Any Tag"),
-            (value: "artist",      label: "Artist"),
-            (value: "album",       label: "Album"),
-            (value: "albumartist", label: "Album Artist"),
             (value: "title",       label: "Title"),
+            (value: "album",       label: "Album"),
+            (value: "artist",      label: "Artist"),
             (value: "filename",    label: "Filename"),
             (value: "genre",       label: "Genre"),
         ],
@@ -122,35 +115,23 @@
     ),
     tabs: [
         (
-            name: "Queue",
+            name: "Playing",
             pane: Split(
                 direction: Horizontal,
-                panes: [(size: "40%", pane: Pane(AlbumArt)), (size: "60%", pane: Pane(Queue))],
+                panes: [(size: "70%", pane: Pane(Queue)), (size: "30%", pane: Pane(AlbumArt))],
             ),
         ),
         (
-            name: "Directories",
-            pane: Pane(Directories),
+            name: "Find",
+            pane: Pane(Search),
         ),
-        (
-            name: "Artists",
-            pane: Pane(Artists),
-        ),
-        (
-            name: "Album Artists",
-            pane: Pane(AlbumArtists),
-        ),
-        (
-            name: "Albums",
-            pane: Pane(Albums),
-        ),
-        (
+       (
             name: "Playlists",
             pane: Pane(Playlists),
         ),
-        (
-            name: "Search",
-            pane: Pane(Search),
+       (
+            name: "Dir",
+            pane: Pane(Directories),
         ),
     ],
 )

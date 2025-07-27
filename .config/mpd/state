@@ -1,0 +1,235 @@
+sw_volume: 100
+audio_device_state:1:PipeWire Sound Server
+state: stop
+random: 1
+repeat: 0
+single: 0
+consume: 1
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: General
+playlist_begin
+0:General/Slipknot - Custer.flac
+1:General/Stahlmann - Adrenalin.flac
+2:General/Stahlmann - Der Schmied.flac
+3:General/Stahlmann - Die Welt verbrennt.flac
+4:General/Stahlmann - Nackt.flac
+5:General/Stahlmann - Paradies.flac
+6:General/Stahlmann - Schwarz.flac
+7:General/Stahlmann - Süchtig.flac
+8:General/Stahlmann - Tempel der Lust.flac
+9:General/Slipknot - Psychosocial.flac
+10:General/Powerman 5000 - Bombshell.flac
+11:General/Deftones - My Own Summer (Shove It).flac
+12:General/Stahlmann - Alptraum.flac
+13:General/Stahlmann - Bastard.flac
+14:General/Stahlmann - Dein Gott.flac
+15:General/Stahlmann - Judas.flac
+16:General/Stahlmann - Leitwolf.flac
+17:General/Stahlmann - Military Lapdance.flac
+18:General/Stahlmann - Supernova.flac
+19:General/Stahlmann - Von Glut zu Asche.flac
+20:General/Stahlmann - Wächter.flac
+21:General/Powerman 5000 - Black Lipstick.flac
+22:General/Limp Bizkit - Full Nelson.flac
+23:General/Limp Bizkit - Hold On.flac
+24:General/Limp Bizkit - Hot Dog.flac
+25:General/Limp Bizkit - Livin' It Up.flac
+26:General/Limp Bizkit - My Generation.flac
+27:General/Limp Bizkit - My Way.flac
+28:General/Limp Bizkit - Rollin' (Air Raid Vehicle).flac
+29:General/Limp Bizkit - Take A Look Around.flac
+30:General/Limp Bizkit - The One.flac
+31:General/Stahlmann - Feindflug.flac
+32:General/Stahlmann - Friss mich.flac
+33:General/Stahlmann - Nimm meine Hand.flac
+34:General/Stahlmann - Plasma.flac
+35:General/Ost+Front - Geld Geld Geld.flac
+36:General/Eisbrecher - Tanz mit mir.flac
+37:General/Eisbrecher - Verrückt.flac
+38:General/Eisbrecher - Miststück 2012.flac
+39:General/Eisbrecher - Eiszeit.flac
+40:General/Eisbrecher - Supermodel.flac
+41:General/Eisbrecher - Everything is wunderbar.flac
+42:General/Exfeind - Göttergatte.flac
+43:General/Lindemann - Allesfresser.flac
+44:General/Lindemann - Gummi.flac
+45:General/Lindemann - Ich weiß es nicht.flac
+46:General/Lindemann - Steh auf.flac
+47:General/Lindemann - G-Spot Michael.flac
+48:General/Korn - Freak On a Leash.flac
+49:General/OOMPH! - Gott ist ein Popstar.flac
+50:General/Megaherz - Jagdzeit.flac
+51:General/Sabaton - Night Witches.flac
+52:General/Rammstein - Asche zu Asche.flac
+53:General/Rammstein - Das alte Leid.flac
+54:General/Rammstein - Der Meister.flac
+55:General/Rammstein - Du riechst so gut.flac
+56:General/Rammstein - Heirate mich.flac
+57:General/Rammstein - Herzeleid.flac
+58:General/Rammstein - Laichzeit.flac
+59:General/Rammstein - Rammstein.flac
+60:General/Rammstein - Weisses Fleisch.flac
+61:General/Rammstein - Wollt ihr das Bett in Flammen sehen.flac
+62:General/System Of A Down - Attack.flac
+63:General/System Of A Down - Dreaming.flac
+64:General/System Of A Down - Holy Mountains.flac
+65:General/System Of A Down - Kill Rock 'n Roll.flac
+66:General/System Of A Down - She's Like Heroin.flac
+67:General/System Of A Down - Stealing Society.flac
+68:General/System Of A Down - Tentative.flac
+69:General/System Of A Down - U-Fig.flac
+70:General/System Of A Down - Vicinity Of Obscenity.flac
+71:General/Eisbrecher - Auf die Zunge (feat. Schattenmann).flac
+72:General/Eisbrecher - Das neue Normal.flac
+73:General/Eisbrecher - Dein Herz.flac
+74:General/Eisbrecher - Die Hoffnung stirbt zuletzt (feat. Sotiria).flac
+75:General/Eisbrecher - Kaltfront.flac
+76:General/Eisbrecher - Waffen Waffen Waffen.flac
+77:General/Eisbrecher - Zeitgeist (feat. Joachim Witt).flac
+78:General/TOOL - Schism.flac
+79:General/Rammstein - Pussy.flac
+80:General/Rammstein - Führe mich.flac
+81:General/Rammstein - Haifisch.flac
+82:General/Rammstein - Liebe ist für alle da.flac
+83:General/Rammstein - Rammlied.flac
+84:General/Rammstein - Waidmanns Heil.flac
+85:General/Eisbrecher - Dagegen (feat. Dero Goi).flac
+86:General/Eisbrecher - Es lebe der Tod.flac
+87:General/Eisbrecher - Es lohnt sich nicht ein Mensch zu sein.flac
+88:General/Eisbrecher - FAKK.flac
+89:General/Eisbrecher - Frommer Mann.flac
+90:General/Eisbrecher - High Society.flac
+91:General/Eisbrecher - Im Guten Im Bösen.flac
+92:General/Eisbrecher - Kontrollverlust.flac
+93:General/Eisbrecher - Leiserdrehen.flac
+94:General/Eisbrecher - Liebe Macht Monster.flac
+95:General/Eisbrecher - Systemsprenger.flac
+96:General/Eisbrecher - Wer bin ich.flac
+97:General/Dope - Die MF Die.flac
+98:General/Stahlmann - Luxusuniform.flac
+99:General/Rammstein - Mein Land.flac
+100:General/System Of A Down - B.Y.O.B..flac
+101:General/System Of A Down - Cigaro.flac
+102:General/System Of A Down - Question!.flac
+103:General/System Of A Down - Revenga.flac
+104:General/System Of A Down - Sad Statue.flac
+105:General/System Of A Down - This Cocaine Makes Me Feel Like I'm On This Song.flac
+106:General/System Of A Down - Violent Pornography.flac
+107:General/OOMPH! - Labyrinth.flac
+108:General/Rammstein - Adios.flac
+109:General/Rammstein - Feuer frei!.flac
+110:General/Rammstein - Ich will.flac
+111:General/Rammstein - Links 2 3 4.flac
+112:General/Rammstein - Mein Herz brennt.flac
+113:General/Rammstein - Mutter.flac
+114:General/Rammstein - Rein raus.flac
+115:General/Rammstein - Sonne.flac
+116:General/Rammstein - Spieluhr.flac
+117:General/Rammstein - Zwitter.flac
+118:General/Stahlmann - Asche zu Asche.flac
+119:General/Stahlmann - Interstellar.flac
+120:General/Stahlmann - Am Grunde.flac
+121:General/Stahlmann - Asche.flac
+122:General/Stahlmann - Diener.flac
+123:General/Stahlmann - Goetter.flac
+124:General/Stahlmann - Mein Leib.flac
+125:General/Stahlmann - Schmerz.flac
+126:General/Stahlmann - Spring nicht.flac
+127:General/Stahlmann - Tanzmaschine - Rock Version.flac
+128:General/Rage Against The Machine - Killing In The Name.flac
+129:General/Rammstein - Ausländer.flac
+130:General/Rammstein - Deutschland.flac
+131:General/Rammstein - Sex.flac
+132:General/Rammstein - Zeig dich.flac
+133:General/Rammstein - Das Modell.flac
+134:General/Rammstein - Feuerräder - Demo Version 1994.flac
+135:General/Rammstein - Kokain.flac
+136:General/Rammstein - Keine Lust.flac
+137:General/Rammstein - Mein Teil.flac
+138:General/Rammstein - Moskau.flac
+139:General/Rammstein - Reise, Reise.flac
+140:General/Rammstein - Benzin.flac
+141:General/Rammstein - Mann gegen Mann.flac
+142:General/Rammstein - Rosenrot.flac
+143:General/Rammstein - Zerstören.flac
+144:General/Eisbrecher - Zwischen uns.flac
+145:General/Korn - Coming Undone.flac
+146:General/Rammstein - Alter Mann.flac
+147:General/Rammstein - Bestrafe mich.flac
+148:General/Rammstein - Bück dich.flac
+149:General/Rammstein - Du hast.flac
+150:General/Rammstein - Eifersucht.flac
+151:General/Rammstein - Engel.flac
+152:General/Rammstein - Küss mich (Fellfrosch).flac
+153:General/Rammstein - Sehnsucht.flac
+154:General/Rammstein - Tier.flac
+155:General/Spineshank - Violent Mood Swings.flac
+156:General/Limp Bizkit - Break Stuff.flac
+157:General/Limp Bizkit - Nobody Like You.flac
+158:General/Limp Bizkit - Nookie.flac
+159:General/Slipknot - Eyeless.flac
+160:General/Slipknot - Spit It Out.flac
+161:General/Slipknot - Wait and Bleed.flac
+162:General/Stahlmann - Auf Ewig.flac
+163:General/Stahlmann - Hass mich..Lieb mich.flac
+164:General/Stahlmann - Kaltes Herz.flac
+165:General/Stahlmann - Kokain.flac
+166:General/Stahlmann - Letzter Vorhang.flac
+167:General/Stahlmann - Marschieren.flac
+168:General/Stahlmann - Stahlmann.flac
+169:General/Stahlmann - Stahlwittchen.flac
+170:General/Stahlmann - Teufel.flac
+171:General/Stahlmann - Willkommen.flac
+172:General/System Of A Down - 36.flac
+173:General/System Of A Down - A.D.D. (American Dream Denial).flac
+174:General/System Of A Down - Boom!.flac
+175:General/System Of A Down - Bubbles.flac
+176:General/System Of A Down - Chic 'N' Stu.flac
+177:General/System Of A Down - Fuck the System.flac
+178:General/System Of A Down - Highway Song.flac
+179:General/System Of A Down - I-E-A-I-A-I-O.flac
+180:General/System Of A Down - Pictures.flac
+181:General/System Of A Down - Streamline.flac
+182:General/System Of A Down - Thetawaves.flac
+183:General/Limp Bizkit - Turn It Up, Bitch.flac
+184:General/Eisbrecher - Was ist hier los.flac
+185:General/Eisbrecher - This is Deutsch.flac
+186:General/System Of A Down - CUBErt.flac
+187:General/System Of A Down - Darts.flac
+188:General/System Of A Down - DDevil.flac
+189:General/System Of A Down - Know.flac
+190:General/System Of A Down - Sugar.flac
+191:General/System Of A Down - Suggestions.flac
+192:General/System Of A Down - Suite-Pee.flac
+193:General/Stahlmann - Tanzen.flac
+194:General/Deathstars - Blitzkrieg.flac
+195:General/Dry Kill Logic - Rot.flac
+196:General/Sabaton - The Attack of the Dead Men.flac
+197:General/Sabaton - The Red Baron.flac
+198:General/Powerman 5000 - Supernova Goes Pop.flac
+199:General/Powerman 5000 - Tonight The Stars Revolt!.flac
+200:General/Powerman 5000 - When Worlds Collide.flac
+201:General/System Of A Down - Aerials.flac
+202:General/System Of A Down - ATWA.flac
+203:General/System Of A Down - Bounce.flac
+204:General/System Of A Down - Chop Suey!.flac
+205:General/System Of A Down - Deer Dance.flac
+206:General/System Of A Down - Forest.flac
+207:General/System Of A Down - Jet Pilot.flac
+208:General/System Of A Down - Needles.flac
+209:General/System Of A Down - Prison Song.flac
+210:General/System Of A Down - Psycho.flac
+211:General/System Of A Down - Science.flac
+212:General/System Of A Down - Shimmy.flac
+213:General/System Of A Down - Toxicity.flac
+214:General/System Of A Down - X.flac
+215:General/Slipknot - Before I Forget.flac
+216:General/Slipknot - Duality.flac
+217:General/OOMPH! - Augen auf!.flac
+218:General/Slipknot - Nero Forte.flac
+219:General/Slipknot - Unsainted.flac
+220:General/Rammstein - Giftig.flac
+221:General/Rammstein - Zick Zack.flac
+playlist_end
