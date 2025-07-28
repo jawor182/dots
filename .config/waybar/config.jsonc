@@ -18,8 +18,14 @@
         // "temperature",
         "battery",
         "pulseaudio",
+        "custom/swaync",
         "network",
     ],
+    "custom/swaync" : {
+        "format":"",
+        "on-click":"swaync-client -t",
+        "tooltip":false,
+    },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S} ",
         "format-disconnected": "Disconnected ",
