@@ -1,0 +1,158 @@
+{
+    "height": 36,
+    "spacing": 4,
+    "margin": 4,
+    "modules-left": [
+        "hyprland/workspaces",
+        "dwl/tags",
+        "mpd"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "cpu",
+        "memory",
+        "backlight",
+        // "temperature",
+        "battery",
+        "pulseaudio",
+        "network",
+    ],
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S} ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "interval": 10,
+        "consume-icons": {
+            "on": " ", // Icon shows only when "consume" is on
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+            "on": " ",
+        },
+        "repeat-icons": {
+            "on": " ",
+        },
+        "single-icons": {
+            "on": " ",
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": "",
+        },
+        // "tooltip-format": "MPD (connected)",
+        // "tooltip-format-disconnected": "MPD (disconnected)",
+        "tooltip":false,
+        "on-click": "playerctl -p mpd play-pause"
+    },
+    "hyprland/workspaces": {
+        "format": "{}",
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            // "(.*) — Firefox Nightly": "󰈹 $1 - Firefox Nightly",
+        },
+        "separate-outputs": true,
+        "tooltip": false,
+        "icon": true,
+        "icon-size": 24,
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 8,
+    },
+    "clock": {
+        "format": " {:%a, %H:%M}",
+        "format-alt": " {:%A, %d.%m.%Y}",
+        "tooltip": false,
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip-format": "{avg_frequency}",
+    },
+    "memory": {
+        "format": " {}%",
+        "on-click": "$TERMINAL -e htop",
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+    },
+    "battery": {
+        "states": {
+            "good": 65,
+            "warning": 30,
+            "critical": 10,
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󱧥 {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip": false,
+        "on-click": "$TERMINAL -e speedtest",
+        "on-click-right": "$TERMINAL -e nm-connection-editor",
+    },
+    "bluetooth": {
+        "format": "",
+        "on-click": "$TERMINAL -e bluetuith",
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "{icon} 󰖁",
+        "format-muted": " ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [
+                // "",
+                "",
+                "",
+            ],
+        },
+        "on-click": "$TERMINAL -e pulsemixer",
+        "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    },
+}
+// -*- mode: jsonc -*-
