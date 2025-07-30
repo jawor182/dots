@@ -3,7 +3,7 @@
 # Prints all batteries, their percentage remaining and an emoji corresponding
 # to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
 
-case $BUTTON in
+case $BLOCK_BUTTON in
     1) notify-send "Hello" ;;
     2) notify-send "world" ;;
     3) notify-send "🔋 Battery module" "🔋: discharging
@@ -13,8 +13,8 @@ case $BUTTON in
 ⚡: charged
 ❗: battery very low!
 - Scroll to change adjust xbacklight." ;;
-    # 4) xbacklight -inc 10 ;;
-    # 5) xbacklight -dec 10 ;;
+    4) brightnessctl set +10%;;
+    5) brightnessctl set 10%-;;
     6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
