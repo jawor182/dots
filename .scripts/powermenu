@@ -2,10 +2,10 @@
 
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
     option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | dmenu -c -i -l 4 -p "What do you want to do?")
-    LOCK="betterlockscreen -l"
+    LOCK="$(loginctl lock-session && betterlockscreen -l)"
 else
     option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | rofi -dmenu -i -l 4 -p "What do you want to do?")
-    LOCK="gtklock"
+    LOCK="$(gtklock)"
 fi
 
 case $option in
