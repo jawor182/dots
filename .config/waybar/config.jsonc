@@ -18,7 +18,7 @@
         // "temperature",
         "battery",
         "pulseaudio",
-        "custom/swaync",
+        // "custom/swaync",
         "network",
     ],
     "custom/swaync" : {
