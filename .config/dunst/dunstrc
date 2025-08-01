@@ -4,7 +4,10 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = DP-0,DP-1
+    # X
+    monitor = 0
+    # Wayland
+    # monitor = 1
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer

@@ -1,0 +1,15 @@
+cava
+pypr
+bluetuith-bin
+selectdefaultapplication-git
+catppuccin-gtk-theme-mocha-revamped
+thunderbird-nightly
+waypaper
+pipes.sh
+ventoy-bin
+qt5gtk2
+qt5-styleplugins
+betterlockscreen
+xurls
+hyprsysteminfo
+boomer-git
