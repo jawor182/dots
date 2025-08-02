@@ -41,10 +41,10 @@
         trace: (fg: "magenta", bg: "black"),
     ),
     progress_bar: (
-        symbols: ["█", "█", "█"],
+        symbols: ["█", "", "█"],
         track_style: (fg: "#2e2e2e"),
         elapsed_style: (fg: "#d65d0e"),
-        thumb_style: (fg: "#fe8019"),
+        thumb_style: (fg: "#d65d0e"),
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
