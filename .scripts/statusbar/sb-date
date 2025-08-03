@@ -10,4 +10,4 @@ case $BLOCK_BUTTON in
 esac
 
 date=$(date '+ %a, %H:%M')
-printf "%s\n" "$date"
+printf "%s\n" "$date"

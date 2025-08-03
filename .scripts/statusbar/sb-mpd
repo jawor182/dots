@@ -1,0 +1,23 @@
+#!/bin/sh
+
+status=$(mpc status %state%)
+info=$(mpc status --format "[%artist% - %title%]" | head -n 1)
+time=$(mpc status "[%currenttime%/%totaltime%]" | head -n 1)
+
+case "$status" in
+    "playing")
+        statusIcon="" ;;
+    "paused")
+        statusIcon="" ;;
+    *)
+        statusIcon="" ;;
+esac
+
+case $BLOCK_BUTTON in
+    1) playerctl -p mpd play-pause ;;
+    2) playerctl -p mpd next ;;
+    3) playerctl -p mpd previous ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+printf " %s %s %s\n" "$statusIcon" "$info" "$time"
