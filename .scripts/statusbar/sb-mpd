@@ -10,7 +10,9 @@ case "$status" in
     "paused")
         statusIcon="" ;;
     *)
-        statusIcon="" ;;
+        statusIcon=""
+        info="off" 
+        time="";;
 esac
 
 case $BLOCK_BUTTON in
