@@ -4,7 +4,7 @@
 
 # Apps autostart
 dwmblocks &
-xcompmgr &
+picom &
 dunst &
 lxsession &
 
