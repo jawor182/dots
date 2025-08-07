@@ -81,7 +81,7 @@
     },
     "memory": {
         "format": " {}%",
-        "on-click": "$TERMINAL -e htop",
+        "on-click": "$TERMINAL --app-id floatingterm -e htop",
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -135,12 +135,12 @@
         "format-ethernet": "",
         "format-disconnected": "",
         "tooltip": false,
-        "on-click": "$TERMINAL -e speedtest",
-        "on-click-right": "$TERMINAL -e nm-connection-editor",
+        "on-click": "$TERMINAL --app-id floatingterm -e speedtest",
+        "on-click-right": "$TERMINAL --app-id floatingterm -e nm-connection-editor",
     },
     "bluetooth": {
         "format": "",
-        "on-click": "$TERMINAL -e bluetuith",
+        "on-click": "$TERMINAL --app-id floatingterm -e bluetuith",
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -157,7 +157,7 @@
                 "",
             ],
         },
-        "on-click": "$TERMINAL -e pulsemixer",
+        "on-click": "$TERMINAL --app-id floatingterm -e pulsemixer",
         "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
     },
 }

@@ -3,7 +3,7 @@
 mem=$(free | awk '/^Mem:/ {print ($3 / $2) * 100}')
 
 case $BLOCK_BUTTON in
-1) setsid -f "$TERMINAL" -e "htop" ;;
+1) setsid -f "$TERMINAL" -c "floatingTerm" -e "htop" ;;
 6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 

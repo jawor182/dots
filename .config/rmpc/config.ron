@@ -29,8 +29,8 @@
     keybinds: (
         global: {
             ":":       CommandMode,
-            ",":       VolumeDown,
-            ".":       VolumeUp,
+            "-":       VolumeDown,
+            "=":       VolumeUp,
             "s":       Stop,
             "<Tab>":   NextTab,
             "<S-Tab>": PreviousTab,

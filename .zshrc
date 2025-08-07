@@ -63,6 +63,26 @@ function yazii() {
 	rm -f -- "$tmp"
 }
 
+function preexec {
+    if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+        if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+            print -Pn "\e]0;${(q)1}\e\\"
+        fi
+    else
+        print -Pn "\e]0;${(q)1}\e\\"
+    fi
+}
+
+function precmd {
+    if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+        if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+            print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
+        fi
+    else
+        print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
+    fi
+}
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -145,6 +165,7 @@ alias nsn="cd ~/new-suckless/nsxiv/"
 alias nsd="cd ~/new-suckless/dwm"
 alias nsdm="cd ~/new-suckless/dmenu"
 alias nst="cd ~/new-suckless/st"
+alias ws="cd ~/wayland-suckless/"
 alias wsd="cd ~/wayland-suckless/dwl/"
 alias d="cd ~/dox"
 alias dn="cd ~/dox/notes"

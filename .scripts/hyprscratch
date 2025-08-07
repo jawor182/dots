@@ -14,25 +14,21 @@ toggle_scratchpad() {
         hyprctl dispatch togglespecialworkspace "$ws"
     fi
 }
-term="kitty --app-id floatingterm"
+term="foot --app-id floatingterm"
 
 case "$1" in
 terminal)
-    toggle_scratchpad "terminal" "$term"
-    ;;
+    toggle_scratchpad "terminal" "$term" ;;
 volume)
-    toggle_scratchpad "volume" "$term -e pulsemixer"
-    ;;
+    toggle_scratchpad "volume" "$term -e pulsemixer" ;;
 bt)
-    toggle_scratchpad "bt" "$term -e bluetuith"
-    ;;
+    toggle_scratchpad "bt" "$term -e bluetuith" ;;
 sysmon)
-    toggle_scratchpad "sysmon" "$term -e btop"
-    ;;
+    toggle_scratchpad "sysmon" "$term -e btop" ;;
 files)
-    toggle_scratchpad "files" "$term -e yazi"
-    ;;
+    toggle_scratchpad "files" "$term -e yazi" ;;
 notes)
-    toggle_scratchpad "notes" "$term -e sh -c 'cd $HOME/dox/notes && $EDITOR'"
-    ;;
+    toggle_scratchpad "notes" "$term -e sh -c 'cd $HOME/dox/notes && $EDITOR'" ;;
+music)
+    toggle_scratchpad "music" "$term -e rmpc" ;;
 esac
