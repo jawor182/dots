@@ -3,8 +3,6 @@ calibre
 gtklock
 tmux
 discord
-firefox-nightly
-flameshot
 keepassxc
 lxappearance-gtk3
 lxsession-gtk3
@@ -14,8 +12,9 @@ xdotool
 qt5ct
 mpv
 mpd
+mpc
+rmpc
 mpd-mpris
-ncmpcpp
 solaar
 thunderbird
 vim
