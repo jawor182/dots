@@ -92,7 +92,6 @@ bindkey -M visual '^[[P' vi-delete
 
 # Aliases
 # ─── EDITORS ──────────────────────────────────────────────
-alias v="vim"
 alias n="nvim"
 alias sn="sudoedit"
 
@@ -144,6 +143,7 @@ alias r="cd ~/repos"
 alias c="cd ~/dots"
 alias cft="$EDITOR ~/dots/.config/tmux/tmux.conf"
 alias cfd="$EDITOR ~/dots/.config/dunst/dunstrc"
+alias cfb="$EDITOR ~/dots/.config/newsboat/config"
 alias cfp="$EDITOR ~/dots/.config/picom/picom.conf"
 alias cfz="$EDITOR ~/dots/.zshrc"
 alias cff="$EDITOR ~/dots/.config/foot/foot.ini"
@@ -172,6 +172,8 @@ alias ds="cd ~/dox/szkola"
 alias w="cd ~/walls"
 alias f="$FILES"
 alias m="cd ~/musik/"
+alias v="cd ~/vids"
+alias pc="cd ~/podcasts/"
 
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────
 alias la="ls -la"
@@ -192,6 +194,7 @@ alias tns="tmux new -s"
 alias dev="npm run dev"
 alias wi="wikiman"
 alias wia="wikiman -s arch"
+alias nb="newsboat"
 
 # Catppuccin
 # export FZF_DEFAULT_OPTS=" \
