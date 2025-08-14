@@ -144,6 +144,7 @@ keymap = [
 	{ on = [ "g", "p" ],       run = "cd ~/dox/pix",                desc = "Go to pix" },
 	{ on = [ "g", "w" ],       run = "cd ~/walls",                  desc = "Go to walls" },
 	{ on = [ "g", "r" ],       run = "cd ~/repos",                  desc = "Go to repos" },
+	{ on = [ "g", "v" ],       run = "cd ~/vids/",                  desc = "Go to vids" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive",            desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",                      desc = "Follow hovered symlink" },
 
