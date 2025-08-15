@@ -44,6 +44,5 @@ highlight article "\\[image\\ [0-9]+\\]" color2 default bold
 highlight feedlist "^─.*$" color166 color166 bold
 
 reload-threads 100
-cleanup-on-quit no
 
 # vim: filetype=conf

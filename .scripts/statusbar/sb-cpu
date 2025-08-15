@@ -1,6 +1,10 @@
 #!/bin/sh
 
-temp=$(sensors | awk '/^Tctl:/ {print $2}' | sed 's/+//')
+if $HOST = "desktop"; then
+    temp=$(sensors | awk '/^Tctl:/ {print $2}' | sed 's/+//')
+else
+    temp=$( sensors | awk '/^CPU:/ {print $2}' | sed 's/+//')
+fi
 usage=$(top -b -n 1 | grep "Cpu(s)" | awk '{printf  $2}' | xargs printf "%.1f%%\n")
 
 case $BLOCK_BUTTON in
