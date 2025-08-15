@@ -2,7 +2,7 @@
 
 TIMESTAMP="$(date '+%Y-%m-%d-%H-%M-%S')"
 IMG_NAME="${TIMESTAMP}.png"
-SAVE_DIR="$HOME/dox/pix"
+SAVE_DIR="$HOME/dox/pix/screenshots"
 TEMP_FILE="/tmp/screenshot_temp_${TIMESTAMP}.png" # Temporary file to hold the selection
 
 mkdir -p "$SAVE_DIR"
