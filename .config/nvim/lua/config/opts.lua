@@ -7,7 +7,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.swapfile = false
 
-vim.opt.smartindent = false
+vim.opt.smartindent = true
+vim.opt.ignorecase = true
+vim.opt.hlsearch = true
+vim.opt.winborder = "rounded"
+vim.opt.undofile = true
+vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = false
 vim.opt.conceallevel = 2
