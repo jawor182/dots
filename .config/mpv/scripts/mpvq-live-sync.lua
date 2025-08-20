@@ -1,83 +1,120 @@
--- Keeps mpv's playlist and external queue file in sync
--- Removes entries when they finish, allows skipping, and reloads new queue entries
+local utils = require("mp.utils")
+local msg = require("mp.msg")
 
-local msg = require "mp.msg"
-local utils = require "mp.utils"
-
+-- Configuration
 local queue_file = os.getenv("HOME") .. "/.local/share/mpvq/playlist.m3u"
+local current_file = nil
+local played_files = {}
 
--- Delete the first line from the queue file
-local function delete_first_line()
-    local cmd = { "sed", "-i", "1d", queue_file }
-    local res = utils.subprocess({ args = cmd })
-    if res.error then
-        msg.error("Failed to update queue file: " .. res.error)
-    else
-        msg.info("Removed first line from queue file")
-    end
+-- Function to safely read the queue file
+local function read_queue_file()
+	local f = io.open(queue_file, "r")
+	if not f then
+		return {}
+	end
+
+	local lines = {}
+	for line in f:lines() do
+		table.insert(lines, line)
+	end
+	f:close()
+	return lines
 end
 
--- Remove current entry from mpv playlist and queue
-local function consume_current()
-    if mp.get_property_number("playlist-count", 0) > 0 then
-        local fname = mp.get_property("playlist/current/filename")
-        mp.commandv("playlist-remove", "current")
-        -- Only delete first line if it matches the consumed file
-        local f = io.open(queue_file, "r")
-        if f then
-            local first_line = f:read("*l")
-            f:close()
-            if first_line == fname then
-                delete_first_line()
-            end
-        end
-    end
+-- Function to safely write to the queue file
+local function write_queue_file(lines)
+	-- Create backup
+	os.rename(queue_file, queue_file .. ".bak")
+
+	local f = io.open(queue_file, "w")
+	if not f then
+		os.rename(queue_file .. ".bak", queue_file)
+		return false
+	end
+
+	for _, line in ipairs(lines) do
+		f:write(line, "\n")
+	end
+	f:close()
+
+	-- Remove backup if successful
+	os.remove(queue_file .. ".bak")
+	return true
 end
 
--- Trigger when a file ends naturally
+-- Function to remove current file from queue
+local function remove_current_from_queue()
+	if not current_file then
+		return
+	end
+
+	local lines = read_queue_file()
+	local new_lines = {}
+	local removed = false
+
+	for _, line in ipairs(lines) do
+		if line == current_file and not removed then
+			removed = true
+			msg.info("Removed from queue: " .. current_file)
+		else
+			table.insert(new_lines, line)
+		end
+	end
+
+	if removed then
+		write_queue_file(new_lines)
+		played_files[current_file] = true
+	end
+end
+
+-- Function to sync queue with MPV's playlist
+local function sync_queue()
+	local lines = read_queue_file()
+	local current_playlist = {}
+
+	-- Get current MPV playlist
+	for i = 0, mp.get_property_number("playlist-count", 0) - 1 do
+		local filename = mp.get_property("playlist/" .. i .. "/filename")
+		current_playlist[filename] = true
+	end
+
+	-- Add new entries from queue file to MPV playlist
+	for _, entry in ipairs(lines) do
+		if not current_playlist[entry] and not played_files[entry] then
+			mp.commandv("loadfile", entry, "append")
+			msg.info("Appended to playlist: " .. entry)
+		end
+	end
+end
+
+-- Event handlers
+mp.register_event("file-loaded", function()
+	current_file = mp.get_property("path")
+	msg.info("Now playing: " .. (current_file or "unknown"))
+end)
+
+mp.register_event("playback-restart", function()
+	current_file = mp.get_property("path")
+end)
+
 mp.register_event("end-file", function(event)
-    if event.reason == "eof" then
-        consume_current()
-    end
+	if (event.reason == "eof" or event.reason == "stop") and current_file then
+		-- Remove from queue after successful playback
+		remove_current_from_queue()
+	end
+	current_file = nil
 end)
 
--- Keybindings for skip-and-delete
-mp.add_key_binding(nil, "consume-next", function()
-    consume_current()
-    mp.commandv("playlist-next", "force")
+-- Set up periodic sync
+mp.add_periodic_timer(1.0, sync_queue)
+
+-- Set up key binding to manually remove current file from queue
+mp.add_key_binding("Ctrl+r", "remove-from-queue", function()
+	if current_file then
+		remove_current_from_queue()
+		mp.commandv("playlist-remove", "current")
+		mp.commandv("playlist-next")
+	else
+		msg.info("No file currently playing")
+	end
 end)
-
-mp.add_forced_key_binding(">", "skip-and-delete", function()
-    consume_current()
-    mp.commandv("playlist-next", "force")
-end)
-
--- Reload new entries from queue file without duplicates
-local function reload_queue()
-    local f = io.open(queue_file, "r")
-    if not f then return end
-    local lines = {}
-    for line in f:lines() do
-        table.insert(lines, line)
-    end
-    f:close()
-
-    -- Build a set of current playlist filenames
-    local current_playlist = {}
-    for i = 0, mp.get_property_number("playlist-count", 0)-1 do
-        local fname = mp.get_property("playlist/"..i.."/filename")
-        current_playlist[fname] = true
-    end
-
-    -- Append only entries not already in playlist
-    for _, entry in ipairs(lines) do
-        if not current_playlist[entry] then
-            mp.commandv("loadfile", entry, "append")
-            msg.info("Appended to playlist: " .. entry)
-        end
-    end
-end
-
--- Poll every second to check for new entries
-mp.add_periodic_timer(1.0, reload_queue)
-
