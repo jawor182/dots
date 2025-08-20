@@ -1,0 +1,64 @@
+#!/bin/bash
+
+path="$HOME/.local/share/mpvq"
+playlist="$path/playlist.m3u"
+clipfile=$(xclip -o clip sel)
+lockfile="$path/mpvq.lock"
+
+[ ! -d "$path" ] && mkdir -p "$path"
+[ ! -f "$playlist" ] && touch "$playlist"
+
+add() {
+    echo "$2" >>"$playlist"
+    echo "Added: $2"
+}
+
+addclip() {
+    if echo "$clipfile" | grep -Eq '^https?://'; then
+        echo "$clipfile" >> "$playlist"
+    else
+        echo "Clipboard does not contain a valid URL."
+    fi
+}
+
+
+show() {
+    if [ ! -s "$playlist" ]; then
+        echo "Queue is empty."
+    else
+        cat "$playlist"
+    fi
+}
+
+play() {
+    # Try to acquire lock to prevent multiple instances
+    exec 200>"$lockfile"
+    flock -n 200 || { echo "Another mpvq instance is already running!"; exit 1; }
+
+    setsid -f mpv \
+        --playlist="$playlist" \
+        --player-operation-mode=pseudo-gui \
+        --script="$HOME/.config/mpv/scripts/mpvq-live-sync.lua"
+
+}
+
+case "$1" in
+    add)
+        [ -z "$2" ] && { echo "Usage: mpvq add <file-or-url>"; exit 1; }
+        add "$@"
+        ;;
+    show)
+        show
+        ;;
+    play)
+        play
+        ;;
+    addclip)
+        addclip
+        ;;
+    *)
+        echo "Usage: mpvq {add|show|play}"
+        exit 1
+        ;;
+esac
+
