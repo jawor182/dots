@@ -2,7 +2,6 @@
 
 path="$HOME/.local/share/mpvq"
 playlist="$path/playlist.m3u"
-clipfile=$(xclip -o clip sel)
 lockfile="$path/mpvq.lock"
 
 [ ! -d "$path" ] && mkdir -p "$path"
@@ -14,6 +13,7 @@ add() {
 }
 
 addclip() {
+    clipfile=$(xclip -o clip sel)
     if echo "$clipfile" | grep -Eq '^https?://'; then
         echo "$clipfile" >> "$playlist"
     else
