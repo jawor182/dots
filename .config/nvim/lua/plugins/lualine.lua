@@ -27,7 +27,7 @@ return {
                 lualine_c = { "filename" },
                 lualine_x = { "filetype" },
                 lualine_y = { "" },
-                lualine_z = { "" },
+                lualine_z = { "progress" },
             },
             inactive_sections = {
                 lualine_a = {},

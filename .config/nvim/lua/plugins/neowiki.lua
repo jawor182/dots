@@ -36,10 +36,6 @@ return {
                 -- Removes all links in the current file that point to non-existent pages.
                 cleanup_links = "<leader>wc",
             },
-            vim.keymap.set("n", "<leader>ww", require("neowiki").open_wiki, { desc = "Open Wiki" }),
-            vim.keymap.set("n", "<leader>wW", require("neowiki").open_wiki_floating, { desc = "Open Floating Wiki" }),
-            vim.keymap.set("n", "<leader>wT", require("neowiki").open_wiki_new_tab, { desc = "Open Wiki in Tab" }),
-
             -- Configuration for the GTD functionality.
             gtd = {
                 -- Set to false to disable the progress percentage virtual text.

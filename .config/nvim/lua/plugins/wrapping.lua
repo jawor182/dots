@@ -14,14 +14,5 @@ return {
                 notify_on_switch = false,
             },
         })
-
-        vim.api.nvim_create_autocmd("FileType", {
-            pattern = { "markdown" },
-            callback = function()
-                wrapping.soft_wrap_mode()
-                vim.keymap.set("n", "j", "gj", { noremap = true })
-                vim.keymap.set("n", "k", "gk", { noremap = true })
-            end,
-        })
     end,
 }

@@ -1,7 +1,7 @@
 
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>tr", vim.cmd.Yazi)
+vim.keymap.set("n", "<leader>tr", vim.cmd.Ex)
 vim.keymap.set("n",'K', vim.lsp.buf.hover, {})
 vim.keymap.set("n",'<leader>m',vim.cmd.Mason)
 vim.keymap.set("n",'<leader>l',vim.cmd.Lazy)
@@ -49,3 +49,9 @@ local wrapping = require("wrapping")
 vim.keymap.set("n", "[ow", wrapping.hard_wrap_mode, { desc = "Hard Wrap Mode" })
 vim.keymap.set("n", "]ow", wrapping.soft_wrap_mode, { desc = "Soft Wrap Mode" })
 vim.keymap.set("n", "yow", wrapping.toggle_wrap_mode, { desc = "Toggle Wrap Mode" })
+
+vim.keymap.set("n", "<leader>ww", require("neowiki").open_wiki, { desc = "Open Wiki" })
+vim.keymap.set("n", "<leader>wW", require("neowiki").open_wiki_floating, { desc = "Open Floating Wiki" })
+vim.keymap.set("n", "<leader>wT", require("neowiki").open_wiki_new_tab, { desc = "Open Wiki in Tab" })
+
+vim.keymap.set("n","<leader>f",":Pick files<CR>", {desc = "Open Pick"})
