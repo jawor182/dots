@@ -7,7 +7,12 @@ cs                      ~/dots/.scripts/
 cS                      ~/dots/.scripts/statusbar/
 cf                      ~/dots/.config/
 r                       ~/repos/
-ns                      ~/new-suckless/
+nss                     ~/new-suckless/
+nsd                     ~/new-suckless/dwm/
+nsD                     ~/new-suckless/dmenu/
+nst                     ~/new-suckless/dmenu/
+nsb                     ~/new-suckless/blocks/
+nsn                     ~/new-suckless/nsxiv/
 dx                      ~/dox/
 dn                      ~/dox/notes/
 w                       ~/walls
