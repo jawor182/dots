@@ -1,4 +1,5 @@
 librewolf
+aria2c
 calibre
 tmux
 discord
