@@ -1,0 +1,14 @@
+# Shortcuts for dirs in shell
+# Format:
+# shortcut              path
+
+cc                      ~/dots/
+cs                      ~/dots/.scripts/
+cS                      ~/dots/.scripts/statusbar/
+cf                      ~/dots/.config/
+r                       ~/repos/
+ns                      ~/new-suckless/
+dx                      ~/dox/
+dn                      ~/dox/notes/
+w                       ~/walls
+m                       ~/media/

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Input files
+bmfiles=$XDG_CONFIG_HOME/shell/bmfiles
+bmdirs=$XDG_CONFIG_HOME/shell/bmdirs
+
+# Output files
+shellfiles=$XDG_CONFIG_HOME/shell/shortcutsrc
+lfshorts=$XDG_CONFIG_HOME/lf/shortcutsrc
+
+
+[ ! -d "$XDG_CONFIG_HOME"/shell ] && mkdir "$XDG_CONFIG_HOME"/shell
+
+generateDirShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmdirs" | \
+    awk -v editor="cd" '{printf "alias %s=\"%s %s\"\n", $1, editor, $2}' >> "$shellfiles"
+}
+
+generateFileShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmfiles" | \
+    awk -v editor="$EDITOR" '{printf "alias %s=\"%s %s\"\n", $1, editor, $2}' >> "$shellfiles"
+}
+
+generateLFShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmdirs" | \
+    awk -v editor="cd" '{printf "map g%s %s %s\n", $1, editor, $2}' > "$lfshorts"
+    # awk -v editor="cd" '{printf "map %s %s %s\n", $1, editor, $2}' > "$lfshorts"
+}
+# Cleanup 
+[ -f "$shellfiles" ] && rm "$shellfiles"
+[ -f "$shellfiles" ] && rm "$lfshorts"
+generateLFShortcuts
+generateDirShortcuts
+generateFileShortcuts

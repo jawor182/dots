@@ -63,32 +63,14 @@ function yazii() {
 	rm -f -- "$tmp"
 }
 
-function preexec {
-    if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
-        if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
-            print -Pn "\e]0;${(q)1}\e\\"
-        fi
-    else
-        print -Pn "\e]0;${(q)1}\e\\"
-    fi
-}
-
-function precmd {
-    if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
-        if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
-            print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
-        fi
-    else
-        print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
-    fi
-}
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
+
+source $XDG_CONFIG_HOME/shell/shortcutsrc
 
 # Aliases
 # ─── EDITORS ──────────────────────────────────────────────
@@ -97,16 +79,7 @@ alias sn="sudoedit"
 
 # ─── PACKAGE MANAGEMENT
 alias p="sudo pacman"
-alias pQ="sudo pacman -Q"
-alias pQS="sudo pacman -Qs"
-alias pR="sudo pacman -Rus"
-alias pS="sudo pacman -S"
-alias pSS="sudo pacman -Ss"
 alias y="yay"
-alias yR="yay -R"
-alias yS="yay -S"
-alias ySS="yay -Ss"
-alias yeet="yay -Rus"
 
 # ─── SYSTEM UPDATES ───────────────────────────────────────
 alias update="sudo pacman -Syyuu && yay -Syyu"
@@ -138,37 +111,6 @@ alias gs="git status"
 alias gd="git diff"
 alias gr="git restore"
 
-# ─── NAVIGATION & DOTFILES ────────────────────────────────
-alias r="cd ~/repos"
-alias c="cd ~/dots"
-alias cft="$EDITOR ~/dots/.config/tmux/tmux.conf"
-alias cfd="$EDITOR ~/dots/.config/dunst/dunstrc"
-alias cfb="$EDITOR ~/dots/.config/newsboat/config"
-alias cfp="$EDITOR ~/dots/.config/picom/picom.conf"
-alias cfz="$EDITOR ~/dots/.zshrc"
-alias cs="cd ~/dots/.scripts"
-alias css="cd ~/dots/.scripts/statusbar"
-alias cf="cd ~/dots/.config"
-alias cfn="cd ~/dots/.config/nvim"
-alias cfw="cd ~/dots/.config/waybar"
-alias cfy="cd ~/dots/.config/yazi"
-alias cfm="cd ~/dots/.config/rmpc"
-alias ns="cd ~/new-suckless"
-alias nsb="cd ~/new-suckless/blocks"
-alias nsn="cd ~/new-suckless/nsxiv/"
-alias nsd="cd ~/new-suckless/dwm"
-alias nsdm="cd ~/new-suckless/dmenu"
-alias nst="cd ~/new-suckless/st"
-alias d="cd ~/dox"
-alias dn="cd ~/dox/notes"
-alias dp="cd ~/dox/pix"
-alias ds="cd ~/dox/szkola"
-alias w="cd ~/walls"
-alias f="$FILES"
-alias m="cd ~/musik/"
-alias v="cd ~/vids"
-alias pc="cd ~/podcasts/"
-
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────
 alias la="ls -la"
 alias ll="ls -l"
@@ -186,9 +128,8 @@ alias tns="tmux new -s"
 
 # ─── MISCELLANEOUS ────────────────────────────────────────
 alias dev="npm run dev"
-alias wi="wikiman"
-alias wia="wikiman -s arch"
 alias nb="newsboat"
+alias lf="lfub"
 
 # Catppuccin
 # export FZF_DEFAULT_OPTS=" \
@@ -211,6 +152,8 @@ export FZF_DEFAULT_OPTS=" \
 bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m ~/.Xresources\n'
+bindkey -s '^B' 'find $HOME/dots -path "*/.git/*" -prune -o -type f -print | fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
+bindkey -s '^E' 'fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
 
 export PATH="/home/jawor/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/jawor/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

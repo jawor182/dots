@@ -2,3 +2,4 @@
 .local/share
 .local/state
 .config/nvim/lazy-lock.json
+.config/lf/shortcutsrc

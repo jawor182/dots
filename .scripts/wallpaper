@@ -9,6 +9,6 @@ case "$1" in
         ;;
     "set")
         xwallpaper --stretch "$2"
-        betterlockscreen -u "$2" --fx
+        betterlockscreen -u "$2" --fx &> /dev/null &
         ;;
 esac

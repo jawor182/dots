@@ -11,7 +11,7 @@ autocmd("VimEnter", {
 autocmd("FileType", {
 	pattern = { "markdown" },
 	callback = function()
-		require("plugins.wrapping").soft_wrap_mode()
+		require("wrapping").soft_wrap_mode()
 		vim.keymap.set("n", "j", "gj", { noremap = true })
 		vim.keymap.set("n", "k", "gk", { noremap = true })
 	end,

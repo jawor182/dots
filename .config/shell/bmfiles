@@ -1,0 +1,14 @@
+# Shortcuts for files in shell
+# Format:
+# shortcut              path
+
+cfc                       ~/dots/.config/cava/config
+cfz                       ~/dots/.zshrc
+cfd                       ~/dots/.config/dunst/dunstrc
+cfM                       ~/dots/.config/mpd/mpd.conf
+cfm                       ~/dots/.config/mpv/mpv.conf
+cfn                       ~/dots/.config/newsboat/config
+cfp                       ~/dots/.config/picom/picom.conf
+cfr                       ~/dots/.config/rmpc/config.ron
+cft                       ~/dots/.config/tmux/tmux.conf
+cfl                       ~/dots/.config/lf/lfrc

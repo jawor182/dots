@@ -1,7 +1,7 @@
 PATH="$PATH:/$HOME/.scripts"
 PATH="$PATH:/$HOME/.scripts/statusbar"
 export EDITOR="nvim"
-export FILES="yazii"
+export FILES="lfub"
 export BROWSER="brave"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
