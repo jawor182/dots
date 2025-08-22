@@ -57,8 +57,10 @@ cmd open ${{
 
 cmd delete ${{
     set -f
-    printf "$fx\n"
-    rm -rf $fx
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf -- $fx
 }}
 
 cmd extract ${{

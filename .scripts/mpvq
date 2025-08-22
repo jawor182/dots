@@ -7,8 +7,20 @@ lockfile="$path/mpvq.lock"
 [ ! -d "$path" ] && mkdir -p "$path"
 [ ! -f "$playlist" ] && touch "$playlist"
 
+# Function to remove duplicates from the playlist
+deduplicate() {
+    if [ -f "$playlist" ]; then
+        # Create a temporary file to hold unique lines
+        awk '!a[$0]++' "$playlist" > "$playlist.tmp"
+        # Overwrite the original playlist with the unique lines
+        mv "$playlist.tmp" "$playlist"
+        echo "Duplicates removed from playlist."
+    fi
+}
+
 add() {
     echo "$2" >>"$playlist"
+    deduplicate
     echo "Added: $2"
 }
 
@@ -16,11 +28,12 @@ addclip() {
     clipfile=$(xclip -o clip sel)
     if echo "$clipfile" | grep -Eq '^https?://'; then
         echo "$clipfile" >> "$playlist"
+        deduplicate
+        echo "Added from clipboard."
     else
         echo "Clipboard does not contain a valid URL."
     fi
 }
-
 
 show() {
     if [ ! -s "$playlist" ]; then
@@ -39,7 +52,6 @@ play() {
         --playlist="$playlist" \
         --player-operation-mode=pseudo-gui \
         --script="$HOME/.config/mpv/scripts/mpvq-live-sync.lua"
-
 }
 
 case "$1" in
@@ -56,9 +68,11 @@ case "$1" in
     addclip)
         addclip
         ;;
+    deduplicate)
+        deduplicate
+        ;;
     *)
-        echo "Usage: mpvq {add|show|play}"
+        echo "Usage: mpvq {add|show|play|deduplicate}"
         exit 1
         ;;
 esac
-
