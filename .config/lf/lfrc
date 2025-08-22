@@ -134,7 +134,6 @@ map R bulkrename
 map W $wallpaper set "$f" &> /dev/null &
 map v visual
 map V invert
-map <c-h> set hidden!
 
 map i 
 map w 
