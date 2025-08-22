@@ -128,7 +128,7 @@ map a :push %touch<space>
 map D delete
 map d cut
 map y copy
-map d cut
+map x cut
 map p paste
 map c clear
 map r rename 

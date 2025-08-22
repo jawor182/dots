@@ -15,11 +15,9 @@ export QT_FONT_DPI=96
 
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
-# Xorg
 xset r rate 300 60 &
 setxkbmap -layout pl & 
 xrdb -merge ~/.Xresources
-
-# Screen 
 screen &
 wallpaper random
+shortcuts
