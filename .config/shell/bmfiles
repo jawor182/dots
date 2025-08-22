@@ -8,6 +8,7 @@ cfd                       ~/dots/.config/dunst/dunstrc
 cfM                       ~/dots/.config/mpd/mpd.conf
 cfm                       ~/dots/.config/mpv/mpv.conf
 cfn                       ~/dots/.config/newsboat/config
+cfu                       ~/dots/.config/newsboat/urls
 cfp                       ~/dots/.config/picom/picom.conf
 cfr                       ~/dots/.config/rmpc/config.ron
 cft                       ~/dots/.config/tmux/tmux.conf

@@ -27,6 +27,7 @@ arch-wiki-docs
 libmtp
 gvfs-mtp
 android-udev
+android-tools
 udisks2
 imagemagick
 7zip

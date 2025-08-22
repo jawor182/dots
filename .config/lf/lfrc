@@ -30,7 +30,7 @@ cmd open ${{
             fi
             ;;
         audio/*|video/x-ms-asf)
-             mpv --audio-display=no $f ;;
+             mpv $f ;;
         video/*)
              setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         application/pdf|application/vnd.djvu|application/epub*)
