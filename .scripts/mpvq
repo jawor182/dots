@@ -19,18 +19,28 @@ deduplicate() {
 
 add() {
     local file_or_url="$2"
-    
+
     # Always append to the playlist file for persistence
     echo "$file_or_url" >>"$playlist"
     deduplicate
     echo "Added to playlist file: $file_or_url"
-    
-    # If mpv is running, also add the file via IPC for immediate playback
+
+    # If mpv is running, check if it's already in the playlist before adding
     if [ -S "$ipc_socket" ]; then
-        echo '{ "command": ["loadfile", "'"$file_or_url"'", "append"] }' | socat - "$ipc_socket"
-        echo "Also added via IPC for immediate playback."
+        # Get current MPV playlist
+        local current_playlist
+        current_playlist=$(echo '{ "command": ["get_property", "playlist"] }' | socat - "$ipc_socket" | jq -r '.data[].filename')
+
+        # Check if file_or_url is already in MPV's playlist
+        if echo "$current_playlist" | grep -Fxq "$file_or_url"; then
+            echo "Item already in MPV playlist, not adding again."
+        else
+            echo '{ "command": ["loadfile", "'"$file_or_url"'", "append"] }' | socat - "$ipc_socket"
+            echo "Also added via IPC for immediate playback."
+        fi
     fi
 }
+
 
 addclip() {
     local clipfile=$(xclip -o -selection clipboard)
@@ -39,16 +49,24 @@ addclip() {
         echo "$clipfile" >>"$playlist"
         deduplicate
         echo "Added from clipboard to playlist file."
-        
-        # If mpv is running, also add via IPC
+
+        # If mpv is running, check if it's already in the playlist before adding
         if [ -S "$ipc_socket" ]; then
-            echo '{ "command": ["loadfile", "'"$clipfile"'", "append"] }' | socat - "$ipc_socket"
-            echo "Also added from clipboard via IPC for immediate playback."
+            local current_playlist
+            current_playlist=$(echo '{ "command": ["get_property", "playlist"] }' | socat - "$ipc_socket" | jq -r '.data[].filename')
+
+            if echo "$current_playlist" | grep -Fxq "$clipfile"; then
+                echo "Clipboard URL already in MPV playlist, not adding again."
+            else
+                echo '{ "command": ["loadfile", "'"$clipfile"'", "append"] }' | socat - "$ipc_socket"
+                echo "Also added from clipboard via IPC for immediate playback."
+            fi
         fi
     else
         echo "Clipboard does not contain a valid URL."
     fi
 }
+
 
 show() {
     if [ ! -s "$playlist" ]; then
