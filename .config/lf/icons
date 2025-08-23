@@ -320,3 +320,7 @@ Vagrantfile             
 *.spx                   
 *.xspf                  
 *.pdf                   
+*.epub                                   
+*.mobi                  
+*.kfx                   
+*.azw3                  
