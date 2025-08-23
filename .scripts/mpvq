@@ -3,6 +3,7 @@
 path="$HOME/.local/share/mpvq"
 playlist="$path/playlist.m3u"
 lockfile="$path/mpvq.lock"
+ipc_socket="/tmp/mpvsocket"
 
 [ ! -d "$path" ] && mkdir -p "$path"
 [ ! -f "$playlist" ] && touch "$playlist"
@@ -10,26 +11,40 @@ lockfile="$path/mpvq.lock"
 # Function to remove duplicates from the playlist
 deduplicate() {
     if [ -f "$playlist" ]; then
-        # Create a temporary file to hold unique lines
         awk '!a[$0]++' "$playlist" > "$playlist.tmp"
-        # Overwrite the original playlist with the unique lines
         mv "$playlist.tmp" "$playlist"
         echo "Duplicates removed from playlist."
     fi
 }
 
 add() {
-    echo "$2" >>"$playlist"
+    local file_or_url="$2"
+    
+    # Always append to the playlist file for persistence
+    echo "$file_or_url" >>"$playlist"
     deduplicate
-    echo "Added: $2"
+    echo "Added to playlist file: $file_or_url"
+    
+    # If mpv is running, also add the file via IPC for immediate playback
+    if [ -S "$ipc_socket" ]; then
+        echo '{ "command": ["loadfile", "'"$file_or_url"'", "append"] }' | socat - "$ipc_socket"
+        echo "Also added via IPC for immediate playback."
+    fi
 }
 
 addclip() {
-    clipfile=$(xclip -o clip sel)
+    local clipfile=$(xclip -o -selection clipboard)
     if echo "$clipfile" | grep -Eq '^https?://'; then
-        echo "$clipfile" >> "$playlist"
+        # Always append to the playlist file for persistence
+        echo "$clipfile" >>"$playlist"
         deduplicate
-        echo "Added from clipboard."
+        echo "Added from clipboard to playlist file."
+        
+        # If mpv is running, also add via IPC
+        if [ -S "$ipc_socket" ]; then
+            echo '{ "command": ["loadfile", "'"$clipfile"'", "append"] }' | socat - "$ipc_socket"
+            echo "Also added from clipboard via IPC for immediate playback."
+        fi
     else
         echo "Clipboard does not contain a valid URL."
     fi
@@ -44,13 +59,13 @@ show() {
 }
 
 play() {
-    # Try to acquire lock to prevent multiple instances
     exec 200>"$lockfile"
     flock -n 200 || { echo "Another mpvq instance is already running!"; exit 1; }
 
     setsid -f mpv \
         --playlist="$playlist" \
         --player-operation-mode=pseudo-gui \
+        --input-ipc-server="$ipc_socket" \
         --script="$HOME/.config/mpv/scripts/mpvq-live-sync.lua"
 }
 
@@ -72,7 +87,7 @@ case "$1" in
         deduplicate
         ;;
     *)
-        echo "Usage: mpvq {add|show|play|deduplicate}"
+        echo "Usage: mpvq {add|show|play|deduplicate|addclip}"
         exit 1
         ;;
 esac
