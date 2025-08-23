@@ -57,8 +57,12 @@ mp.register_event("file-loaded", function()
 end)
 
 mp.register_event("end-file", function(event)
-    if (event.reason == "eof" or event.reason == "stop") and current_file then
+    -- Only remove from queue if playback ended normally
+    if event.reason == "eof" then
         remove_current_from_queue()
+    else
+        mp.msg.warn("File ended unexpectedly (" .. tostring(event.reason) .. "): " .. (current_file or "unknown"))
     end
     current_file = nil
 end)
+
