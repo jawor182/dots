@@ -1,4 +1,3 @@
-librewolf
 aria2c
 calibre
 tmux
@@ -137,6 +136,5 @@ ttf-roboto
 gnome-themes-extra
 adw-gtk-theme
 betterlockscreen
-brave-bin
 cmake
 make

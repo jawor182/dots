@@ -7,3 +7,5 @@ qt5-styleplugins
 betterlockscreen
 xurls
 boomer-git
+librewolf-bin
+brave-bin

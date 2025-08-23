@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo pacman -Syyuu --needed < $HOME/.scripts/packages.txt
-yay -Syyuu --needed < $HOME/.scripts/yay-packages.txt
+sudo pacman -Syyuu --needed < "$HOME/.scripts/packages.txt"
+xargs -a "$HOME/.scripts/yay-packages.txt" -r yay -S --needed
