@@ -136,6 +136,5 @@ ttf-sazanami
 ttf-roboto
 gnome-themes-extra
 adw-gtk-theme
-betterlockscreen
 cmake
 make

@@ -6,7 +6,6 @@ set ifs "\n"
 set scrolloff 10
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set drawbox
-set roundbox
 set autoquit true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
