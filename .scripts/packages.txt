@@ -15,6 +15,7 @@ mpd
 mpc
 rmpc
 mpd-mpris
+mpv-mpris
 solaar
 thunderbird
 vim
