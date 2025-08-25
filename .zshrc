@@ -137,14 +137,13 @@ export FZF_DEFAULT_OPTS=" \
     --color=info:#d65d0e,prompt:#458588,pointer:#fe8019 \
     --color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f"
 
-
+FZF_DEFAULT_OPTS="--layout=reverse --height 90%"
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
 bindkey -s '^R' 'source ~/dots/.zshrc \n'
 bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m ~/.Xresources\n'
 bindkey -s '^B' 'find $HOME/dots -path "*/.git/*" -prune -o -type f -print | fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
-bindkey -s '^E' 'fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
 
 export PATH="/home/jawor/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/jawor/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
