@@ -2,12 +2,14 @@
 # Format:
 # shortcut              path
 
+cfB                     ~/dots/.config/bat/config
+cfb                     ~/dots/.config/btop/btop.conf
 cfc                     ~/dots/.config/cava/config
 cfz                     ~/dots/.zshrc
 cfd                     ~/dots/.config/dunst/dunstrc
 cfM                     ~/dots/.config/mpd/mpd.conf
 cfm                     ~/dots/.config/mpv/mpv.conf
-cfn                     ~/dots/.config/newsboat/config
+cfN                     ~/dots/.config/newsboat/config
 cfu                     ~/dots/.config/newsboat/urls
 cfp                     ~/dots/.config/picom/picom.conf
 cfr                     ~/dots/.config/rmpc/config.ron

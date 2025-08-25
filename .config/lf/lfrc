@@ -5,6 +5,7 @@ set icons
 set ifs "\n"
 set scrolloff 10
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set roundbox
 set drawbox
 set autoquit true
 set cleaner '~/.config/lf/cleaner'
