@@ -15,5 +15,8 @@ nsb                     ~/new-suckless/blocks/
 nsn                     ~/new-suckless/nsxiv/
 dx                      ~/dox/
 dn                      ~/dox/notes/
-w                       ~/walls
-m                       ~/media/
+w                       ~/walls/
+mm                      ~/media/
+mV                      ~/media/vids/
+mp                      ~/media/podcasts/
+mM                      ~/media/musik/
