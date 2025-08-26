@@ -54,4 +54,9 @@ vim.keymap.set("n", "<leader>ww", require("neowiki").open_wiki, { desc = "Open W
 vim.keymap.set("n", "<leader>wW", require("neowiki").open_wiki_floating, { desc = "Open Floating Wiki" })
 vim.keymap.set("n", "<leader>wT", require("neowiki").open_wiki_new_tab, { desc = "Open Wiki in Tab" })
 
-vim.keymap.set("n","<leader>f",":Pick files<CR>", {desc = "Open Pick"})
+-- vim.keymap.set("n","<leader>f",":Pick files<CR>", {desc = "Open Pick"})
+
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
+vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, {})
+vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, {})

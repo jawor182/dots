@@ -136,6 +136,7 @@ map R bulkrename
 map W $wallpaper set "$f" &> /dev/null &
 map v visual
 map V invert
+map f search
 
 map i 
 map w 
