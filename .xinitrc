@@ -4,7 +4,7 @@
 
 # Apps autostart
 dwmblocks &
-picom &
+picom -b &
 dunst &
 lxsession &
 playerctld daemon &
