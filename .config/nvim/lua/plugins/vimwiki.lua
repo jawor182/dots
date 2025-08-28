@@ -5,6 +5,7 @@ return {
             vim.g.vimwiki_list = {
                 {
                     path = "~/dox/notes/",
+                    auto_diary_index = 1
                 },
             }
             vim.g.vimwiki_global_ext = 1
