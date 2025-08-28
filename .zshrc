@@ -89,8 +89,6 @@ alias lshw="sudo lshw"
 alias zb="zbarimg"
 
 # ─── SYSTEM CONTROL ───────────────────────────────────────
-alias cm="cmatrix"
-alias pp="pipes.sh"
 alias smci="sudo make clean install"
 alias SS="sudo systemctl"
 alias SU="systemctl --user"
