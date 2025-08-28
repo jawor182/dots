@@ -125,6 +125,7 @@ alias tns="tmux new -s"
 alias dev="npm run dev"
 alias nb="newsboat"
 alias lf="lfcd"
+alias diff="diff --color"
 
 # Catppuccin
 # export FZF_DEFAULT_OPTS=" \

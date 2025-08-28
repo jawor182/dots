@@ -131,6 +131,7 @@ map y copy
 map x cut
 map p paste
 map c clear
+map C clear
 map r rename 
 map R bulkrename
 map W $wallpaper set "$f" &> /dev/null &
