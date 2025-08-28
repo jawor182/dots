@@ -55,10 +55,14 @@ vim.keymap.set("n", "yow", wrapping.toggle_wrap_mode, { desc = "Toggle Wrap Mode
 
 vim.keymap.set("n", "<Leader>ww", ":VimwikiIndex<CR>", { desc = "Open main wiki index" })
 vim.keymap.set("n", "<Leader>wi", ":VimwikiDiaryIndex<CR>", { desc = "Open diary for today" })
-vim.keymap.set("n", "<Leader>wp", ":VimwikiDiaryPrevDay<CR>", { desc = "Open diary for yesterday" })
-vim.keymap.set("n", "<Leader>wn", ":VimwikiDiaryNextDay<CR>", { desc = "Open diary for tomorrow" })
+vim.keymap.set("n", "<Leader>w<leader>p", ":VimwikiDiaryPrevDay<CR>", { desc = "Open diary for yesterday" })
+vim.keymap.set("n", "<Leader>w<leader>n", ":VimwikiDiaryNextDay<CR>", { desc = "Open diary for tomorrow" })
 vim.keymap.set("n", "<Leader>wr", ":VimwikiRenameLink<CR>", { desc = "Rename current page and links" })
 vim.keymap.set("n", "<Leader>wb", ":VimwikiBacklinks<CR>", { desc = "Show backlinks" })
+vim.keymap.set("n","<leader>wm",":VimwikiMakeDiaryNote<CR>", { desc = "Make a note in diary"})
+vim.keymap.set("n","<leader>wN",":VimwikiMakeTommorowDiaryNote<CR>", { desc = "Make a note in diary"})
+vim.keymap.set("n","<leader>wP",":VimwikiMakeYesterdayDiaryNote<CR>", { desc = "Make a note in diary"})
+vim.keymap.set("n","<leader>wG",":VimwikiDiaryGenerateLinks<CR>", { desc = "Make a note in diary"})
 
 
 vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files, {})

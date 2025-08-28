@@ -6,6 +6,8 @@ return {
             opts = {
                 auto_set_mode_filetype_allowlist = {
                     "markdown",
+                    "wiki",
+                    "vimwiki"
                 },
                 create_commands = false,
                 create_keymaps = false,

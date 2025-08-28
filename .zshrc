@@ -124,7 +124,7 @@ alias tns="tmux new -s"
 # ─── MISCELLANEOUS ────────────────────────────────────────
 alias dev="npm run dev"
 alias nb="newsboat"
-alias lf="lfub"
+alias lf="lfcd"
 
 # Catppuccin
 # export FZF_DEFAULT_OPTS=" \
