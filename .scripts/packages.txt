@@ -107,7 +107,7 @@ perl-image-exiftool
 perl-rename
 bat
 btop
-yazi
+lf
 fzf
 figlet
 cowsay
