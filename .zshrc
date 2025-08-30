@@ -39,9 +39,6 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-lfcd(){
-    cd "$(lfub -print-last-dir "$@")"
-}
 yazii() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -90,8 +87,6 @@ alias update="sudo pacman -Syyuu && yay -Syyu"
 # ─── SYSTEM MONITORING & INFO ─────────────────────────────
 alias ff="fastfetch"
 alias grep="grep --color -i"
-alias ipa="ip a"
-alias lshw="sudo lshw"
 alias zb="zbarimg"
 
 # ─── SYSTEM CONTROL ───────────────────────────────────────
@@ -128,7 +123,6 @@ alias tns="tmux new -s"
 # ─── MISCELLANEOUS ────────────────────────────────────────
 alias dev="npm run dev"
 alias nb="newsboat"
-alias lf="lfcd"
 alias yazi="yazii"
 alias diff="diff --color"
 
