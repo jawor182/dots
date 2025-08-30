@@ -7,6 +7,8 @@ Xft.hinting: 1
 Xft.autohint: 1
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
+Xcursor.size:24
+Xcursor.theme:Bibata-Original-Classic
 
 // Catppuccin Mocha
  ! *.color0: #1e1e2e

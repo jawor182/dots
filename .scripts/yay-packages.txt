@@ -9,3 +9,4 @@ boomer-git
 librewolf-bin
 brave-bin
 xuatolock
+bibata-cursor-theme-bin
