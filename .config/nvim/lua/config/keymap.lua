@@ -1,7 +1,7 @@
 
 
 vim.g.mapleader = " "
-vim.keymap.set("n",'<leader>tr',vim.cmd.Ex)
+vim.keymap.set("n",'<leader>tr',vim.cmd.Yazi)
 vim.keymap.set("n",'K', vim.lsp.buf.hover, {})
 vim.keymap.set("n",'<leader>m',vim.cmd.Mason)
 vim.keymap.set("n",'<leader>l',vim.cmd.Lazy)
