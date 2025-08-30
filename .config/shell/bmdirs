@@ -5,9 +5,7 @@
 cc                      ~/dots/
 cs                      ~/dots/.scripts/
 cS                      ~/dots/.scripts/statusbar/
-cff                     ~/dots/.config/
-cfn                     ~/dots/.config/nvim/
-cfy                     ~/dots/.config/yazi/
+cf                      ~/dots/.config/
 r                       ~/repos/
 nss                     ~/new-suckless/
 nsd                     ~/new-suckless/dwm/
