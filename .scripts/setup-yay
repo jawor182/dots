@@ -1,8 +1,8 @@
 #!/bin/sh
 
-git clone https://aur.archlinux.org/yay ~/yay || exit 
+git clone https://aur.archlinux.org/yay ~/.local/yay || exit 
 
-cd "$HOME/yay" || exit 
+cd "$HOME/.local/yay" || exit 
 
 makepkg -si 
 
