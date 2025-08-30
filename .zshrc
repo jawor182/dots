@@ -19,6 +19,7 @@ SAVEHIST=10000000
 HISTFILE="$HOME/.zsh_history"
 setopt share_history
 setopt inc_append_history
+export FUNCNEST=1000000
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -40,6 +41,13 @@ bindkey -v '^?' backward-delete-char
 
 lfcd(){
     cd "$(lfub -print-last-dir "$@")"
+}
+yazii() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
 
 # Change cursor shape for different vi modes.
@@ -80,8 +88,6 @@ alias y="yay"
 alias update="sudo pacman -Syyuu && yay -Syyu"
 
 # ─── SYSTEM MONITORING & INFO ─────────────────────────────
-alias b="btop"
-alias h="htop"
 alias ff="fastfetch"
 alias grep="grep --color -i"
 alias ipa="ip a"
@@ -123,6 +129,7 @@ alias tns="tmux new -s"
 alias dev="npm run dev"
 alias nb="newsboat"
 alias lf="lfcd"
+alias yazi="yazii"
 alias diff="diff --color"
 
 # Catppuccin
