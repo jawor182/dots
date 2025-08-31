@@ -1,4 +1,4 @@
-aria2c
+aria2
 socat
 calibre
 tmux
@@ -97,7 +97,7 @@ zsh-syntax-highlighting
 xsecurelock
 bluez-utils
 bluez
-bluez-deprecaed-utils
+bluez-deprecated-tools
 os-prober
 perl-file-mimeinfo
 dysk
@@ -113,10 +113,8 @@ figlet
 cowsay
 speedtest-cli
 lshw
-htop-vim
 jq
 uwsm
-neofetch
 pulsemixer
 stow
 tldr
@@ -137,3 +135,4 @@ gnome-themes-extra
 adw-gtk-theme
 cmake
 make
+xorg-xeyes

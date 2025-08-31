@@ -9,3 +9,4 @@ boomer-git
 librewolf-bin
 brave-bin
 xuatolock
+htop-vim

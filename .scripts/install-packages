@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-sudo pacman -Syyuu --needed < "$HOME/.scripts/packages.txt"
-xargs -a "$HOME/.scripts/yay-packages.txt" -r yay -S --needed
+sudo pacman -Syyuu --needed $(cat "$HOME/.scripts/packages.txt")
+yay -Syu --needed $(cat "$HOME/.scripts/yay-packages.txt")
