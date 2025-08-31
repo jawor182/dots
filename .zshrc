@@ -123,7 +123,7 @@ alias tns="tmux new -s"
 # ─── MISCELLANEOUS ────────────────────────────────────────
 alias dev="npm run dev"
 alias nb="newsboat"
-alias yazi="yazii"
+alias f="$FILES"
 alias diff="diff --color"
 
 # Catppuccin

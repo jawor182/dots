@@ -5,7 +5,7 @@ include "/home/jawor/.gtkrc-2.0.mine"
 gtk-theme-name="adw-gtk3-dark"
 gtk-icon-theme-name="Papirus-Dark"
 gtk-font-name="Inter 12"
-gtk-cursor-theme-name="default"
+gtk-cursor-theme-name="Adwaiata"
 gtk-cursor-theme-size=24
 gtk-toolbar-style=GTK_TOOLBAR_TEXT
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
