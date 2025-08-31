@@ -22,7 +22,7 @@ vim
 virt-manager
 virt-viewer
 spotify-launcher
-thunar
+pcmanfm-qt
 zsh
 nm-connection-editor
 arch-wiki-docs
