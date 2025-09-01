@@ -17,3 +17,10 @@ autocmd("FileType", {
     end,
 })
 
+autocmd("FileType", {
+    pattern = { "c","go","c++" },
+    callback = function ()
+        vim.opt.shiftwidth = 2
+        vim.opt.tabstop = 2
+    end
+})
