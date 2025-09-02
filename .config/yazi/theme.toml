@@ -41,3 +41,5 @@ dark = "gruvbox-dark"
 # active = { fg = "#d3869b", bold = true }
 # inactive = {}
 
+[icon]
+exts = [{ name = "wiki", text = "󰹕" }]

@@ -1,17 +1,17 @@
 #!/bin/sh
 
 # Input files
-bmfiles=$XDG_CONFIG_HOME/shell/bmfiles
-bmdirs=$XDG_CONFIG_HOME/shell/bmdirs
-yazikeys=$XDG_CONFIG_HOME/yazi/keys.toml
+bmfiles=$HOME/.config/shell/bmfiles
+bmdirs=$HOME/.config/shell/bmdirs
+yazikeys=$HOME/.config/yazi/keys.toml
 
 # Output files
-shellfiles=$XDG_CONFIG_HOME/shell/shortcutsrc
-yazishorts=$XDG_CONFIG_HOME/yazi/shortcuts.toml
-yazifiles=$XDG_CONFIG_HOME/yazi/keymap.toml
+shellfiles=$HOME/.config/shell/shortcutsrc
+yazishorts=$HOME/.config/yazi/shortcuts.toml
+yazifiles=$HOME/.config/yazi/keymap.toml
 
 
-[ ! -d "$XDG_CONFIG_HOME"/shell ] && mkdir "$XDG_CONFIG_HOME"/shell
+[ ! -d "$HOME/.config"/shell ] && mkdir "$HOME/.config/shell"
 
 generateDirShortcuts(){
     sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmdirs" | \
@@ -46,7 +46,7 @@ generateYaziShortcuts(){
         printf "run  = \"cd %s\"\n", path
         # printf "desc = \"Shortcut for %s\"\n\n", path
     }' > "$yazishorts"
-    cat "$yazikeys" "$yazishorts" >> "$XDG_CONFIG_HOME/yazi/keymap.toml"
+    cat "$yazikeys" "$yazishorts" >> "$HOME/.config/yazi/keymap.toml"
 }
 
 # Cleanup 
