@@ -5,3 +5,4 @@
 .config/lf/shortcutsrc
 .config/yazi/keymap.toml
 .config/yazi/shortcuts.toml
+.config/ncmpcpp/error.log
