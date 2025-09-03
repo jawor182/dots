@@ -291,6 +291,9 @@ def_key "7"
 def_key "8"
  show_visualizer
 
+def_key "W"
+ show_visualizer
+
 def_key "t"
  show_clock
 
