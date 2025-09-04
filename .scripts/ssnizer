@@ -16,16 +16,16 @@ if [[ $name == .* ]]; then
 fi
 
 if ! tmux has-session -t "$name" 2>/dev/null; then
-    tmux -v new-session -d -s "$name" -c "$selected"
+    tmux new-session -d -s "$name" -c "$selected"
 fi
 
-tmux -v new-window -t "$name":2 -c "$selected"
-tmux -v split-window -h -t "$name":2 -c "$selected"
-tmux -v send-keys -t "$name":1.1 "nvim" C-m
-tmux -v select-window -t "$name":1
+tmux new-window -t "$name":2 -c "$selected"
+tmux split-window -h -t "$name":2 -c "$selected"
+tmux send-keys -t "$name":1.1 "nvim" C-m
+tmux select-window -t "$name":1
 
 if [ -z "${TMUX:-}" ]; then
-    tmux -v attach-session -t "$name"
+    tmux attach-session -t "$name"
 else
-    tmux -v switch-client -t "$name"
+    tmux switch-client -t "$name"
 fi

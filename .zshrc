@@ -126,22 +126,7 @@ alias nb="newsboat"
 alias f="$FILES"
 alias diff="diff --color"
 
-# Catppuccin
-# export FZF_DEFAULT_OPTS=" \
-# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-# --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-# --color=selected-bg:#45475a \
-# --color=border:#313244,label:#cdd6f4"
-
-# Gruvbox
-export FZF_DEFAULT_OPTS=" \
-    --color=fg:#ebdbb2,bg:#282828,hl:#b16286 \
-    --color=fg+:#689d6a,bg+:#32302f,hl+:#d3869b \
-    --color=info:#d65d0e,prompt:#458588,pointer:#fe8019 \
-    --color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f"
-
-FZF_DEFAULT_OPTS="--layout=reverse --height 90%"
+export FZF_DEFAULT_OPTS="--layout=reverse --height 90%"
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
