@@ -2,8 +2,8 @@
 # Format:
 # shortcut              path
 
-cfB                     ~/dots/.config/bat/config
-cfb                     ~/dots/.config/btop/btop.conf
+cfb                     ~/dots/.config/bat/config
+cfB                     ~/dots/.config/btop/btop.conf
 cfc                     ~/dots/.config/cava/config
 cfz                     ~/dots/.zshrc
 cfd                     ~/dots/.config/dunst/dunstrc
