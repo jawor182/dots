@@ -126,7 +126,7 @@ alias nb="newsboat"
 alias f="$FILES"
 alias diff="diff --color"
 
-export FZF_DEFAULT_OPTS="--layout=reverse --height 90%"
+export FZF_DEFAULT_OPTS="--layout=reverse"
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
