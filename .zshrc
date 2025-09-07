@@ -47,6 +47,50 @@ yazii() {
 	rm -f -- "$tmp"
 }
 
+# function preexec {
+#     if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+#         if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+#             print -Pn "\e]0;${(q)1}\e\\"
+#         fi
+#     else
+#           print -Pn "\e]2;${(q)1}\a"
+#     fi
+# }
+#
+# function precmd {
+#     if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+#         if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+#             print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
+#         fi
+#     else
+#           print -Pn "\e]2;%(1j,%j job%(2j|s|); ,)%~\a"
+#     fi
+# }
+autoload -Uz add-zsh-hook
+
+function set-title-preexec {
+    if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+        if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+            print -Pn "\e]0;${(q)1}\e\\"
+        fi
+    else
+          print -Pn "\e]2;${(q)1}\a"
+    fi
+}
+
+function set-title-precmd {
+     if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
+         if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
+             print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
+         fi
+     else
+           print -Pn "\e]2;%(1j,%j job%(2j|s|); ,)%~\a"
+     fi
+}
+
+add-zsh-hook preexec set-title-preexec
+add-zsh-hook precmd set-title-precmd
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {
     case $KEYMAP in

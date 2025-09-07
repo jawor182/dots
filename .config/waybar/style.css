@@ -1,0 +1,124 @@
+/* Gruvbox */
+@define-color fg #ebdbb2;
+@define-color bg #282828;
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color aqua #8ec07c;
+@define-color orange #d65d0e;
+/* Catppuccin */
+/* @define-color fg #cdd6f4; */
+/* @define-color bg #1e1e2e; */
+/* @define-color red #f38ba8; */
+/* @define-color purple #cba6f7; */
+/* @define-color yellow #f9e2af; */
+/* @define-color aqua #94e2d5; */
+/* @define-color green #a6e3a1; */
+/* @define-color blue #89b4fa; */
+/* @define-color orange #d65d0e; */
+
+* {
+  font-family:
+    JetBrainsMonoNerdFont Propo,
+    otf-font-awesome,
+    monospace;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: @bg;
+  color: @fg;
+  transition-property: background-color;
+}
+
+#tray,
+#network,
+#memory,
+#backlight,
+#battery,
+#custom-swaync,
+#temperature,
+#clock {
+  padding: 5px;
+  background-color: @bg;
+}
+
+#cpu {
+  color: @red;
+}
+
+#memory {
+  color: @purple;
+}
+
+#pulseaudio {
+  color: @yellow;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#backlight {
+  color: @aqua;
+}
+
+#network {
+  color: @blue;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.warning {
+  color: @red;
+}
+
+#temperature {
+  color: @yellow;
+}
+
+#tray {
+  background-color: @bg;
+}
+
+#custom-swaync {
+  color: @purple;
+}
+
+#workspaces button {
+  color: @fg;
+  background-color: @bg;
+  border-radius: 0px;
+  padding: 5px;
+}
+
+#workspaces button.active {
+  background-color: @orange;
+  color: @bg;
+}
+
+#workspaces button:hover {
+  background: @purple;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#workspaces button.urgent:hover {
+  background-color: @red;
+}
+
+tooltip {
+  background-color: @bg;
+}
+
+tooltip label {
+  color: @fg;
+}
