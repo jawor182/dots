@@ -6,7 +6,9 @@ cc                      ~/dots/
 cs                      ~/dots/.scripts/
 cS                      ~/dots/.scripts/statusbar/
 cf                      ~/dots/.config/
-r                       ~/repos/
+rr                      ~/repos/
+rs                      ~/repos/szkola/
+rp                      ~/repos/personal/
 nss                     ~/new-suckless/
 nsd                     ~/new-suckless/dwm/
 nsD                     ~/new-suckless/dmenu/
