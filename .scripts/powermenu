@@ -5,7 +5,7 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
     LOCK="slock"
 else
     option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | rofi -dmenu -i -l 4 -p "What do you want to do?")
-    LOCK="gtklock"
+    LOCK="hyprlock"
 fi
 
 case $option in
