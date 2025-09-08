@@ -6,6 +6,7 @@
 dwmblocks &
 picom -b &
 dunst &
+mpd-mpris &
 playerctld daemon &
 
 dbus-update-activation-environment --all

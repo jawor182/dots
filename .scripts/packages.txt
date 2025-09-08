@@ -136,15 +136,3 @@ adw-gtk-theme
 cmake
 make
 xorg-xeyes
-rofi
-foot
-waybar
-wlroots
-egl
-wayland
-wlroots
-wayland-protocols
-wl-clipboard
-wlogout
-grim
-slurp
