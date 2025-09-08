@@ -17,12 +17,12 @@ fi
 
 if ! tmux has-session -t "$name" 2>/dev/null; then
     tmux new-session -d -s "$name" -c "$selected"
-fi
 
-tmux new-window -t "$name":2 -c "$selected"
-tmux split-window -h -t "$name":2 -c "$selected"
-tmux send-keys -t "$name":1.1 "nvim" C-m
-tmux select-window -t "$name":1
+    tmux new-window -t "$name":2 -c "$selected"
+    tmux split-window -h -t "$name":2 -c "$selected"
+    tmux send-keys -t "$name":1.1 "nvim" C-m
+    tmux select-window -t "$name":1
+fi
 
 if [ -z "${TMUX:-}" ]; then
     tmux attach-session -t "$name"

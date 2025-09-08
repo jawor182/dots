@@ -15,7 +15,7 @@ configuration {
   urgent-foreground:           @red;
   alternate-urgent-background: @lightbg;
   lightbg:                     @mantle;
-  background-color:            transparent;
+  background-color:            @background;
   // Catppuccin
   // border-color:                @mauve;
   // Gruvbox
@@ -38,8 +38,8 @@ configuration {
   normal-foreground:           @foreground;
   alternate-urgent-foreground: @red;
   alternate-active-foreground: @blue;
-
 }
+
 element {
     padding: 1px ;
     cursor:  pointer;

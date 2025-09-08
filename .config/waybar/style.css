@@ -20,17 +20,17 @@
 /* @define-color orange #d65d0e; */
 
 * {
-  font-family:
-    JetBrainsMonoNerdFont Propo,
-    otf-font-awesome,
-    monospace;
-  font-size: 16px;
+    font-family:
+        JetBrainsMonoNerdFont Propo,
+        otf-font-awesome,
+        monospace;
+    font-size: 16px;
 }
 
 window#waybar {
-  background-color: @bg;
-  color: @fg;
-  transition-property: background-color;
+    background-color: @bg;
+    color: @fg;
+    transition-property: background-color;
 }
 
 #tray,
@@ -41,84 +41,90 @@ window#waybar {
 #custom-swaync,
 #temperature,
 #clock {
-  padding: 5px;
-  background-color: @bg;
+    padding: 5px;
+    background-color: @bg;
 }
 
 #cpu {
-  color: @red;
+    color: @red;
 }
 
 #memory {
-  color: @purple;
+    color: @purple;
 }
 
 #pulseaudio {
-  color: @yellow;
-  padding-left: 8px;
-  padding-right: 8px;
+    color: @yellow;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #backlight {
-  color: @aqua;
+    color: @aqua;
 }
 
 #network {
-  color: @blue;
+    color: @blue;
+    padding-right:10px;
 }
 
 #battery {
-  color: @green;
+    color: @green;
 }
 
 #battery.critical {
-  color: @red;
+    color: @red;
 }
 
 #battery.warning {
-  color: @red;
+    color: @red;
 }
 
 #temperature {
-  color: @yellow;
+    color: @yellow;
 }
 
 #tray {
-  background-color: @bg;
+    background-color: @bg;
+    padding-right:15px;
 }
 
 #custom-swaync {
-  color: @purple;
+    color: @purple;
 }
 
 #workspaces button {
-  color: @fg;
-  background-color: @bg;
-  border-radius: 0px;
-  padding: 5px;
+    color: @fg;
+    background-color: @bg;
+    border-radius: 0px;
+    padding: 5px;
 }
 
 #workspaces button.active {
-  background-color: @orange;
-  color: @bg;
+    background-color: @orange;
+    color: @bg;
 }
 
 #workspaces button:hover {
-  background: @purple;
+    background: @purple;
 }
 
 #workspaces button.urgent {
-  background-color: @red;
+    background-color: @red;
 }
 
 #workspaces button.urgent:hover {
-  background-color: @red;
+    background-color: @red;
+}
+
+#window {
+    padding-left: 5px;
 }
 
 tooltip {
-  background-color: @bg;
+    background-color: @bg;
 }
 
 tooltip label {
-  color: @fg;
+    color: @fg;
 }

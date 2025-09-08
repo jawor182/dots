@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git clone https://aur.archlinux.org/yay ~/.local/yay || exit 
+[ ! -d $HOME/.local/yay/ ] && git clone https://aur.archlinux.org/yay $HOME/.local/yay || exit 1
 
 cd "$HOME/.local/yay" || exit 
 

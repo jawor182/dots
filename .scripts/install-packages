@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo pacman -Syyuu --needed $(cat "$HOME/.scripts/packages.txt")
-yay -Syu --needed $(cat "$HOME/.scripts/yay-packages.txt")
+[ -d $HOME/.local/yay ] && yay -Syu --needed $(cat "$HOME/.scripts/yay-packages.txt") || setup-yay && yay -Syu --needed $(cat "$HOME/.scripts/yay-packages.txt")

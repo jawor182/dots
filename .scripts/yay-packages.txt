@@ -10,3 +10,5 @@ librewolf-bin
 brave-bin
 xuatolock
 htop-vim
+hyprland-meta-git
+hyprmag
