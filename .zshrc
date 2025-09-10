@@ -47,25 +47,6 @@ yazii() {
 	rm -f -- "$tmp"
 }
 
-# function preexec {
-#     if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
-#         if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
-#             print -Pn "\e]0;${(q)1}\e\\"
-#         fi
-#     else
-#           print -Pn "\e]2;${(q)1}\a"
-#     fi
-# }
-#
-# function precmd {
-#     if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
-#         if [[ $(xdotool getwindowfocus getwindowname 2>/dev/null) != "spterm" ]]; then
-#             print -Pn "\e]0;%(1j,%j job%(2j|s|); ,)%~\e\\"
-#         fi
-#     else
-#           print -Pn "\e]2;%(1j,%j job%(2j|s|); ,)%~\a"
-#     fi
-# }
 autoload -Uz add-zsh-hook
 
 function set-title-preexec {
