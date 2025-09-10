@@ -19,9 +19,9 @@ case "$1" in
     ;;
 "open")
     if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-        nsxiv -rtb "$HOME/walls"
+        find "$HOME/walls" -type f -iname '*.png' | shuf | nsxiv -tb -
     else
-        swiv -rtb "$HOME/walls"
+        find "$HOME/walls" -type f -iname '*.png' | shuf | swiv -tb -
     fi
     ;;
 esac
