@@ -13,7 +13,5 @@ cfNc                    ~/dots/.config/newsboat/config
 cfNu                    ~/dots/.config/newsboat/urls
 cfn                     ~/dots/.config/ncmpcpp/config
 cfp                     ~/dots/.config/picom/picom.conf
-cfr                     ~/dots/.config/rofi/config.rasi
 cft                     ~/dots/.config/tmux/tmux.conf
-cfl                     ~/dots/.config/lf/lfrc
 cfv                     ~/.local/share/mpvq/playlist.m3u                          
