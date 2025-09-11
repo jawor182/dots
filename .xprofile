@@ -20,4 +20,3 @@ xrdb -merge ~/.Xresources
 screen &
 wallpaper random
 shortcuts
-xautolock -time 15 -locker "slock" &
