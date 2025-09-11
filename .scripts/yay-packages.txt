@@ -9,3 +9,4 @@ boomer-git
 librewolf-bin
 brave-bin
 htop-vim
+playerctl-git

@@ -71,7 +71,6 @@ openbsd-netcat
 picom
 xcolor
 scrot
-playerctl
 pciutils
 php
 powertop
