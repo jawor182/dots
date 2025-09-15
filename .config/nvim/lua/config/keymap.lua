@@ -63,6 +63,7 @@ vim.keymap.set("n", "<leader>wm", ":VimwikiMakeDiaryNote<CR>", { desc = "Make a 
 vim.keymap.set("n", "<leader>wN", ":VimwikiMakeTomorrowDiaryNote<CR>", { desc = "Make a next day note in diary"})
 vim.keymap.set("n", "<leader>wP", ":VimwikiMakeYesterdayDiaryNote<CR>", { desc = "Make a previous day note in diary"})
 vim.keymap.set("n", "<leader>wG", ":VimwikiDiaryGenerateLinks<CR>", { desc = "Generate diary links"})
+vim.keymap.set("n", "<leader>wT", ":VimwikiTOC<CR>", { desc = "Generate Table Of Contents (TOC)"})
 
 
 vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files, {})
