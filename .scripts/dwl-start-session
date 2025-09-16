@@ -20,4 +20,4 @@ export WLR_RENDER_DRM_FENCE=1
 
 dbus-update-activation-environment --all
 
-exec dwl -s "sh $HOME/.scripts/dwl-autostart <&-"
+exec slstatus -s | dwl -s "sh $HOME/.scripts/dwl-autostart <&-"
