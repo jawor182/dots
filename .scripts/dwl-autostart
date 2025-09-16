@@ -6,6 +6,5 @@ swww-daemon  &
 imvpaper random &
 dunst &
 swww-daemon &
-foot -s &
 screen &
-
+mpd-mpris &

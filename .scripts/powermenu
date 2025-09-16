@@ -4,8 +4,8 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
     option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | dmenu -c -i -l 4 -p "What do you want to do?")
     LOCK="slock"
 else
-    option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | rofi -dmenu -i -l 4 -p "What do you want to do?")
-    LOCK="hyprlock"
+    option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | bemenu -c -W 0.3 -i -l 4 -p "What do you want to do?")
+    LOCK="gtklock"
 fi
 
 case $option in
