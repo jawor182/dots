@@ -8,3 +8,4 @@ dunst &
 swww-daemon &
 screen &
 mpd-mpris &
+xrdb -m "$HOME/.Xdefaults"
