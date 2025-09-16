@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# export DISPLAY=:0
+
+swww-daemon  &
+imvpaper random &
+dunst &
+swww-daemon &
+foot -s &
+screen &
+

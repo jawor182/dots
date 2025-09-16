@@ -6,5 +6,7 @@ export BROWSER="librewolf"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        exec startx
+        # exec startx
+        exec dwl-start-session
+
 fi
