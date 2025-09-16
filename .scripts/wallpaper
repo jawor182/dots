@@ -21,7 +21,7 @@ case "$1" in
     if [ "$XDG_SESSION_TYPE" = "x11" ]; then
         find "$HOME/walls" -type f -iname '*.png' | shuf | nsxiv -t -
     else
-        find "$HOME/walls" -type f -iname '*.png' | shuf | swiv -tb -
+        find "$HOME/walls" -type f -iname '*.png' | shuf | nsxiv -tb -
     fi
     ;;
 esac
