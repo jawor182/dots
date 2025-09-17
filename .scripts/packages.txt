@@ -137,3 +137,7 @@ make
 xorg-xeyes
 foot
 bemenu
+grim
+slurp
+wl-clipboard
+gtklock
