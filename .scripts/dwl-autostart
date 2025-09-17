@@ -1,11 +1,9 @@
 #!/bin/sh
 
-# export DISPLAY=:0
-
 swww-daemon  &
-imvpaper random &
+wallpaper random &
 dunst &
 swww-daemon &
 screen &
 mpd-mpris &
-xrdb -m "$HOME/.Xdefaults"
+xrdb -m ~/.Xdefaults &
