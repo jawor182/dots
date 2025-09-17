@@ -135,3 +135,5 @@ adw-gtk-theme
 cmake
 make
 xorg-xeyes
+foot
+bemenu
