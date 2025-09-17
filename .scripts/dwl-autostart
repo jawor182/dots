@@ -6,4 +6,3 @@ dunst &
 swww-daemon &
 screen &
 mpd-mpris &
-xrdb -m ~/.Xdefaults &
