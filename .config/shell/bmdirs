@@ -18,7 +18,10 @@ nsn                     ~/new-suckless/nsxiv/
 nsl                     ~/new-suckless/slock
 dx                      ~/dox/
 dn                      ~/dox/notes/
-w                       ~/walls/
+wss                     ~/wayland-suckless/
+wsd                     ~/wayland-suckless/dwl/
+wsS                     ~/wayland-suckless/slstatus/
+ww                      ~/walls/
 mm                      ~/media/
 mV                      ~/media/vids/
 mp                      ~/media/podcasts/
