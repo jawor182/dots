@@ -110,7 +110,6 @@ alias y="yay"
 alias update="sudo pacman -Syyuu && yay -Syyu"
 
 # ─── SYSTEM MONITORING & INFO ─────────────────────────────
-alias ff="fastfetch"
 alias grep="grep --color -i"
 alias zb="zbarimg"
 
