@@ -1,5 +1,5 @@
 .config/tmux/plugins
-.local/share
+.local/share/applications/mimeinfo.cache
 .local/state
 .config/nvim/lazy-lock.json
 .config/lf/shortcutsrc
