@@ -18,5 +18,6 @@ vim.opt.conceallevel = 2
 vim.opt_local.conceallevel = 2
 
 vim.opt.termguicolors = true
+vim.opt.mouse = "a"
 
 vim.cmd("delcommand WrappingOpenLog")

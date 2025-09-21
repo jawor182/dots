@@ -69,3 +69,5 @@ vim.keymap.set("n", "<leader>wT", ":VimwikiTOC<CR>", { desc = "Generate Table Of
 vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files, {})
 vim.keymap.set("n", "<leader>gr", require("telescope.builtin").live_grep, {})
 vim.keymap.set("n", "<leader>h", require("telescope.builtin").help_tags, {})
+
+vim.api.nvim_set_keymap('v', 'Y', '"+y', { noremap = true, silent = true })
