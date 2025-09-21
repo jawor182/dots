@@ -7,6 +7,7 @@ Xft.hinting: 1
 Xft.autohint: 1
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
+Xft.lcdfilter:  lcddefault
 
 // Catppuccin Mocha
  ! *.color0: #1e1e2e
