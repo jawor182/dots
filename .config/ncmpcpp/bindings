@@ -198,9 +198,6 @@ def_key "G"
 def_key "space"
  select_item
 
-def_key "l"
- enter_directory
-
 def_key "enter"
  toggle_output
 
@@ -233,6 +230,9 @@ def_key "l"
 
 def_key "l"
  slave_screen
+
+def_key "l"
+ enter_directory
 
 def_key "="
  volume_up

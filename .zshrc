@@ -149,8 +149,13 @@ alias dev="npm run dev"
 alias nb="newsboat"
 alias f="$FILES"
 alias diff="diff --color"
+alias lsblk="lsblk -e 7 | bat -l conf -p"
 
 export FZF_DEFAULT_OPTS="--layout=reverse"
+
+export GOPATH="$HOME/.local/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
