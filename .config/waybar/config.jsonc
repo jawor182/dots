@@ -41,6 +41,7 @@
   "clock": {
     "format": " {:%H:%M %d %b %Y}",
     "tooltip": false,
+    "on-click": "notify-send 'This Month' \"$(cal -m | sed \"s/\\<$(date +%e | tr -d ' ')\\>/<b><span color='red'>&<\\/span><\\/b>/\")\"",
   },
   "cpu": {
     "format": " {usage}%",
