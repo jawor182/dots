@@ -1,0 +1,32 @@
+PATH="$PATH:/$HOME/.scripts"
+PATH="$PATH:/$HOME/.scripts/statusbar"
+export EDITOR="nvim"
+export FILES="yazii"
+export BROWSER="librewolf"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
+export XPROFILE="$XDG_CONFIG_HOME/x11/xprofile"
+export XRESOURCES="$XDG_CONFIG_HOME/x11/Xresources"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$XDG_DATA_HOME/go"
+export GOBIN="$GOPATH/bin"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+export ANDROID_HOME="$XDG_DATA_HOME/android"
+export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export PKI_DIR="$XDG_DATA_HOME/pki"
+export SPOTDL_CONFIG_DIR="$XDG_CONFIG_HOME/spotdl"
+
+
+export BEMENU_OPTS="--hp 8 --fb '#282828' --ff '#ebdbb2' --nb '#282828' --nf '#ebdbb2' --tb '#d65d0e' --tf '#282828' --hf '#282828' --hb '#d65d0e' --nf '#ebdbb2' --af '#ebdbb2' --ab '#282828'--fn 'JetBrainsMonoNerdFont 16'"
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+        exec startx
+        # exec dwl-start-session
+fi

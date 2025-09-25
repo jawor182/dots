@@ -16,7 +16,7 @@ export MANPAGER="$EDITOR +Man!"
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$XDG_CACHE_HOME/zsh_history"
 setopt share_history
 setopt inc_append_history
 export FUNCNEST=1000000
@@ -159,8 +159,8 @@ export PATH="$PATH:$GOBIN"
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
-bindkey -s '^R' 'source ~/dots/.zshrc \n'
-bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m ~/.Xresources\n'
+bindkey -s '^R' 'source $XDG_CONFIG_HOME/zsh/.zshrc \n'
+bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m $XRESOURCES\n'
 bindkey -s '^B' 'find $HOME/dots -path "*/.git/*" -prune -o -type f -print | fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
 bindkey -s '^T' 'ssnizer \n'
 

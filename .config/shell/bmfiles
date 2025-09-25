@@ -2,7 +2,7 @@
 # Format:
 # shortcut              path
 
-cfz                     ~/dots/.zshrc
+cfz                     ~/dots/.config/zsh/.zshrc
 cfd                     ~/dots/.config/dunst/dunstrc
 cfM                     ~/dots/.config/mpd/mpd.conf
 cfm                     ~/dots/.config/mpv/mpv.conf

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. "$HOME/.xprofile"
+. "$XPROFILE"
 
 # Apps autostart
 dwmblocks &
