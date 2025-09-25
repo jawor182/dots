@@ -136,7 +136,7 @@ cmake
 make
 xorg-xeyes
 foot
-bemenu
+fuzzel
 grim
 slurp
 wl-clipboard

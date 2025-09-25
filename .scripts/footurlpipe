@@ -2,7 +2,7 @@
 
 urls=$(xurls)
 
-[ -z "$urls" ] || selUrl=$(echo "$urls" | bemenu -l 10 -i -p "Choose Link")
+[ -z "$urls" ] || selUrl=$(echo "$urls" | fuzzel -d -l 10 -i -p "Choose Link")
 
 [ -z "$selUrl" ] && exit 1
 

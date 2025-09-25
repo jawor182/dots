@@ -24,9 +24,8 @@ export PKI_DIR="$XDG_DATA_HOME/pki"
 export SPOTDL_CONFIG_DIR="$XDG_CONFIG_HOME/spotdl"
 
 
-export BEMENU_OPTS="--hp 8 --fb '#282828' --ff '#ebdbb2' --nb '#282828' --nf '#ebdbb2' --tb '#d65d0e' --tf '#282828' --hf '#282828' --hb '#d65d0e' --nf '#ebdbb2' --af '#ebdbb2' --ab '#282828'--fn 'JetBrainsMonoNerdFont 16'"
-
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        exec startx
+        # exec startx
         # exec dwl-start-session
+        exec uwsm start Hyprland
 fi
