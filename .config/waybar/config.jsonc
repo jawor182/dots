@@ -3,9 +3,9 @@
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window",
-        "dwl/tags",
-        "dwl/window",
+        // "dwl/tags",
+        // "dwl/window",
+        "hyprland/window"
     ],
     "modules-center": [],
     "modules-right": [
