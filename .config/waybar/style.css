@@ -93,6 +93,31 @@ window#waybar {
     color: @purple;
 }
 
+#tags button {
+    color: @fg;
+    background-color: @bg;
+    border-radius: 0px;
+    padding: 5px;
+}
+
+#tags button.focused {
+    background-color: @orange;
+    color: @bg;
+}
+
+#tags button:hover {
+    background: @purple;
+}
+
+#tags button.urgent {
+    background-color: @red;
+    color: @bg;
+}
+
+#tags button.urgent:hover {
+    background-color: @red;
+}
+
 #workspaces button {
     color: @fg;
     background-color: @bg;

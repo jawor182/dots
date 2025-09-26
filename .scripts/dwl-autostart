@@ -7,3 +7,4 @@ swww-daemon &
 screen &
 mpd-mpris &
 playerctld & 
+waybar &
