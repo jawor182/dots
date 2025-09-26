@@ -25,7 +25,7 @@ export SPOTDL_CONFIG_DIR="$XDG_CONFIG_HOME/spotdl"
 
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        # exec startx
+        exec startx
         # exec dwl-start-session
-        exec uwsm start Hyprland
+        # exec uwsm start Hyprland
 fi
