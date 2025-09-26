@@ -2,4 +2,4 @@
 Type=Application
 Name=PDF reader
 Icon=org.pwmt.zathura
-Exec=/usr/bin/zathura %u
+Exec=/usr/local/bin/zathura %u
