@@ -111,29 +111,25 @@
                 on_label: " ",
                 off_label: " ",
                 on_style: (fg: "#d65d0e", modifiers: "Bold"),
-                off_style: (fg: "blue", modifiers: "Dim"),
+                off_style: (fg: "blue", modifiers: ""),
             )))),
             (kind: Property(Status(RandomV2(
                 on_label: " ",
                 off_label: " ",
                 on_style: (fg: "#d65d0e", modifiers: "Bold"),
-                off_style: (fg: "blue", modifiers: "Dim"),
+                off_style: (fg: "blue", modifiers: ""),
             )))),
             (kind: Property(Status(ConsumeV2(
                 on_label: "󰮯 ",
                 off_label: "󰮯 ",
-                oneshot_label: "󰮯 ",
                 on_style: (fg: "#d65d0e", modifiers: "Bold"),
-                off_style: (fg: "blue", modifiers: "Dim"),
-                oneshot_style: (fg: "red", modifiers: "Dim"),
+                off_style: (fg: "blue", modifiers: ""),
             )))),
             (kind: Property(Status(SingleV2(
                 on_label: "󰑘 ",
                 off_label: "󰑘 ",
-                oneshot_label: "󰑘 ",
                 on_style: (fg: "#d65d0e", modifiers: "Bold"),
-                off_style: (fg: "blue", modifiers: "Dim"),
-                oneshot_style: (fg: "red", modifiers: "Bold"),
+                off_style: (fg: "blue", modifiers: ""),
             )))),
         ], align: Right
     )),
@@ -156,9 +152,9 @@
     "top_row": Split(
         direction: Horizontal,
         panes: [
-            (size: "23", pane: Component("state")),
+            (size: "15", pane: Component("state")),
             (size: "100%", pane: Component("album")),
-            (size: "23", pane: Component("volume"))
+            (size: "15", pane: Component("volume"))
         ],
     ),
     "bottom_row": Split(
@@ -181,7 +177,7 @@
         panes: [
             (
                 pane: Pane(Property(content: [(kind: Property(Status(StateV2(playing_label: "  ", paused_label: "  ", stopped_label: "  ",
-                    playing_style: (fg: "#d65d0e"), paused_style: (fg: "yellow"), stopped_style: (fg: "red")
+                    playing_style: (fg: "#d65d0e"), paused_style: (fg: "#d65d0e"), stopped_style: (fg: "#d65d0e")
                 ))))], align: Left)),
                 size: "3",
             ),
