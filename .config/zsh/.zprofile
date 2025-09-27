@@ -22,9 +22,8 @@ export ANDROID_HOME="$XDG_DATA_HOME/android"
 export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export SPOTDL_CONFIG_DIR="$XDG_CONFIG_HOME/spotdl"
-
+export FZF_DEFAULT_OPTS="--layout=reverse"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
         exec startx
-        # exec dwl-start-session
 fi

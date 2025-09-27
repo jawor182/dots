@@ -96,67 +96,7 @@ bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
 source $XDG_CONFIG_HOME/shell/shortcutsrc
-
-# Aliases
-# ─── EDITORS ──────────────────────────────────────────────
-alias n="nvim"
-alias sn="sudoedit"
-
-# ─── PACKAGE MANAGEMENT
-alias p="sudo pacman"
-alias y="yay"
-
-# ─── SYSTEM UPDATES ───────────────────────────────────────
-alias update="sudo pacman -Syyuu && yay -Syyu"
-
-# ─── SYSTEM MONITORING & INFO ─────────────────────────────
-alias grep="grep --color -i"
-alias zb="zbarimg"
-
-# ─── SYSTEM CONTROL ───────────────────────────────────────
-alias smci="sudo make clean install"
-alias SS="sudo systemctl"
-alias SU="systemctl --user"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-# ─── GIT WORKFLOW ─────────────────────────────────────────
-alias gad="git add"
-alias gc="git clone"
-alias gcm="git commit -m"
-alias gp="git pull"
-alias gps="git push"
-alias gs="git status"
-alias gd="git diff"
-alias gr="git restore"
-alias gl="git log"
-
-# ─── SHELL & ENVIRONMENT ──────────────────────────────────
-alias la="ls -la"
-alias ll="ls -l"
-alias ls="ls --color -hN"
-alias rm="rm -rf"
-alias restow="cd ~/dots && stow -R ."
-alias zshupdate="source ~/dots/.zshrc"
-alias xcopy="xclip -selection clipboard"
-
-# ─── TMUX SESSIONS ────────────────────────────────────────
-alias t="tmux"
-alias ta="tmux attach"
-alias tn="tmux new"
-alias tns="tmux new -s"
-
-# ─── MISCELLANEOUS ────────────────────────────────────────
-alias dev="npm run dev"
-alias nb="newsboat"
-alias f="$FILES"
-alias diff="diff --color"
-alias lsblk="lsblk -e 7 | bat -l conf -p"
-
-export FZF_DEFAULT_OPTS="--layout=reverse"
-
-export GOPATH="$HOME/.local/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
+source $XDG_CONFIG_HOME/shell/aliasrc
 
 # Custom keybinds
 bindkey -s '^F' '$FILES \n'
