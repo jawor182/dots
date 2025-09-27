@@ -3,8 +3,8 @@
 # shortcut              path
 
 cc                      ~/dots/
-cs                      ~/dots/.scripts/
-cS                      ~/dots/.scripts/statusbar/
+cs                      ~/dots/.local/bin/
+cS                      ~/dots/.local/bin/statusbar/
 cf                      ~/dots/.config/
 rr                      ~/repos/
 rs                      ~/repos/szkola/
