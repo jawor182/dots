@@ -54,6 +54,7 @@
             "P":       ShowDecoders,
             "u":       Update,
             "U":       Rescan,
+            "0":       ExternalCommand(command:["~/dots/.config/rmpc/rmpc-go-to-start"])
         },
         navigation: {
             "k":         Up,
