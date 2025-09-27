@@ -128,6 +128,7 @@ alias gps="git push"
 alias gs="git status"
 alias gd="git diff"
 alias gr="git restore"
+alias gl="git log"
 
 # ─── SHELL & ENVIRONMENT ──────────────────────────────────
 alias la="ls -la"
