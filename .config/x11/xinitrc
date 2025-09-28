@@ -7,7 +7,7 @@ dwmblocks &
 picom -b &
 dunst &
 mpd-mpris &
-playerctld daemon &
+playerctld &
 
 dbus-update-activation-environment --all
 exec dwm
