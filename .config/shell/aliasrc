@@ -31,3 +31,4 @@ gps="git push" \
 gp="git pull" \
 gd="git diff" \
 gs="git status" \
+gr="git restore" \
