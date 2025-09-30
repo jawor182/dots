@@ -47,6 +47,15 @@ yazii() {
 	rm -f -- "$tmp"
 }
 
+fdf(){
+    find $HOME/dots -path "*/.git/*" -prune -o -type f -print | \
+    fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"
+}
+
+snc(){
+    shortcuts ; source $XDG_CONFIG_HOME/zsh/.zshrc ; xset r rate 300 60 ; xrdb -m $XRESOURCES 
+}
+
 autoload -Uz add-zsh-hook
 
 function set-title-preexec {
@@ -99,11 +108,10 @@ source $XDG_CONFIG_HOME/shell/shortcutsrc
 source $XDG_CONFIG_HOME/shell/aliasrc
 
 # Custom keybinds
-bindkey -s '^F' '$FILES \n'
-bindkey -s '^R' 'source $XDG_CONFIG_HOME/zsh/.zshrc \n'
-bindkey -s '^X' 'xset r rate 300 60 ; xrdb -m $XRESOURCES\n'
-bindkey -s '^B' 'find $HOME/dots -path "*/.git/*" -prune -o -type f -print | fzf --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"\n'
-bindkey -s '^T' 'ssnizer \n'
+bindkey -s '^F' '$FILES\n'
+bindkey -s '^R' 'snc\n'
+bindkey -s '^B' 'fdf\n'
+bindkey -s '^T' 'ssnizer\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
