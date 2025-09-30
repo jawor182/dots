@@ -105,6 +105,7 @@ ttf-sazanami
 ttf-roboto
 gnome-themes-extra
 adw-gtk-theme
+papirus-icon-theme
 cmake
 make
 xorg-xeyes

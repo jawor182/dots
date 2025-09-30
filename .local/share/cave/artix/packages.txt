@@ -107,3 +107,4 @@ adw-gtk-theme
 cmake
 make
 xorg-xeyes
+papirus-icon-theme
