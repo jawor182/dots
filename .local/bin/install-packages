@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-sudo pacman -Syyuu --needed $(cat "$HOME/.local/share/cave/arch/packages.txt")
+sudo pacman -Syyuu --needed $(cat "$HOME/.local/share/cave/packages.txt")
 
 if [ ! -d "$HOME/.local/yay" ]; then
     setup-yay
 fi
 
-yay -Syu --needed $(cat "$HOME/.local/share/cave/arch/yay-packages.txt")
+yay -Syu --needed $(cat "$HOME/.local/share/cave/yay-packages.txt")
