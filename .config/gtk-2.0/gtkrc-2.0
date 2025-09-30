@@ -3,7 +3,7 @@
 
 include "/home/jawor/.gtkrc-2.0.mine"
 gtk-theme-name="Adwaita-dark"
-gtk-icon-theme-name="Adwaita"
+gtk-icon-theme-name="Papirus-Dark"
 gtk-font-name="Inter 12"
 gtk-cursor-theme-name="Adwaiata"
 gtk-cursor-theme-size=24
