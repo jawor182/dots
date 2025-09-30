@@ -1,0 +1,49 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+[scratchpads.terminals]
+animation = ""
+margin = 50
+size = "60% 70%"
+max_size = "1920px 100%"
+
+[scratchpads.terminal]
+command = "foot --app-id terminal"
+class = "terminal"
+use = "terminals"
+
+[scratchpads.volume]
+command = "foot --app-id volume -e pulsemixer"
+class = "volume"
+use = "terminals"
+
+[scratchpads.bt]
+command = "foot --app-id bt -e bluetui"
+class = "bt"
+use = "terminals"
+
+[scratchpads.sysmon]
+command = "foot --app-id sysmon -e btop"
+class = "sysmon"
+use = "terminals"
+
+[scratchpads.files]
+command = "foot --app-id files -e yazi"
+class = "files"
+use = "terminals"
+
+[scratchpads.notes]
+command = "foot --app-id notes -e sh -c 'cd $HOME/dox/notes && ${EDITOR:-nvim}'"
+class = "notes"
+use = "terminals"
+
+[scratchpads.music]
+command = "foot --app-id music -e rmpc"
+class = "music"
+use = "terminals"
+
+[scratchpads.news]
+command = "foot --app-id news -e newsboat"
+class = "news"
+use = "terminals"
+

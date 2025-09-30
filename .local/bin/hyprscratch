@@ -30,7 +30,7 @@ files)
 notes)
     toggle_scratchpad "notes" "$term -e sh -c 'cd $HOME/dox/notes && $EDITOR'" ;;
 music)
-    toggle_scratchpad "music" "$term -e ncmpcpp" ;;
+    toggle_scratchpad "music" "$term -e rmpc" ;;
 news)
     toggle_scratchpad "news" "$term -e newsboat" ;;
 esac

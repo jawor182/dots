@@ -1,4 +1,3 @@
-bluetuith-git
 ventoy-bin
 qt5gtk2
 qt5-styleplugins
