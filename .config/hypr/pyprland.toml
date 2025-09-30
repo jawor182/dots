@@ -6,6 +6,7 @@ animation = ""
 margin = 50
 size = "60% 70%"
 max_size = "1920px 100%"
+# pinned = false
 
 [scratchpads.terminal]
 command = "foot --app-id terminal"
