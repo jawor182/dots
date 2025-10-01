@@ -25,6 +25,5 @@ export SPOTDL_CONFIG_DIR="$XDG_CONFIG_HOME/spotdl"
 export FZF_DEFAULT_OPTS="--layout=reverse"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-        # exec startx
-        exec uwsm start Hyprland
+        exec startx
 fi
