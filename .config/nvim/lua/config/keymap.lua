@@ -66,8 +66,13 @@ vim.keymap.set("n", "<leader>wG", ":VimwikiDiaryGenerateLinks<CR>", { desc = "Ge
 vim.keymap.set("n", "<leader>wT", ":VimwikiTOC<CR>", { desc = "Generate Table Of Contents (TOC)"})
 
 
-vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files, {})
-vim.keymap.set("n", "<leader>gr", require("telescope.builtin").live_grep, {})
-vim.keymap.set("n", "<leader>h", require("telescope.builtin").help_tags, {})
+-- vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files, {})
+-- vim.keymap.set("n", "<leader>gr", require("telescope.builtin").live_grep, {})
+-- vim.keymap.set("n", "<leader>h", require("telescope.builtin").help_tags, {})
+--
+vim.keymap.set("n", "<leader>f", require("mini.pick").builtin.files, {})
+vim.keymap.set("n", "<leader>gr", require("mini.pick").builtin.grep_live, {})
+vim.keymap.set("n", "<leader>h", require("mini.pick").builtin.help, {})
+
 
 vim.api.nvim_set_keymap('v', 'Y', '"+y', { noremap = true, silent = true })
