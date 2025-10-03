@@ -144,8 +144,8 @@
     "volume": Split(
         direction: Horizontal,
             panes: [
-                (size: "100%", pane: Pane(Property(content:[(kind: Text("Volume: "),style: (fg:"#d65d0e"))],align:Right))), 
-                (size: "2", pane: Pane(Property(content: [(kind: Property(Status(Volume)), style: (fg: "blue"))], align: Right))),
+                (size: "100%", pane: Pane(Property(content:[(kind: Text("Volume:"),style: (fg:"#d65d0e"))],align:Right))), 
+                (size: "3", pane: Pane(Property(content: [(kind: Property(Status(Volume)), style: (fg: "blue"))], align: Right))),
                 (size: "1", pane: Pane(Property(content: [(kind: Text("%"), style: (fg: "blue"))]))),
             ]
         ),
