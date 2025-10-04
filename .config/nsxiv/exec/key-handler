@@ -5,5 +5,4 @@ while read -r file; do
     "w") wallpaper set "$file" & ;;
     *) ;;
     esac
-
 done
