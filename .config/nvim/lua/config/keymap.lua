@@ -70,3 +70,4 @@ vim.keymap.set("n", "<leader>gr", require("telescope.builtin").live_grep, {})
 vim.keymap.set("n", "<leader>h", require("telescope.builtin").help_tags, {})
 
 vim.api.nvim_set_keymap('v', 'Y', '"+y', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>cc", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights", silent = true, noremap = true })
