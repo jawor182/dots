@@ -12,7 +12,7 @@ rs                      ~/repos/szkola/
 rp                      ~/repos/personal/
 nss                     ~/repos/new-suckless/
 nsd                     ~/repos/new-suckless/dwm/
-nsD                     ~/repos/new-suckless/dmenu/
+nsm                     ~/repos/new-suckless/dmenu/
 nst                     ~/repos/new-suckless/st/
 nsb                     ~/repos/new-suckless/blocks/
 nsn                     ~/repos/new-suckless/nsxiv/
@@ -21,7 +21,7 @@ dx                      ~/dox/
 dn                      ~/dox/notes/
 wss                     ~/repos/wayland-suckless/
 wsd                     ~/repos/wayland-suckless/dwl/
-wsS                     ~/repos/wayland-suckless/slstatus/
+wsl                     ~/repos/wayland-suckless/slstatus/
 ww                      ~/walls/
 mm                      ~/media/
 mV                      ~/media/vids/
