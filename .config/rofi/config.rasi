@@ -2,7 +2,7 @@
 @theme "gruvbox-dark"
 
 configuration {
-    font: "JetBrainsMonoNerdFont 14";
+    font: "JetBrainsMonoNerdFont 16";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     combi-modes: [ window, drun, run, dmenu, emoji, calc ];
@@ -43,7 +43,7 @@ configuration {
 element {
     padding: 1px ;
     cursor:  pointer;
-    spacing: 5px ;
+    spacing: 8px ;
     border:  0;
 }
 element normal.normal {
@@ -59,8 +59,11 @@ element normal.active {
     text-color:       @active-foreground;
 }
 element selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+    border:           2px;
+    border-color:     @peach;
+    border-radius:    8px;
 }
 element selected.urgent {
     background-color: @selected-urgent-background;
@@ -99,6 +102,7 @@ window {
     background-color: @background;
     border:           2;
     border-radius:    8;
+    width:            640px;
 }
 mainbox {
     padding: 0;
@@ -114,11 +118,12 @@ textbox {
 }
 listview {
     padding:      2px 0px 0px ;
-    scrollbar:    true;
+    scrollbar:    false;
     border-color: @separatorcolor;
     spacing:      2px ;
     fixed-height: 0;
     border:       2px dash 0px 0px ;
+    lines:        10;
 }
 scrollbar {
     width:        4px ;
@@ -157,7 +162,7 @@ inputbar {
     padding:    1px ;
     spacing:    0px ;
     text-color: @normal-foreground;
-    children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+    children:   [ "prompt","textbox-prompt-colon","entry" ];
 }
 case-indicator {
     spacing:    0;
