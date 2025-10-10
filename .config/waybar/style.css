@@ -130,8 +130,14 @@ window#waybar {
     color: @bg;
 }
 
+#workspaces button.active:hover {
+    background-color: @orange;
+    color: @bg;
+}
+
 #workspaces button:hover {
-    background: @purple;
+    background: @orange;
+    color: @bg;
 }
 
 #workspaces button.urgent {
