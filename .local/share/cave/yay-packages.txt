@@ -7,3 +7,5 @@ librewolf-bin
 brave-bin
 htop-vim
 playerctl-git
+hyprland-meta-git
+hyprmag-git
