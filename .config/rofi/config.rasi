@@ -59,10 +59,8 @@ element normal.active {
     text-color:       @active-foreground;
 }
 element selected.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-    border:           2px;
-    border-color:     @peach;
+    background-color: @peach;
+    text-color:       @normal-background;
     border-radius:    8px;
 }
 element selected.urgent {
