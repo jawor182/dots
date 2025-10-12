@@ -24,9 +24,10 @@
         "interval": 1,
         "tooltip": false,
         "on-click": "playerctl -p mpd play-pause",
-        "on-click-right": "playerctl -p mpd previous",
-        "on-click-middle": "playerctl -p mpd next",
-        "on-double-click-right": "playerctl -p mpd pause && playerctl -p mpd position 0",
+        "on-click-middle": "hyprscratch music",
+        "on-scroll-down": "playerctl -p mpd next",
+        "on-scroll-up": "playerctl -p mpd previous",
+        "on-click-right": "playerctl -p mpd pause && playerctl -p mpd position 0",
     },
     "dwl/tags": {
         "format": "{}",
