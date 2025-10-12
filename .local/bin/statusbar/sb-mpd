@@ -21,10 +21,10 @@ esac
 
 case $BLOCK_BUTTON in
     1) playerctl -p mpd play-pause ;;
-    4) playerctl -p mpd next ;;
-    5) playerctl -p mpd previous ;;
-    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
     3) playerctl -p mpd pause && playerctl -p mpd position 0 ;;
+    4) playerctl -p mpd previous ;;
+    5) playerctl -p mpd next ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
