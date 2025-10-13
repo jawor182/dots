@@ -11,9 +11,13 @@ autocmd("VimEnter", {
 autocmd("FileType", {
     pattern = { "markdown", "vimwiki" },
     callback = function()
-        require("wrapping").soft_wrap_mode()
         vim.keymap.set("n", "j", "gj", { silent = true, noremap = true })
         vim.keymap.set("n", "k", "gk", { silent = true, noremap = true })
+        vim.opt.wrap = true
+        vim.opt.linebreak = true
+        vim.opt.breakindent = true
+        vim.opt.textwidth = 60
+        vim.opt.formatoptions:append('t')
     end,
 })
 
