@@ -40,6 +40,7 @@ window#waybar {
 #battery,
 #custom-swaync,
 #temperature,
+#idle_inhibitor,
 #clock {
     padding: 5px;
     background-color: @bg;
@@ -87,6 +88,10 @@ window#waybar {
 #tray {
     background-color: @bg;
     padding-right:5px;
+}
+
+#idle_inhibitor.activated {
+    color:@green;
 }
 
 #custom-swaync {

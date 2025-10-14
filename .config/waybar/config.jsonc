@@ -11,6 +11,7 @@
     "modules-right": [
         "custom/mpd",
         "clock",
+        "idle_inhibitor",
         "pulseaudio",
         "cpu",
         "memory",
@@ -121,6 +122,13 @@
         "format-disconnected": "",
         "tooltip": false,
         "on-click": "$TERMINAL --app-id floatingterm -e speedtest",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
     },
     "bluetooth": {
         "format": "",
