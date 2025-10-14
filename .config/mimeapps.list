@@ -74,3 +74,4 @@ application/epub=calibre-ebook-viewer.desktop
 application/epub+zip=calibre-ebook-viewer.desktop
 application/vnd.amazon.mobi8-ebook=calibre-ebook-viewer.desktop
 application/x-mobipocket-ebook=calibre-ebook-viewer.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
