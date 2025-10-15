@@ -3,7 +3,7 @@
 # Env
 export TERMINAL=st
 export XCURSOR_THEME=breeze_cursors
-export XCURSOR_SIZE=24
+export XCURSOR_SIZE=30
 export QT_QPA_PLATFORMTHEME=gtk3
 export XDG_CURRENT_DESKTOP=DWM
 export XDG_SESSION_TYPE=x11
