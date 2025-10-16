@@ -111,3 +111,6 @@ foot
 waybar
 bemenu
 wl-clipboard
+grim
+slurp
+swww

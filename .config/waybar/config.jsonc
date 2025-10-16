@@ -4,7 +4,8 @@
     "modules-left": [
         "hyprland/workspaces",
         // "dwl/tags",
-        // "dwl/window",
+        "ext/workspaces",
+        "dwl/window",
         "hyprland/window"
     ],
     "modules-center": [],
@@ -40,6 +41,9 @@
         "tooltip": false,
         "icon": true,
         "icon-size": 24,
+    },
+    "ext/workspaces": {
+        "format": "{}",
     },
     "hyprland/workspaces": {
         "format": "{}",

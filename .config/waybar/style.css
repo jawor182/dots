@@ -111,7 +111,8 @@ window#waybar {
 }
 
 #tags button:hover {
-    background: @purple;
+    background: @orange;
+    color: @fg;
 }
 
 #tags button.urgent {

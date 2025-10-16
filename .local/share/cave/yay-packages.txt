@@ -9,3 +9,8 @@ htop-vim
 playerctl-git
 hyprland-meta-git
 hyprmag-git
+task-spooler
+wl-color-picker
+mangowc-git
+mmsg-git
+mprop-git
