@@ -107,10 +107,3 @@ papirus-icon-theme
 cmake
 make
 xorg-xeyes
-foot
-waybar
-bemenu
-wl-clipboard
-grim
-slurp
-swww
