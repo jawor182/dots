@@ -4,7 +4,7 @@ waybar &
 swww-daemon &
 wallpaper random &
 foot -s &
-dunst &
+swaync &
 screen &
 mpd-mpris &
 playerctld &

@@ -8,3 +8,4 @@ screen &
 mpd-mpris &
 playerctld & 
 waybar &
+foot -s &
