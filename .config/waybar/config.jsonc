@@ -69,6 +69,7 @@
     "cpu": {
         "format": " {usage}%",
         "tooltip-format": "{avg_frequency}",
+        "on-click": "$HOME/dots/.config/waybar/scripts/cpu-temp"
     },
     "memory": {
         "format": " {}%",
