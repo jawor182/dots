@@ -1,5 +1,5 @@
-PATH="$PATH:/$HOME/.local/bin/"
-PATH="$PATH:/$HOME/.local/bin/statusbar"
+export PATH="$PATH:/$HOME/.local/bin/"
+export PATH="$PATH:/$HOME/.local/bin/statusbar"
 export EDITOR="nvim"
 export FILES="yazii"
 export BROWSER="librewolf"
