@@ -5,72 +5,81 @@ playlist="$path/playlist.m3u"
 lockfile="$path/mpvq.lock"
 ipc_socket="/tmp/mpvsocket"
 
-[ ! -d "$path" ] && mkdir -p "$path"
+mkdir -p "$path"
 [ ! -f "$playlist" ] && touch "$playlist"
 
-# Function to remove duplicates from the playlist
 deduplicate() {
     if [ -f "$playlist" ]; then
-        awk '!a[$0]++' "$playlist" > "$playlist.tmp"
-        mv "$playlist.tmp" "$playlist"
-        echo "Duplicates removed from playlist."
+        awk '!a[$0]++' "$playlist" > "$playlist.tmp" && mv "$playlist.tmp" "$playlist"
     fi
+}
+
+normalize_path() {
+    local input="$1"
+    if [[ "$input" =~ ^https?:// ]]; then
+        echo "$input"
+    else
+        local abs
+        abs=$(realpath "$input" 2>/dev/null)
+        if [ -n "$abs" ]; then
+            echo "file://$abs"
+        else
+            echo "$input"
+        fi
+    fi
+}
+
+mpv_running() {
+    if [ -S "$ipc_socket" ]; then
+        echo '{ "command": ["get_property", "idle-active"] }' \
+            | socat - "$ipc_socket" >/dev/null 2>&1
+        return $?
+    else
+        return 1
+    fi
+}
+
+mpv_playlist() {
+    echo '{ "command": ["get_property", "playlist"] }' \
+        | socat - "$ipc_socket" 2>/dev/null | jq -r '.data[].filename' 2>/dev/null
 }
 
 add() {
     local file_or_url="$2"
+    [ -z "$file_or_url" ] && { echo "Usage: mpvq add <file-or-url>"; exit 1; }
 
-    # Always append to the playlist file for persistence
-    echo "$file_or_url" >>"$playlist"
+    local normalized
+    normalized=$(normalize_path "$file_or_url")
+
+    echo "$normalized" >>"$playlist"
     deduplicate
-    echo "Added to playlist file: $file_or_url"
 
-    # If mpv is running, check if it's already in the playlist before adding
-    if [ -S "$ipc_socket" ]; then
-        # Get current MPV playlist
+    if mpv_running; then
         local current_playlist
-        current_playlist=$(echo '{ "command": ["get_property", "playlist"] }' | socat - "$ipc_socket" | jq -r '.data[].filename')
-
-        # Check if file_or_url is already in MPV's playlist
-        if echo "$current_playlist" | grep -Fxq "$file_or_url"; then
-            echo "Item already in MPV playlist, not adding again."
-        else
-            echo '{ "command": ["loadfile", "'"$file_or_url"'", "append"] }' | socat - "$ipc_socket"
-            echo "Also added via IPC for immediate playback."
-        fi
-    fi
-}
-
-
-addclip() {
-    if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-            clipfile=$(xclip -o -selection clipboard)
-        else
-            clipfile=$(wl-paste)
-    fi
-    if echo "$clipfile" | grep -Eq '^https?://'; then
-        # Always append to the playlist file for persistence
-        echo "$clipfile" >>"$playlist"
-        deduplicate
-        echo "Added from clipboard to playlist file."
-
-        # If mpv is running, check if it's already in the playlist before adding
-        if [ -S "$ipc_socket" ]; then
-            local current_playlist
-            current_playlist=$(echo '{ "command": ["get_property", "playlist"] }' | socat - "$ipc_socket" | jq -r '.data[].filename')
-
-            if echo "$current_playlist" | grep -Fxq "$clipfile"; then
-                echo "Clipboard URL already in MPV playlist, not adding again."
-            else
-                echo '{ "command": ["loadfile", "'"$clipfile"'", "append"] }' | socat - "$ipc_socket"
-                echo "Also added from clipboard via IPC for immediate playback."
-            fi
+        current_playlist=$(mpv_playlist)
+        if ! echo "$current_playlist" | grep -Fxq "$normalized"; then
+            echo '{ "command": ["loadfile", "'"$normalized"'", "append"] }' | socat - "$ipc_socket"
         fi
     else
-        echo "Clipboard does not contain a valid URL."
+        # Clean up stale socket if it exists but MPV is dead
+        [ -S "$ipc_socket" ] && rm -f "$ipc_socket"
     fi
 }
 
+addclip() {
+    local clipfile
+    if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+        clipfile=$(xclip -o -selection clipboard 2>/dev/null)
+    else
+        clipfile=$(wl-paste 2>/dev/null)
+    fi
+
+    if echo "$clipfile" | grep -Eq '^https?://'; then
+        add add "$clipfile"
+    elif [ -f "$clipfile" ]; then
+        add add "$clipfile"
+    fi
+}
 
 show() {
     if [ ! -s "$playlist" ]; then
@@ -90,26 +99,15 @@ play() {
         --player-operation-mode=pseudo-gui \
         --input-ipc-server="$ipc_socket" \
         --script="$HOME/.config/mpv/scripts/mpvq-live-sync.lua" \
-        --script="/usr/lib/mpv-mpris/mpris.so"
+        --script="/usr/lib/mpv-mpris/mpris.so" >/dev/null 2>&1 &
 }
 
 case "$1" in
-    add)
-        [ -z "$2" ] && { echo "Usage: mpvq add <file-or-url>"; exit 1; }
-        add "$@"
-        ;;
-    show)
-        show
-        ;;
-    play)
-        play
-        ;;
-    addclip)
-        addclip
-        ;;
-    deduplicate)
-        deduplicate
-        ;;
+    add) add "$@" ;;
+    show) show ;;
+    play) play ;;
+    addclip) addclip ;;
+    deduplicate) deduplicate ;;
     *)
         echo "Usage: mpvq {add|show|play|deduplicate|addclip}"
         exit 1
