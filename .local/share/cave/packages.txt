@@ -5,7 +5,7 @@ calibre
 tmux
 keepassxc
 lxappearance-gtk3
-lxsession-gtk3
+lxsession
 neovim
 xwallpaper
 xdotool
