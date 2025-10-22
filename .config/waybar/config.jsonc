@@ -28,7 +28,7 @@
         "on-click": "playerctl -p mpd play-pause",
         "on-click-right": "playerctl -p mpd next",
         "on-click-middle": "hyprscratch music",
-        "on-double-click-right": "playerctl -p mpd pause && playerctl -p mpd position 0",
+        "on-double-click": "playerctl -p mpd pause && playerctl -p mpd position 0",
     },
     "custom/swaync" : {
         "format":"",
