@@ -27,5 +27,5 @@ export BEMENU_OPTS="--hp 8 --fb '#282828' --ff '#ebdbb2' --nb '#282828' --nf '#e
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
         # exec startx
-        exec uwsm start Hyprland
+        exec Hyprland
 fi
