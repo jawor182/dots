@@ -4,7 +4,7 @@ socat
 calibre
 tmux
 keepassxc
-lxappearance-gtk3
+lxappearance
 lxsession
 neovim
 xwallpaper
