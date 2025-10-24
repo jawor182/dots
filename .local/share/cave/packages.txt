@@ -114,3 +114,10 @@ wl-clipboard
 grim
 slurp
 swww
+hypridle
+hyprland
+hyprlock
+hyprpicker
+hyprpolkitagent
+hyprsunset
+xdg-desktop-portal-hyprland
