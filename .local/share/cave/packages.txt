@@ -108,6 +108,7 @@ cmake
 make
 xorg-xeyes
 foot
+kitty
 waybar
 bemenu
 wl-clipboard
