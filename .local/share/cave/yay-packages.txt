@@ -8,4 +8,3 @@ brave-bin
 htop-vim
 playerctl-git
 task-spooler
-hyprmag-git
