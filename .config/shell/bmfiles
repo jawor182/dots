@@ -11,3 +11,4 @@ cfn                     ~/dots/.config/ncmpcpp/config
 cfp                     ~/dots/.config/picom/picom.conf
 cft                     ~/dots/.config/tmux/tmux.conf
 cfv                     ~/.local/share/mpvq/playlist.m3u                          
+ckb                     ~/keepassxc/bookmarks
