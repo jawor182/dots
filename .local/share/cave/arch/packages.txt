@@ -1,5 +1,4 @@
 aria2
-bluetui
 socat
 calibre
 tmux
@@ -85,9 +84,7 @@ yazi
 fzf
 lshw
 jq
-pulsemixer
 stow
-tldr
 zathura
 noto-fonts-emoji
 noto-fonts

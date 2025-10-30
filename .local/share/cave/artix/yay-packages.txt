@@ -1,4 +1,12 @@
-ventoy-bin
+calibre-bin
+mpc-git
+rmpc-git
+mpdris-bin
+ifuse-git
+xcolor-bin
+unzip-git
+bat-cat-git
+adw-gtk-theme-git
 qt5gtk2
 qt5-styleplugins
 xurls
