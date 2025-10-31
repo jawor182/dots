@@ -1,4 +1,0 @@
-#!/bin/sh
-DIR="$1"
-shift
-nvim +"cd $DIR" "$DIR" "$@"
