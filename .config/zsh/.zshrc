@@ -49,7 +49,7 @@ yazii() {
 
 fdf(){
     find $HOME/dots -path "*/.git/*" -prune -o -type f -print | \
-    fzf -e --preview "bat --style=numbers --color=always {}" --bind "enter:become(nvim {})"
+    fzf -e --bind "enter:become(nvim {})"
 }
 
 snc(){
