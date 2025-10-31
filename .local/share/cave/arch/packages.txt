@@ -78,7 +78,6 @@ zsh-syntax-highlighting
 os-prober
 tree
 perl-image-exiftool
-bat
 btop
 yazi
 fzf
