@@ -3,7 +3,7 @@ mpc-git
 rmpc-git
 mpdris-bin
 ifuse-git
-xcolor-bin
+xcolor
 unzip-git
 adw-gtk-theme-git
 qt5gtk2
@@ -15,3 +15,4 @@ brave-bin
 htop-vim
 playerctl-git
 task-spooler
+ttf-sazanami-hanazono
