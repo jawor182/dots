@@ -29,18 +29,25 @@ local function write_queue_file(lines)
     return true
 end
 
+local function normalize_path_for_comparison(line)
+    if line:match("^file://") then
+        return line:sub(8) -- remove 'file://'
+    else
+        return line
+    end
+end
+
+
 -- Function to remove the currently playing file from the queue file
 local function remove_current_from_queue()
-    if not current_file then
-        return
-    end
+    if not current_file then return end
     local lines = read_queue_file()
     local new_lines = {}
     local removed = false
     for _, line in ipairs(lines) do
-        if line == current_file and not removed then
+        if normalize_path_for_comparison(line) == current_file and not removed then
             removed = true
-            mp.msg.info("Removed from queue: " .. current_file)
+            mp.msg.info("Removed from queue: " .. line)
         else
             table.insert(new_lines, line)
         end
