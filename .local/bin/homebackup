@@ -10,7 +10,7 @@ outputPath="$targetDir/$backupFile"
 
 echo "🔄 Starting backup: ${outputPath}"
 
-if tar -czvf "$outputPath" "${dirs[@]}"; then
+if tar -czvf "$outputPath" --exclude="$HOME/dox/ISO" "${dirs[@]}"; then
     echo "✅ Backup completed successfully!"
     echo "📦 Saved to: $outputPath"
 else
