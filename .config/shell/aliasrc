@@ -15,8 +15,8 @@ smci="sudo make clean install" \
 la="ls -la" \
 ll="ls -l" \
 ls="ls --color=always --group-directories-first -hN" \
-restow="cd ~/dots && stow -R ." \
-zshupdate="source ~/dots/.zshrc" \
+restow="cd ~/dotfiles && stow -R ." \
+zshupdate="source ~/dotfiles/.zshrc" \
 xcopy="xclip -selection clipboard" \
 t="tmux" \
 dev="npm run dev" \

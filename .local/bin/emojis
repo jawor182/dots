@@ -1,5 +1,5 @@
 #!/bin/sh
 
-file="$HOME/dots/.local/share/cave/unicode"
+file="$HOME/dotfles/.local/share/cave/unicode"
 
 cat "$file" | bemenu -bi --fixed-height -l 10 -p "Pick emoji:" | awk '{printf "%s", $1}' | wl-copy

@@ -2,11 +2,11 @@
 # Format:
 # shortcut              path
 
-cc                      ~/dots/
-cs                      ~/dots/.local/bin/
-cS                      ~/dots/.local/bin/statusbar/
-cf                      ~/dots/.config/
-cl                      ~/dots/.local/share
+cc                      ~/dotfiles/
+cs                      ~/dotfiles/.local/bin/
+cS                      ~/dotfiles/.local/bin/statusbar/
+cf                      ~/dotfiles/.config/
+cl                      ~/dotfiles/.local/share
 rr                      ~/repos/
 rs                      ~/repos/szkola/
 rp                      ~/repos/personal/

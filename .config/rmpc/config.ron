@@ -3,7 +3,7 @@
 #![enable(unwrap_variant_newtypes)]
 (
     address: "127.0.0.1:6600",
-    on_song_change: ["~/dots/.config/rmpc/rmpc-notifier"],
+    on_song_change: ["~/dotfiles/.config/rmpc/rmpc-notifier"],
     password: None,
     theme: "default",
     cache_dir: "~/.cache/mpd/",
@@ -54,7 +54,7 @@
             "P":       ShowDecoders,
             "u":       Update,
             "U":       Rescan,
-            "0":       ExternalCommand(command:["~/dots/.config/rmpc/rmpc-go-to-start"])
+            "0":       ExternalCommand(command:["~/dotfiles/.config/rmpc/rmpc-go-to-start"])
         },
         navigation: {
             "k":         Up,

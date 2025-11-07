@@ -2,14 +2,14 @@
 # Format:
 # shortcut              path
 
-cfz                     ~/dots/.config/zsh/.zshrc
-cfd                     ~/dots/.config/dunst/dunstrc
-cfM                     ~/dots/.config/mpd/mpd.conf
-cfm                     ~/dots/.config/mpv/mpv.conf
-cfb                     ~/dots/.config/newsboat/config
-cfn                     ~/dots/.config/ncmpcpp/config
-cfp                     ~/dots/.config/picom/picom.conf
-cft                     ~/dots/.config/tmux/tmux.conf
+cfz                     ~/dotfiles/.config/zsh/.zshrc
+cfd                     ~/dotfiles/.config/dunst/dunstrc
+cfM                     ~/dotfiles/.config/mpd/mpd.conf
+cfm                     ~/dotfiles/.config/mpv/mpv.conf
+cfb                     ~/dotfiles/.config/newsboat/config
+cfn                     ~/dotfiles/.config/ncmpcpp/config
+cfp                     ~/dotfiles/.config/picom/picom.conf
+cft                     ~/dotfiles/.config/tmux/tmux.conf
 cfv                     ~/.local/share/mpvq/playlist.m3u                          
 ckb                     ~/keepassxc/bookmarks
 cku                     ~/keepassxc/urls

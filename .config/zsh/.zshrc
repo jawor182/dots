@@ -48,7 +48,7 @@ yazii() {
 }
 
 fdf(){
-    find $HOME/dots -path "*/.git/*" -prune -o -type f -print | \
+    find $HOME/dotfiles/ -path "*/.git/*" -prune -o -type f -print | \
     fzf -e --bind "enter:become(nvim {})"
 }
 
