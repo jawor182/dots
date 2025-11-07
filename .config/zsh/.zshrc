@@ -47,7 +47,7 @@ yazii() {
 	rm -f -- "$tmp"
 }
 
-fdf(){
+se(){
     find $HOME/dotfiles/ -path "*/.git/*" -prune -o -type f -print | \
     fzf -e --bind "enter:become(nvim {})"
 }
@@ -122,7 +122,7 @@ source $XDG_CONFIG_HOME/shell/aliasrc
 # Custom keybinds
 bindkey -s '^F' '$FILES\n'
 bindkey -s '^R' 'snc\n'
-bindkey -s '^B' 'fdf\n'
+bindkey -s '^S' 'se\n'
 bindkey -s '^T' 'ssnizer\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
