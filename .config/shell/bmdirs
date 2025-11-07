@@ -1,0 +1,34 @@
+# Shortcuts for dirs in shell
+# Format:
+# shortcut              path
+
+cc                      ~/dots/
+cs                      ~/dots/.local/bin/
+cS                      ~/dots/.local/bin/statusbar/
+cf                      ~/dots/.config/
+cl                      ~/dots/.local/share
+rr                      ~/repos/
+rs                      ~/repos/szkola/
+rp                      ~/repos/personal/
+nss                     ~/repos/new-suckless/
+nsd                     ~/repos/new-suckless/dwm/
+nsm                     ~/repos/new-suckless/dmenu/
+nst                     ~/repos/new-suckless/st/
+nsb                     ~/repos/new-suckless/blocks/
+nsn                     ~/repos/new-suckless/nsxiv/
+nsl                     ~/repos/new-suckless/slock
+dx                      ~/dox/
+dn                      ~/dox/notes/
+db                      ~/dox/boox/
+wss                     ~/repos/wayland-suckless/
+wsd                     ~/repos/wayland-suckless/dwl/
+wsl                     ~/repos/wayland-suckless/slstatus/
+ww                      ~/walls/
+mm                      ~/media/
+ms                      ~/media/shows/
+mV                      ~/media/vids/
+mp                      ~/media/podcasts/
+mM                      ~/media/musik/
+k                       ~/keepassxc/
+l                       ~/dl/
+B                       ~/backups/

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+dirs=("$HOME/repos/personal" "$HOME/repos/new-suckless" "$HOME/dots" "$HOME/repos/wayland-suckless")
+
+selected=$(find "${dirs[@]}" -mindepth 1 -maxdepth 1 -path "*/.git*" -prune -o -type d -print | fzf --height=100%)
+
+if [ -z "${selected:-}" ]; then
+    echo "Did not specify the project" >&2
+    exit 1
+fi
+
+name=$(basename "$selected")
+
+if [[ $name == .* ]]; then
+    name="_${name:1}"
+fi
+
+if ! tmux has-session -t "$name" 2>/dev/null; then
+    tmux new-session -d -s "$name" -c "$selected"
+
+    tmux new-window -t "$name":2 -c "$selected"
+    tmux new-window -t "$name":3 -c "$selected"
+    tmux send-keys -t "$name":1.1 "nvim" C-m
+    tmux select-window -t "$name":1
+fi
+
+if [ -z "${TMUX:-}" ]; then
+    tmux attach-session -t "$name"
+else
+    tmux switch-client -t "$name"
+fi

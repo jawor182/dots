@@ -1,0 +1,35 @@
+#!/bin/sh
+
+status=$(mpc status %state%)
+info=$(mpc status --format "[%artist% - %title%]" | head -n 1)
+time=$(mpc status "[%currenttime%/%totaltime%]" | head -n 1)
+
+escape() {
+    echo "$1" | sed 's/&/&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'
+}
+
+case "$status" in
+    "playing")
+        statusIcon="" ;;
+    "paused")
+        statusIcon="" ;;
+    *)
+        statusIcon=""
+        info="off" 
+        time="";;
+esac
+
+case $BLOCK_BUTTON in
+    1) playerctl -p mpd play-pause ;;
+    2) playerctl -p mpd next ;;
+    3) playerctl -p mpd previous ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+    8) playerctl -p mpd pause && playerctl -p mpd position 0 ;;
+esac
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    info=$(escape "$info")
+    time=$(escape "$time")
+fi
+
+printf " %s %s %s\n" "$statusIcon" "$info" "$time"

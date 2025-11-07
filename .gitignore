@@ -1,0 +1,8 @@
+.config/tmux/plugins
+.local/share/applications/mimeinfo.cache
+.local/state
+.config/nvim/lazy-lock.json
+.config/lf/shortcutsrc
+.config/yazi/keymap.toml
+.config/yazi/shortcuts.toml
+.config/ncmpcpp/error.log

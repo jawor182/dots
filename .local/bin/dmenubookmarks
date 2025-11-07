@@ -1,0 +1,21 @@
+#!/bin/sh
+
+bmfile=$HOME/keepassxc/bookmarks
+
+selectbookmark() {
+    selected=$(cat "$bmfile" | dmenu -i -l 30 -p "Select bookmark:"| cut -d ' ' -f 1)
+    [ -z "$selected" ] && exit
+    echo -n "$selected" | xclip -selection clipboard
+}
+
+addbookmark(){
+    bookmark=$(xclip -o);
+    grep -x "$bookmark" "$bmfile" && notify-send "Bookmark is already in file" && exit 1 || echo "$bookmark" >> "$bmfile"
+    notify-send "Added $bookmark to bookmarks"
+}
+
+case "$1" in
+    select) selectbookmark;;
+    add) addbookmark;;
+    *) notify-send "UGABUGA" && exit 1 ;;
+esac

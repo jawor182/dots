@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=File Manager
+Icon=yazi
+Exec=/usr/local/bin/st -e yazi %u

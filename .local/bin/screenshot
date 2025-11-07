@@ -1,0 +1,72 @@
+#!/bin/sh
+
+TIMESTAMP="$(date '+%Y-%m-%d-%H-%M-%S')"
+IMG_NAME="${TIMESTAMP}.png"
+SAVE_DIR="$HOME/dox/pix/screenshots"
+TEMP_FILE="/tmp/screenshot_temp_${TIMESTAMP}.png" # Temporary file to hold the selection
+
+mkdir -p "$SAVE_DIR"
+
+
+if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+scrot -s "$TEMP_FILE"
+else 
+grim -g "$(slurp)" "$TEMP_FILE"
+fi
+
+if [ $? -ne 0 ] || [ ! -f "$TEMP_FILE" ]; then
+    notify-send "Screenshot Aborted" "No selection made."
+    exit 1
+fi
+
+if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+OPTION=$(printf 'Copy to Clipboard\nSave\nOpen\nCancel' | dmenu -i -c -l 4 -p "What do you want to do?")
+else 
+OPTION=$(printf 'Copy to Clipboard\nSave\nOpen\nCancel' | bemenu --fixed-height -W 0.4 -c -i -l 4 -p "What do you want to do?")
+fi
+
+if [ -z "$OPTION" ]; then
+    notify-send "Screenshot Aborted" "Action selection cancelled."
+    rm -f "$TEMP_FILE"
+    exit 0
+fi
+
+case "$OPTION" in
+"Save")
+    mv "$TEMP_FILE" "$SAVE_DIR/$IMG_NAME"
+    if [ $? -eq 0 ]; then
+        notify-send "Screenshot Saved" "Selected area saved to: $SAVE_DIR/$IMG_NAME"
+    else
+        notify-send "Screenshot Error" "Failed to move screenshot to $SAVE_DIR/$IMG_NAME."
+    fi
+    ;;
+"Copy to Clipboard")
+    if command -v xclip >/dev/null 2>&1; then
+        if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+            xclip -selection clipboard -target image/png -i "$TEMP_FILE"
+        else 
+            wl-copy < "$TEMP_FILE"
+        fi
+        notify-send "Screenshot Copied" "Selected area copied to clipboard."
+    else
+        notify-send "Screenshot Error" "Clipboard tool (xclip/wl-clipboard) not found."
+    fi
+    rm -f "$TEMP_FILE"
+    ;;
+"Open")
+    xdg-open "$TEMP_FILE" >/dev/null 2>&1 & # Run in background
+    notify-send "Screenshot Opened" "Selected area opened in default viewer."
+    ;;
+"Cancel")
+    notify-send "Screenshot Cancelled" "No action performed."
+    rm -f "$TEMP_FILE"
+    ;;
+*)
+    notify-send "Screenshot Error" "Unknown option selected: $OPTION"
+    rm -f "$TEMP_FILE"
+    ;;
+esac
+
+if [ -f "$TEMP_FILE" ] && [ "$OPTION" != "Open" ]; then
+    rm -f "$TEMP_FILE"
+fi

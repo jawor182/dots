@@ -1,0 +1,23 @@
+#!/bin/sh
+
+export TERMINAL=footclient
+export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=gtk3
+export QT_QPA_PLATFORM=wayland
+export QT_SCALE_FACTOR=1
+export GTK_THEME=adw-gtk3-dark
+export XDG_CONFIG_HOME="$HOME/.config/"
+export XDG_CURRENT_DESKTOP=dwl
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=dwl
+export WLR_DRM_NO_ATOMIC=1
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export LIBVA_DRIVER_NAME=nvidia
+export __GL_GSYNC_ALLOWED=true
+export NVD_BACKEND=direct
+export WLR_RENDER_DRM_FENCE=1
+
+dbus-update-activation-environment --all
+
+dwl -s "sh $HOME/.local/bin/dwl-autostart <&-"

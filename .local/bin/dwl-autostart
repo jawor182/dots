@@ -1,0 +1,11 @@
+#!/bin/sh
+
+swww-daemon  &
+wallpaper random &
+dunst &
+swww-daemon &
+screen &
+mpd-mpris &
+playerctld & 
+waybar &
+foot -s &

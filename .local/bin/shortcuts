@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# Input files
+bmfiles=$HOME/.config/shell/bmfiles
+bmdirs=$HOME/.config/shell/bmdirs
+yazikeys=$HOME/.config/yazi/keys.toml
+
+# Output files
+shellfiles=$HOME/.config/shell/shortcutsrc
+yazishorts=$HOME/.config/yazi/shortcuts.toml
+yazifiles=$HOME/.config/yazi/keymap.toml
+
+
+[ ! -d "$HOME/.config"/shell ] && mkdir "$HOME/.config/shell"
+
+generateDirShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmdirs" | \
+    awk -v editor="cd" '{printf "alias %s=\"%s %s\"\n", $1, editor, $2}' >> "$shellfiles"
+}
+
+generateFileShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmfiles" | \
+    awk -v editor="$EDITOR" '{printf "alias %s=\"%s %s\"\n", $1, editor, $2}' >> "$shellfiles"
+}
+
+generateYaziShortcuts(){
+    sed -e '/^[[:space:]]*#/d' -e '/^$/d' "$bmdirs" | \
+    awk '
+    {
+        alias = $1;
+        path = $2;
+        
+        # Start the "on" string with the literal "g" and a comma.
+        chars = "\"g\",";
+        
+        # Loop through the rest of the alias to add the other characters.
+        for (i = 1; i <= length(alias); i++) {
+            chars = chars "\"" substr(alias, i, 1) "\",";
+        }
+        
+        # Remove the final, extra comma.
+        chars = substr(chars, 1, length(chars) - 1);
+        
+        printf "[[mgr.prepend_keymap]]\n"
+        printf "on   = [ %s ]\n", chars
+        printf "run  = \"cd %s\"\n", path
+        # printf "desc = \"Shortcut for %s\"\n\n", path
+    }' > "$yazishorts"
+    cat "$yazikeys" "$yazishorts" >> "$HOME/.config/yazi/keymap.toml"
+}
+
+# Cleanup 
+[ -f "$shellfiles" ] && rm "$shellfiles"
+[ -f "$yazifiles" ] && rm "$yazifiles"
+[ -f "$yazishorts" ] && rm "$yazishorts"
+
+generateDirShortcuts
+generateFileShortcuts
+generateYaziShortcuts

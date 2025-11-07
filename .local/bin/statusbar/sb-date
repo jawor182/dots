@@ -1,0 +1,11 @@
+#!/bin/sh
+
+date=$(date '+%d %b %Y')
+time=$(date '+%H:%M')
+
+case $BLOCK_BUTTON in 
+    1) notify-send "This Month" "$(cal -m | sed "s/\<$(date +'%e'|tr -d ' ')\>/<b><span color='red'>&<\/span><\/b>/")" ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+printf "%s\n" " $time $date"
