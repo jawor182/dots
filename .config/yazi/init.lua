@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 require("full-border"):setup({
     -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
-    type = ui.Border.PLAIN,
+    type = ui.Border.ROUNDED,
 })
 -- function Status:size()
 -- end
