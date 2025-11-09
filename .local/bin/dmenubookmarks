@@ -8,6 +8,12 @@ selectbookmark() {
     echo -n "$selected" | xclip -selection clipboard
 }
 
+selectbookmark_browser() {
+    selected=$(cat "$bmfile" | dmenu -i -l 30 -p "Select bookmark:"| cut -d ' ' -f 1)
+    [ -z "$selected" ] && exit
+    $BROWSER $selected
+}
+
 addbookmark(){
     bookmark=$(xclip -o);
     grep -x "$bookmark" "$bmfile" && notify-send "Bookmark is already in file" && exit 1 || echo "$bookmark" >> "$bmfile"
@@ -16,6 +22,7 @@ addbookmark(){
 
 case "$1" in
     select) selectbookmark;;
+    select_browser) selectbookmark_browser;;
     add) addbookmark;;
     *) notify-send "UGABUGA" && exit 1 ;;
 esac
