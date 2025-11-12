@@ -23,7 +23,7 @@ browser linkhandler
 macro SPACE open-in-browser
 macro v set browser "setsid -f mpv --quiet" ; open-in-browser ; set browser linkhandler
 macro d set browser "tsp yt-dlp -f 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]/best[ext=mp4]' --cookies-from-browser brave --merge-output-format mp4 --embed-thumbnail --extractor-args 'youtube:player_js_version=actual' -o '$HOME/media/vids/%(title)s.%(ext)s'" ; open-in-browser ; set browser linkhandler
-macro p set browser "tsp yt-dlp -x --audio-format opus --embed-metadata --embed-thumbnail --extractor-args 'youtube:player_js_version=actual' -o '$HOME/media/podcasts/%(title)s.%(ext)s'" ; open-in-browser ; set browser linkhandler
+macro p set browser "tsp yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail --extractor-args 'youtube:player_js_version=actual' -o '$HOME/media/podcasts/%(title)s.%(ext)s'" ; open-in-browser ; set browser linkhandler
 macro q set browser "mpvq add" ; open-in-browser ; set browser linkhandler
 macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
 macro x set browser "xdg-open" ; open-in-browser ; set browser linkhandler
