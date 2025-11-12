@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+target="$1"
+active_output=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true).output')
+
+if [[ "$active_output" == "eDP-1" || "$active_output" == "DP-1" ]]; then
+    workspace=$((target))
+elif [[ "$active_output" == "HDMI-A-1" ]]; then
+    workspace=$((10 + target))
+else
+    workspace=$((target))
+fi
+
+swaymsg "move container to workspace number $workspace"
