@@ -1,2 +1,0 @@
-#!/bin/sh
-env QT_QPA_PLATFORM=xcb QT_SCALE_FACTOR=1.25 freecad
