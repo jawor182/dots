@@ -48,7 +48,7 @@
         "icon-size": 24,
     },
     "ext/workspaces": {
-        "format": "{}",
+        "format": "{icon}",
         "on-click": "activate",
     },
     "hyprland/workspaces": {

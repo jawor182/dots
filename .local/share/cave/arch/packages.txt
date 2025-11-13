@@ -103,4 +103,10 @@ papirus-icon-theme
 cmake
 make
 xorg-xeyes
-x11-ssh-askpass
+breeze
+foot
+bemenu
+waybar
+gtklock
+swww
+swayidle
