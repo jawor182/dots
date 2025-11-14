@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("$HOME/dox/" "$HOME/repos/" "$HOME/keepassxc/")
+dirs=("$HOME/dox/" "$HOME/repos/" "$HOME/keepassxc/" "$HOME/.ssh/")
 targetDir="/mnt/backup/"
 currentDate=$(date "+%F")
 backupFile="backup-$currentDate.tar.gz"

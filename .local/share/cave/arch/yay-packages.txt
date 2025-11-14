@@ -10,3 +10,4 @@ task-spooler
 bluetuith-git
 mangowc-git
 mprop-git
+wlr-dpms-git
