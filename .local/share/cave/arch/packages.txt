@@ -104,9 +104,3 @@ cmake
 make
 xorg-xeyes
 breeze
-foot
-bemenu
-waybar
-gtklock
-swww
-swayidle

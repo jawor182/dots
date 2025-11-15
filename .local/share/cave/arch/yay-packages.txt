@@ -8,6 +8,3 @@ htop-vim
 playerctl-git
 task-spooler
 bluetuith-git
-mangowc-git
-mprop-git
-wlr-dpms-git
