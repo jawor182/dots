@@ -20,4 +20,4 @@ export WLR_RENDER_DRM_FENCE=1
 
 dbus-update-activation-environment --all
 
-someblocks -p 2>/dev/null | dwl -s "sh $HOME/.local/bin/dwl-autostart <&-"
+someblocks -p 2>/dev/null | dwl -s "sh $HOME/.local/bin/dwl-autostart <&-" 2>/dev/null

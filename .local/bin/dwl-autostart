@@ -7,4 +7,3 @@ mpd-mpris &
 playerctld & 
 foot -s &
 wallpaper random &
-xrdb -m "$XRESOURCES" && echo "Xft.dpi:96" | xrdb -m &
