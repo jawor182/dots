@@ -2,6 +2,7 @@
 
 export TERMINAL=footclient
 export XCURSOR_SIZE=24
+export XCURSOR_THEME=breeze_cursors
 export QT_QPA_PLATFORMTHEME=gtk3
 export QT_QPA_PLATFORM=wayland
 export QT_SCALE_FACTOR=1
