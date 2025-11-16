@@ -108,3 +108,4 @@ foot
 swaybg
 wl-clipboard
 bemenu
+waylock

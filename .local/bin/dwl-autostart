@@ -1,8 +1,10 @@
 #!/bin/sh
 
+[ -f "$HOME/.zprofile" ] && . "$HOME/.zprofile"
+
 dunst &
 mpd-mpris &
 playerctld & 
 foot -s &
 wallpaper random &
-sleep 1 && xrdb -m "$XRESOURCES" && echo "Xft.dpi:96" | xrdb -m &
+xrdb -m "$XRESOURCES" && echo "Xft.dpi:96" | xrdb -m &
