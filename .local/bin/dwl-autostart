@@ -1,11 +1,8 @@
 #!/bin/sh
 
-swww-daemon  &
-wallpaper random &
 dunst &
-swww-daemon &
-screen &
 mpd-mpris &
 playerctld & 
-waybar &
 foot -s &
+wallpaper random &
+sleep 1 && xrdb -m "$XRESOURCES" && echo "Xft.dpi:96" | xrdb -m &

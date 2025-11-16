@@ -104,3 +104,7 @@ cmake
 make
 xorg-xeyes
 breeze
+foot
+swaybg
+wl-clipboard
+bemenu
