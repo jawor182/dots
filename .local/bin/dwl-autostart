@@ -2,8 +2,8 @@
 
 [ -f "$HOME/.zprofile" ] && . "$HOME/.zprofile"
 
-dunst &
 mpd-mpris &
 playerctld & 
 foot -s &
 wallpaper random &
+dunst &
