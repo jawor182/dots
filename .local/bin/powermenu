@@ -1,5 +1,7 @@
 #!/bin/sh
 
+host=$(cat /etc/hostname)
+
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
     option=$(printf 'Lock Screen\nPower Off\nReboot\nSuspend' | dmenu -c -i -l 4 -p "What do you want to do?")
     LOCK="slock"
@@ -11,7 +13,12 @@ fi
 case $option in
 "Power Off") systemctl poweroff ;;
 "Reboot") systemctl reboot ;;
-"Suspend") $LOCK & systemctl suspend ;;
+"Suspend")
+    if [ "$XDG_SESSION_TYPE" = "x11" ] && [ "$host" = "desktop" ]; then
+        notify-send "Suspend does not work on x11 for you" && exit 1
+    else
+        $LOCK & systemctl suspend
+    fi ;;
 "Lock Screen") $LOCK ;;
 *) ;;
 esac
