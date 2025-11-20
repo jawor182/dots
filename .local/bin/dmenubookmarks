@@ -3,15 +3,15 @@
 bmfile=$HOME/keepassxc/bookmarks
 
 selectbookmark() {
-    selected=$(cat "$bmfile" | dmenu -i -l 30 -p "Select bookmark:"| cut -d ' ' -f 1)
+    selected=$(cat "$bmfile" | dmenu -i -l 10 -p "Select bookmark:"| cut -d ' ' -f 1)
     [ -z "$selected" ] && exit
     echo -n "$selected" | xclip -selection clipboard
 }
 
 selectbookmark_browser() {
-    selected=$(cat "$bmfile" | dmenu -i -l 30 -p "Select bookmark:"| cut -d ' ' -f 1)
+    selected=$(cat "$bmfile" | dmenu -i -l 10 -p "Select bookmark:"| cut -d ' ' -f 1)
     [ -z "$selected" ] && exit
-    $BROWSER $selected
+    $BROWSER "$selected"
 }
 
 addbookmark(){
