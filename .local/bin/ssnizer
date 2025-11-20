@@ -5,7 +5,6 @@ dirs=("$HOME/repos/personal" "$HOME/repos/suckless" "$HOME/dotfiles" "$HOME/repo
 selected=$(find "${dirs[@]}" -mindepth 1 -maxdepth 1 -path "*/.git*" -prune -o -type d -print | fzf --height=100%)
 
 if [ -z "${selected:-}" ]; then
-    echo "Did not specify the project" >&2
     exit 1
 fi
 
