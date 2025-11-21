@@ -17,8 +17,3 @@ hash = "2ac87e1b3a61f5887472899e86535d29"
 use = "bennyyip/gruvbox-dark"
 rev = "91fdfa7"
 hash = "f48f510e5505f5d01e79c4f8257ec5cb"
-
-[[flavor.deps]]
-use = "AdithyanA2005/nord"
-rev = "3a791e9"
-hash = "fa7142cda74a50b271ea212356b40b57"
