@@ -28,21 +28,38 @@ macro q set browser "mpvq add" ; open-in-browser ; set browser linkhandler
 macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
 macro x set browser "xdg-open" ; open-in-browser ; set browser linkhandler
 
-color background          color223   color0
-color listnormal          color223   color0
-color listnormal_unread   color2     color0
-color listfocus           color166   color237
-color listfocus_unread    color166   color237
-color info                color166   color0
-color article             color223   color0
+# Gruvbox
+# color background          color223   color0
+# color listnormal          color223   color0
+# color listnormal_unread   color2     color0
+# color listfocus           color166   color237
+# color listfocus_unread    color166   color237
+# color info                color166   color0
+# color article             color223   color0
+# Nord
+color background          color15    default
+color listnormal          color248   default
+color listnormal_unread   color4     default
+color listfocus           color0     color4
+color listfocus_unread    color0     color4   bold
+color info                color12    color0
+color article             color248   default
 
 # highlights
-highlight article "^(Feed|Link):.*$" color166 default bold
-highlight article "^(Title|Date|Author):.*$" color166 default bold
-highlight article "https?://[^ ]+" color2 default underline
-highlight article "\\[[0-9]+\\]" color2 default bold
-highlight article "\\[image\\ [0-9]+\\]" color2 default bold
-highlight feedlist "^─.*$" color166 color166 bold
+# Gruvbox
+# highlight article "^(Feed|Link):.*$" color166 default bold
+# highlight article "^(Title|Date|Author):.*$" color166 default bold
+# highlight article "https?://[^ ]+" color2 default underline
+# highlight article "\\[[0-9]+\\]" color2 default bold
+# highlight article "\\[image\\ [0-9]+\\]" color2 default bold
+# highlight feedlist "^─.*$" color166 color166 bold
+# Nord
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+highlight feedlist "^─.*$" color6 color0 bold
 
 reload-threads 100
 cleanup-on-quit yes

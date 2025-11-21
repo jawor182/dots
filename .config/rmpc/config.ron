@@ -5,7 +5,7 @@
     address: "127.0.0.1:6600",
     on_song_change: ["~/dotfiles/.config/rmpc/rmpc-notifier"],
     password: None,
-    theme: "default",
+    theme: "nord",
     cache_dir: "~/.cache/mpd/",
     volume_step: 5,
     max_fps: 60,
