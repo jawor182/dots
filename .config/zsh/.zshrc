@@ -56,6 +56,10 @@ snc(){
     shortcuts ; source $XDG_CONFIG_HOME/zsh/.zshrc ; xset r rate 300 60 ; xrdb -m $XRESOURCES 
 }
 
+mansplain(){
+    man -k . | fzf -e | cut -d' '  -f1 | xargs -r man
+}
+
 autoload -Uz add-zsh-hook
 
 function set-title-preexec {
@@ -123,6 +127,7 @@ source $XDG_CONFIG_HOME/shell/aliasrc
 bindkey -s '^F' '$FILES\n'
 bindkey -s '^R' 'snc\n'
 bindkey -s '^S' 'se\n'
+bindkey -s '^H' 'mansplain\n'
 bindkey -s '^T' 'ssnizer\n'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 
